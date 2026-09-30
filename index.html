@@ -1,39 +1,77 @@
 <!doctype html>
 <html lang="tr">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ares Kuaför | Kırşehir</title>
-<meta name="description" content="Ares Kuaför Kırşehir — kadın saç tasarımı, boya, ombre, gelin saçı ve profesyonel saç uygulamaları.">
+<meta name="description" content="Ares Kuaför Kırşehir — saç, bakım, renklendirme, özel gün hazırlıkları ve güzellik hizmetleri. Randevu için WhatsApp veya Instagram'dan ulaşın.">
 <style>
-:root{--bg:#090909;--card:#111;--gold:#c9a45c;--gold2:#f1d59b;--text:#f7f3ec;--muted:#aaa}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif}
-a{color:inherit;text-decoration:none}.nav{position:fixed;top:0;left:0;right:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:18px 7%;background:rgba(9,9,9,.82);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,164,92,.16)}
-.logo{font-family:Georgia,serif;letter-spacing:2px;font-size:21px}.logo span{color:var(--gold)}.navlinks{display:flex;gap:24px;font-size:13px;color:#ddd}.navlinks a:hover{color:var(--gold2)}
-.hero{min-height:92vh;display:flex;align-items:center;padding:130px 7% 80px;background:radial-gradient(circle at 80% 20%,rgba(201,164,92,.15),transparent 35%),linear-gradient(180deg,#101010,#090909)}
-.hero-inner{max-width:850px}.eyebrow{color:var(--gold2);letter-spacing:4px;font-size:12px;text-transform:uppercase}
-h1{font-family:Georgia,serif;font-size:clamp(52px,9vw,105px);line-height:.92;margin:18px 0 25px;font-weight:400}h1 span{color:var(--gold)}
-.hero p{max-width:620px;color:#c9c9c9;font-size:18px;line-height:1.7}.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
-.btn{padding:14px 21px;border:1px solid var(--gold);font-size:13px;letter-spacing:1px}.btn.primary{background:var(--gold);color:#111}.btn:hover{transform:translateY(-2px)}
-section{padding:90px 7%}.section-title{font-family:Georgia,serif;font-size:42px;font-weight:400;margin:0 0 12px}.section-sub{color:var(--muted);margin:0 0 38px}
-.services{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.service{padding:30px 24px;background:var(--card);border:1px solid #222;min-height:150px}.service b{color:var(--gold2);font-family:Georgia,serif;font-size:22px;font-weight:400}.service p{color:#aaa;line-height:1.6;font-size:14px}
-.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.gallery img{width:100%;aspect-ratio:1/1.18;object-fit:cover;display:block;filter:saturate(.94);transition:.3s}.gallery a:hover img{transform:scale(1.02);filter:saturate(1.08)}
-.about{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}.quote{border-left:2px solid var(--gold);padding-left:24px;font-family:Georgia,serif;font-size:30px;line-height:1.35;color:#eee}.about p{color:#aaa;line-height:1.9}
-.contact{background:#111;border-top:1px solid #222;border-bottom:1px solid #222}.contactbox{display:flex;justify-content:space-between;gap:30px;align-items:center}.contactbox p{color:#aaa;line-height:1.7}.footer{text-align:center;padding:30px 7%;color:#777;font-size:12px}.social{color:var(--gold2)}
-@media(max-width:800px){.navlinks{display:none}.services{grid-template-columns:1fr 1fr}.about{grid-template-columns:1fr}.contactbox{flex-direction:column;align-items:flex-start}.gallery{gap:5px}section{padding:70px 5%}.hero{padding-left:5%;padding-right:5%}}
-@media(max-width:480px){.services{grid-template-columns:1fr}h1{font-size:56px}.gallery{grid-template-columns:repeat(2,1fr)}}
-</style></head>
+:root{--bg:#0d0d0f;--card:#17171a;--gold:#d8b36a;--cream:#f6f0e6;--muted:#b9b2a8;--line:#2a292b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--cream);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}.wrap{max-width:1180px;margin:auto;padding:0 22px}
+nav{position:fixed;top:0;left:0;right:0;z-index:10;background:rgba(13,13,15,.78);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.07)}
+.navin{height:72px;display:flex;align-items:center;justify-content:space-between}.logo{font-family:Georgia,serif;font-size:25px;letter-spacing:2px}.logo span{color:var(--gold)}
+.navlinks{display:flex;gap:26px;font-size:14px;color:#ddd}.navlinks a:hover{color:var(--gold)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 20px;border-radius:999px;font-weight:700;font-size:14px;border:1px solid transparent;transition:.2s}.btn.gold{background:var(--gold);color:#17130c}.btn.dark{border-color:#555;color:var(--cream);background:rgba(255,255,255,.03)}.btn:hover{transform:translateY(-2px)}
+.hero{min-height:92vh;padding-top:72px;display:flex;align-items:center;position:relative;overflow:hidden;background:radial-gradient(circle at 70% 30%,#3b2e1e 0,#171311 25%,transparent 48%),linear-gradient(120deg,#0d0d0f 35%,#1a1714)}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(13,13,15,.96),rgba(13,13,15,.5),rgba(13,13,15,.2));pointer-events:none}
+.hero .wrap{position:relative;z-index:1;width:100%}.eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:4px;font-size:12px;font-weight:800}
+h1{font-family:Georgia,serif;font-weight:500;font-size:clamp(48px,8vw,94px);line-height:.98;margin:18px 0;max-width:760px}h1 em{color:var(--gold);font-style:normal}.lead{max-width:620px;color:#d0c9bf;font-size:18px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.mini{margin-top:24px;color:var(--muted);font-size:13px}
+section{padding:100px 0}.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:38px}.kicker{color:var(--gold);font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:800}.section-head h2{font-family:Georgia,serif;font-weight:500;font-size:42px;margin:7px 0 0}.section-head p{color:var(--muted);max-width:460px;margin:0}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.service{background:var(--card);border:1px solid var(--line);padding:28px;border-radius:18px}.num{color:var(--gold);font-family:Georgia,serif;font-size:15px}.service h3{font-family:Georgia,serif;font-size:24px;font-weight:500;margin:15px 0 7px}.service p{color:var(--muted);margin:0}
+.price-note{margin-top:22px;padding:16px 18px;border:1px solid #5b4a2d;background:#1d1912;border-radius:12px;color:#ead7b4;text-align:center}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.shot{min-height:250px;border-radius:16px;overflow:hidden;position:relative;background:linear-gradient(145deg,#28211b,#111);border:1px solid var(--line);display:flex;align-items:end}.shot:nth-child(2){min-height:330px}.shot:nth-child(3){min-height:290px}.shot:nth-child(4){min-height:230px}.shot:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 30% 25%,rgba(216,179,106,.38),transparent 35%),linear-gradient(160deg,transparent,#050505 90%)}.shot span{position:relative;padding:18px;color:#fff;font-family:Georgia,serif;font-size:19px}
+.cta{background:linear-gradient(120deg,#201a13,#121214);border:1px solid #3a3126;border-radius:24px;padding:50px;display:flex;justify-content:space-between;align-items:center;gap:30px}.cta h2{font-family:Georgia,serif;font-size:42px;font-weight:500;margin:0 0 8px}.cta p{color:var(--muted);margin:0}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:18px}.contact-card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px}.contact-card h3{font-family:Georgia,serif;font-size:27px;font-weight:500;margin:0 0 10px}.contact-card p{color:var(--muted)}
+footer{border-top:1px solid var(--line);padding:30px 0;color:#89847d;font-size:13px}.foot{display:flex;justify-content:space-between;gap:20px}
+.float{position:fixed;right:18px;bottom:18px;z-index:20;background:#25D366;color:#07170d;padding:13px 18px;border-radius:999px;font-weight:800;box-shadow:0 12px 30px #0008}
+@media(max-width:800px){.navlinks{display:none}.hero{min-height:82vh}.services{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr}.contact{grid-template-columns:1fr}.cta{padding:30px;display:block}.cta .actions{margin-top:22px}.section-head{display:block}.section-head p{margin-top:12px}.gallery .shot{min-height:230px}.gallery .shot:nth-child(2){min-height:260px}}
+</style>
+</head>
 <body>
-<nav class="nav"><a class="logo" href="#">ARES <span>KUAFÖR</span></a><div class="navlinks"><a href="#hizmetler">Hizmetler</a><a href="#galeri">Galeri</a><a href="#hakkimizda">Hakkımızda</a><a href="#iletisim">İletişim</a></div></nav>
-<header class="hero"><div class="hero-inner"><div class="eyebrow">Kırşehir · Kadın Kuaförü</div>
-<h1>Saçınıza<br><span>yeni bir</span><br>dokunuş.</h1>
-<p>Tarzınızı ortaya çıkaran modern saç tasarımları, renk uygulamaları ve özel gün hazırlıkları. Ares Kuaför'de her saç, size özel düşünülür.</p>
-<div class="buttons"><a class="btn primary" href="https://www.instagram.com/areskuaforkirsehir/" target="_blank">Instagram'dan Randevu</a><a class="btn" href="#galeri">Çalışmalarımızı Gör</a></div></div></header>
-<section id="hizmetler"><h2 class="section-title">Hizmetler</h2><p class="section-sub">İhtiyacınıza ve saç yapınıza göre kişiselleştirilmiş uygulamalar.</p>
-<div class="services"><div class="service"><b>Saç Tasarımı</b><p>Kesim, şekillendirme ve yüzünüze uygun modern stiller.</p></div><div class="service"><b>Renk &amp; Boya</b><p>Doğal tonlardan iddialı renklere, saçınıza özel renk çalışmaları.</p></div><div class="service"><b>Ombre &amp; Sombre</b><p>Yumuşak geçişlerle doğal ve ışıl ışıl renk efektleri.</p></div><div class="service"><b>Özel Gün</b><p>Gelin ve özel gün saç tasarımlarıyla unutulmaz bir görünüm.</p></div></div></section>
-<section id="galeri"><h2 class="section-title">Çalışmalarımız</h2><p class="section-sub">Instagram sayfanızdaki paylaşımlardan seçilen çalışmalar.</p><div class="gallery">
-<a href="https://www.instagram.com/areskuaforkirsehir/" target="_blank"><img src="images/hair-1.jpg" alt="Ares Kuaför saç çalışması"></a><a href="https://www.instagram.com/areskuaforkirsehir/" target="_blank"><img src="images/hair-2.jpg" alt="Ares Kuaför saç çalışması"></a><a href="https://www.instagram.com/areskuaforkirsehir/" target="_blank"><img src="images/hair-3.jpg" alt="Ares Kuaför saç çalışması"></a><a href="https://www.instagram.com/areskuaforkirsehir/" target="_blank"><img src="images/hair-4.jpg" alt="Ares Kuaför saç çalışması"></a><a href="https://www.instagram.com/areskuaforkirsehir/" target="_blank"><img src="images/hair-5.jpg" alt="Ares Kuaför saç çalışması"></a><a href="https://www.instagram.com/areskuaforkirsehir/" target="_blank"><img src="images/hair-6.jpg" alt="Ares Kuaför saç çalışması"></a><a href="https://www.instagram.com/areskuaforkirsehir/" target="_blank"><img src="images/hair-7.jpg" alt="Ares Kuaför saç çalışması"></a><a href="https://www.instagram.com/areskuaforkirsehir/" target="_blank"><img src="images/hair-8.jpg" alt="Ares Kuaför saç çalışması"></a><a href="https://www.instagram.com/areskuaforkirsehir/" target="_blank"><img src="images/hair-9.jpg" alt="Ares Kuaför saç çalışması"></a>
+<nav><div class="wrap navin"><a class="logo" href="#">ARES <span>KUAFÖR</span></a><div class="navlinks"><a href="#hizmetler">Hizmetler</a><a href="#galeri">Galeri</a><a href="#fiyatlar">Fiyatlar</a><a href="#iletisim">İletişim</a></div><a class="btn gold" href="https://wa.me/905531293338?text=Merhaba%20Ares%20Kuaf%C3%B6r%2C%20randevu%20almak%20istiyorum." target="_blank">Randevu Al</a></div></nav>
+
+<header class="hero"><div class="wrap">
+<div class="eyebrow">Kırşehir · Kadın Kuaförü</div>
+<h1>Saçınıza <em>özen</em>, tarzınıza imza.</h1>
+<p class="lead">Ares Kuaför'de değişim sadece görünüşünüzde değil, kendinize bakışınızda da başlar. Saç rengi, kesim, bakım ve özel gün hazırlıklarında sizi dinleyen, tarzınıza göre çalışan bir salon deneyimi.</p>
+<div class="actions"><a class="btn gold" href="https://wa.me/905531293338?text=Merhaba%20Ares%20Kuaf%C3%B6r%2C%20randevu%20almak%20istiyorum." target="_blank">💬 WhatsApp'tan Randevu</a><a class="btn dark" href="https://www.instagram.com/areskuaforkirsehir" target="_blank">◎ Instagram'dan Randevu</a></div>
+<div class="mini">📍 Ahi Evran · Şehit Polis Köksal Demirci Cd. · Kırşehir</div>
+</div></header>
+
+<section id="hizmetler"><div class="wrap"><div class="section-head"><div><div class="kicker">Hizmetler</div><h2>Güzelliğiniz için<br>özenli dokunuşlar.</h2></div><p>Tarzınızı ve saçınızın ihtiyacını birlikte değerlendiriyor, size yakışan sonucu hedefliyoruz.</p></div>
+<div class="services">
+<div class="service"><div class="num">01</div><h3>Saç Kesim & Şekillendirme</h3><p>Yüzünüze ve stilinize uygun modern kesimler, fön ve özel saç şekillendirme.</p></div>
+<div class="service"><div class="num">02</div><h3>Renk & Renklendirme</h3><p>Saç boyama, renk geçişleri, röfle, ombre ve kişiye özel renk çalışmaları.</p></div>
+<div class="service"><div class="num">03</div><h3>Saç Bakımı</h3><p>Saçın ihtiyacına göre bakım uygulamalarıyla daha canlı ve bakımlı bir görünüm.</p></div>
+<div class="service"><div class="num">04</div><h3>Mikro Kaynak</h3><p>Uzunluk ve hacim isteyen saçlar için kaynak uygulamaları ve danışmanlık.</p></div>
+<div class="service"><div class="num">05</div><h3>Özel Gün Hazırlığı</h3><p>Düğün, nişan, davet ve özel günler için saç ve makyaj hazırlıkları.</p></div>
+<div class="service"><div class="num">06</div><h3>Manikür & Pedikür</h3><p>Bakımlı eller ve ayaklar için özenli güzellik uygulamaları.</p></div>
+</div></div></section>
+
+<section id="fiyatlar"><div class="wrap"><div class="section-head"><div><div class="kicker">Hizmetler & Fiyatlar</div><h2>Güncel fiyatlar<br>için iletişime geçin.</h2></div><p>Hizmet fiyatlarımız dönemsel olarak güncellenmektedir. İşlem öncesi güncel fiyat bilgisini WhatsApp veya Instagram üzerinden öğrenebilirsiniz.</p></div>
+<div class="price-note">✦ <strong>Fiyatlar güncellenmektedir.</strong> Güncel fiyat bilgisi için WhatsApp veya Instagram'dan bize ulaşabilirsiniz.</div>
 </div></section>
-<section id="hakkimizda"><div class="about"><div><div class="eyebrow">ARES KUAFÖR</div><h2 class="section-title">Güzellik, detaylarda saklı.</h2><p>Ares Kuaför olarak amacımız yalnızca saçınızı değiştirmek değil; kendinizi iyi hissedeceğiniz, size yakışan bir görünüm ortaya çıkarmak.</p><p>Yeni bir renk, yeni bir stil veya özel gününüz için kusursuz bir hazırlık... İlham almak için Instagram sayfamızı da ziyaret edebilirsiniz.</p></div><div class="quote">“Kendinizi en iyi hissettiğiniz saç, size en çok yakışan saçtır.”</div></div></section>
-<section class="contact" id="iletisim"><div class="contactbox"><div><div class="eyebrow">İLETİŞİM</div><h2 class="section-title">Randevunuzu oluşturalım.</h2><p>Güncel çalışmalarımızı görmek ve randevu için Instagram hesabımızdan bize ulaşabilirsiniz.</p></div><a class="btn primary" href="https://www.instagram.com/areskuaforkirsehir/" target="_blank">@areskuaforkirsehir</a></div></section>
-<footer class="footer">© 2026 Ares Kuaför · Kırşehir · <a class="social" href="https://www.instagram.com/areskuaforkirsehir/" target="_blank">Instagram</a></footer>
+
+<section id="galeri"><div class="wrap"><div class="section-head"><div><div class="kicker">Ares'ten İlham</div><h2>Çalışmalarımızdan<br>ilham alın.</h2></div><p>En yeni saç çalışmalarımızı ve salonumuzdan kareleri Instagram sayfamızda keşfedebilirsiniz.</p></div>
+<div class="gallery">
+<a class="shot" href="https://www.instagram.com/areskuaforkirsehir" target="_blank"><span>Saç Rengi & Işıltı →</span></a>
+<a class="shot" href="https://www.instagram.com/areskuaforkirsehir" target="_blank"><span>Kesim & Stil →</span></a>
+<a class="shot" href="https://www.instagram.com/areskuaforkirsehir" target="_blank"><span>Özel Gün Saçları →</span></a>
+<a class="shot" href="https://www.instagram.com/areskuaforkirsehir" target="_blank"><span>Bakım & Güzellik →</span></a>
+</div>
+<div class="actions" style="justify-content:center;margin-top:26px"><a class="btn dark" href="https://www.instagram.com/areskuaforkirsehir" target="_blank">◎ Tüm çalışmaları Instagram'da gör</a></div>
+</div></section>
+
+<section><div class="wrap"><div class="cta"><div><div class="kicker">Yeni görünümünüz için</div><h2>Randevunuzu ayıralım.</h2><p>Size uygun gün ve saati konuşmak için bize WhatsApp veya Instagram'dan yazabilirsiniz.</p></div><div class="actions"><a class="btn gold" href="https://wa.me/905531293338?text=Merhaba%20Ares%20Kuaf%C3%B6r%2C%20randevu%20almak%20istiyorum." target="_blank">WhatsApp</a><a class="btn dark" href="https://www.instagram.com/areskuaforkirsehir" target="_blank">Instagram</a></div></div></div></section>
+
+<section id="iletisim"><div class="wrap"><div class="section-head"><div><div class="kicker">İletişim</div><h2>Bizi bulmak<br>çok kolay.</h2></div></div>
+<div class="contact">
+<div class="contact-card"><h3>📍 Salonumuz</h3><p>Ahi Evran Mahallesi, Şehit Polis Köksal Demirci Caddesi, Kırşehir</p><a class="btn gold" href="https://maps.app.goo.gl/7nh9N5rrybAvzD2x8?g_st=ic" target="_blank">Google Maps'te Yol Tarifi</a></div>
+<div class="contact-card"><h3>💬 Randevu & Sosyal Medya</h3><p>WhatsApp: 0553 129 33 38<br>Instagram: @areskuaforkirsehir</p><div class="actions"><a class="btn gold" href="https://wa.me/905531293338" target="_blank">WhatsApp</a><a class="btn dark" href="https://www.instagram.com/areskuaforkirsehir" target="_blank">Instagram</a></div></div>
+</div></div></section>
+
+<footer><div class="wrap foot"><div>© Ares Kuaför · Kırşehir</div><div>Saçınıza özen, tarzınıza imza.</div></div></footer>
+<a class="float" href="https://wa.me/905531293338?text=Merhaba%20Ares%20Kuaf%C3%B6r%2C%20randevu%20almak%20istiyorum." target="_blank">💬 WhatsApp</a>
 </body></html>
