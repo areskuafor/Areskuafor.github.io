@@ -1,0 +1,1 @@
+Ares Kuaför GitHub Pages dosyaları. Videoların ses kanalları kaldırılmıştır. Markalar sayfasındaki ürün görselleri resmi marka kaynaklarından harici URL ile yüklenmektedir.
