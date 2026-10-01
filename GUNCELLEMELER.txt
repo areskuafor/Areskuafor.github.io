@@ -1,1 +1,7 @@
-Çalışma saatleri hizalandı; Salı kırmızı. Galeri üzerindeki yazılar kaldırıldı ve Salon Çalışması kaldırıldı. Logo uyumlu koyu/siyah-metallic arka plan eklendi. Mobil hamburger menü tüm sayfalara eklendi. Mikro Kaynak SSS genişletildi ve eski internet görseli açıklaması kaldırıldı. Markalar sayfasına HUSH Tangle Free, HUSH The Passion, HUSH Trublonde ve ek X Pro Harmony ürün görselleri eklendi.
+Ares Kuaför güncellemesi
+- Salon çalışması olarak görünen bozuk galeri görseli kaldırıldı.
+- Kullanıcının gönderdiği 27 yeni fotoğraf optimize edilerek galeriye eklendi.
+- Galeri fotoğraflarının üzerindeki yazılar yok; fotoğrafa tıklayınca Instagram'a gider.
+- X Pro Harmony Rescuer 500 ml resmi ürün görseli düzeltildi.
+- Markalar sayfasına daha fazla X Pro Harmony ürünü eklendi.
+- Galeri ve marka görselleri mevcut GitHub kök dizini yapısına uygundur.
