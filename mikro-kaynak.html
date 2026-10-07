@@ -9,7 +9,7 @@
 <link href="https://areskuafor.github.io/mikro-kaynak.html" rel="canonical"/>
 <style>
 :root{--bg:#050506;--bg2:#0b0b0d;--card:#111114;--gold:#d8b36a;--gold-glow:rgba(216,179,106,0.18);--silver:#d7d9dc;--red:#a61f26;--cream:#f7f3ec;--muted:#b8b4ae;--line:#28282c}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 8% 8%,rgba(215,217,220,.09),transparent 28%),radial-gradient(circle at 92% 12%,rgba(166,31,38,.12),transparent 26%),linear-gradient(135deg,var(--bg),var(--bg2) 55%,#070708);color:var(--cream);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6;padding-bottom:0}body:before{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(120deg,transparent 0%,rgba(255,255,255,.025) 45%,transparent 70%);z-index:-1}a{color:inherit;text-decoration:none}.wrap{max-width:1180px;margin:auto;padding:0 22px}nav{position:sticky;top:0;z-index:50;background:rgba(5,5,6,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.navin{height:74px;display:flex;align-items:center;justify-content:space-between;gap:14px}.logo img{height:56px;width:auto;object-fit:contain}.navlinks{display:flex;gap:20px;font-size:14px;align-items:center}.navlinks a:hover{color:var(--gold)}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 22px;border-radius:999px;border:1px solid #555;font-weight:700;transition:all .25s ease}.btn:hover{transform:translateY(-2px)}.gold{background:var(--gold);color:#17130c!important;border-color:transparent;box-shadow:0 4px 20px rgba(216,179,106,0.25)}.gold:hover{background:#e3bf79;box-shadow:0 6px 25px rgba(216,179,106,0.4)}.menu-btn{display:none;background:transparent;border:1px solid #4a4a4d;color:var(--cream);width:44px;height:44px;border-radius:10px;font-size:23px;cursor:pointer}.mobile-menu{display:none}.mobile-menu.open{display:flex;flex-direction:column;padding:10px 22px 18px;border-top:1px solid var(--line);background:#070708}.mobile-menu a{padding:11px 0;border-bottom:1px solid #222}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 8% 8%,rgba(215,217,220,.09),transparent 28%),radial-gradient(circle at 92% 12%,rgba(166,31,38,.12),transparent 26%),linear-gradient(135deg,var(--bg),var(--bg2) 55%,#070708);color:var(--cream);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6;padding-bottom:0}body:before{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(120deg,transparent 0%,rgba(255,255,255,.025) 45%,transparent 70%);z-index:-1}a{color:inherit;text-decoration:none}.wrap{max-width:1180px;margin:auto;padding:0 22px}nav{position:sticky;top:0;z-index:50;background:rgba(5,5,6,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.navin{height:74px;display:flex;align-items:center;justify-content:flex-end;gap:14px;position:relative}.logo{position:absolute;left:22px;top:60%;transform:translateY(-50%);z-index:60;display:flex;align-items:center}.logo img{height:56px;width:auto;object-fit:contain}.navlinks{display:flex;gap:20px;font-size:14px;align-items:center;margin-left:auto}.navlinks a:hover,.navlinks a.active{color:var(--gold)}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 22px;border-radius:999px;border:1px solid #555;font-weight:700;transition:all .25s ease}.btn:hover{transform:translateY(-2px)}.gold{background:var(--gold);color:#17130c!important;border-color:transparent;box-shadow:0 4px 20px rgba(216,179,106,0.25)}.gold:hover{background:#e3bf79;box-shadow:0 6px 25px rgba(216,179,106,0.4)}.menu-btn{display:none;margin-left:auto;position:relative;z-index:70;background:transparent;border:1px solid #4a4a4d;color:var(--cream);width:44px;height:44px;border-radius:10px;font-size:23px;cursor:pointer}.mobile-menu{display:none}.mobile-menu.open{display:flex;flex-direction:column;padding:10px 22px 18px;border-top:1px solid var(--line);background:#070708}.mobile-menu a{padding:11px 0;border-bottom:1px solid #222}
 
 /* HERO SECTION LÜKS TASARIM */
 .hero{padding:90px 0 70px;position:relative;overflow:hidden;background:radial-gradient(circle at 80% 30%,rgba(216,179,106,.12),transparent 45%),radial-gradient(circle at 20% 70%,rgba(166,31,38,.12),transparent 40%)}
@@ -39,7 +39,7 @@ section{padding:80px 0}.grid3{display:grid;grid-template-columns:repeat(3,1fr);g
   .hero-grid{grid-template-columns:1fr;gap:35px}
   .hero-visual{order:-1;margin-bottom:10px}
   .visual-card img{height:360px}
-  .navlinks{display:none}.menu-btn{display:block}.navin>.btn{display:none}.grid4{grid-template-columns:repeat(2,1fr)}.grid3{grid-template-columns:1fr}
+  .navlinks{display:none}.menu-btn{display:block;flex:0 0 44px}.navin>.btn{display:none}.grid4{grid-template-columns:repeat(2,1fr)}.grid3{grid-template-columns:1fr}
 }
 
 @media(max-width:768px){
@@ -89,19 +89,19 @@ section{padding:80px 0}.grid3{display:grid;grid-template-columns:repeat(3,1fr);g
       <a href="index.html">Anasayfa</a>
       <a href="hizmetler.html">Hizmetler</a>
       <a href="index.html#galeri">Galeri</a>
-      <a href="mikro-kaynak.html">Mikro Kaynak</a>
+      <a href="mikro-kaynak.html" class="active" style="color:var(--gold)">Mikro Kaynak</a>
       <a href="markalar.html">Markalar</a>
       <a href="index.html#iletisim">İletişim</a>
       <a href="randevu.html">Randevu</a>
     </div>
     <button aria-expanded="false" aria-label="Menüyü aç" class="menu-btn" type="button">☰</button>
-    <a class="btn gold" href="https://wa.me/905531293338?text=Merhaba%20Ares%20Kuaf%C3%B6r%2C%20mikro%20kaynak%20randevusu%20almak%20istiyorum." rel="noopener" target="_blank">Randevu</a>
+    <a class="btn gold" href="randevu.html">Randevu</a>
   </div>
   <div class="mobile-menu">
     <a href="index.html">Anasayfa</a>
     <a href="hizmetler.html">Hizmetler</a>
     <a href="index.html#galeri">Galeri</a>
-    <a href="mikro-kaynak.html">Mikro Kaynak</a>
+    <a href="mikro-kaynak.html" style="color:var(--gold)">Mikro Kaynak</a>
     <a href="markalar.html">Markalar</a>
     <a href="index.html#iletisim">İletişim</a>
     <a href="randevu.html">Randevu</a>
@@ -221,7 +221,7 @@ section{padding:80px 0}.grid3{display:grid;grid-template-columns:repeat(3,1fr);g
 <footer>
   <div class="wrap foot">
     <div>© Ares Kuaför · Kırşehir</div>
-    <div><a href="index.html">Ana Sayfa</a> · <a href="mikro-kaynak.html">Mikro Kaynak</a> · <a href="markalar.html">Markalar</a> · <a href="randevu.html">Randevu</a></div>
+    <div><a href="index.html">Ana Sayfa</a> · <a href="hizmetler.html">Hizmetler</a> · <a href="mikro-kaynak.html">Mikro Kaynak</a> · <a href="markalar.html">Markalar</a> · <a href="randevu.html">Randevu</a></div>
   </div>
 </footer>
 
