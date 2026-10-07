@@ -20,8 +20,9 @@
 <link href="https://areskuafor.github.io/" rel="canonical"/>
 <style>
 :root{--bg:#050506;--bg2:#0b0b0d;--card:#111114;--gold:#d8b36a;--gold-glow:rgba(216,179,106,0.18);--silver:#d7d9dc;--red:#a61f26;--cream:#f7f3ec;--muted:#b8b4ae;--line:#28282c}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 8% 8%,rgba(215,217,220,.09),transparent 28%),radial-gradient(circle at 92% 12%,rgba(166,31,38,.12),transparent 26%),linear-gradient(135deg,var(--bg),var(--bg2) 55%,#070708);color:var(--cream);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6;padding-bottom:0}body:before{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(120deg,transparent 0%,rgba(255,255,255,.025) 45%,transparent 70%);z-index:-1}a{color:inherit;text-decoration:none}.wrap{max-width:1180px;margin:auto;padding:0 22px}nav{position:sticky;top:0;z-index:50;background:rgba(5,5,6,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.navin{height:74px;display:flex;align-items:center;justify-content:flex-end;gap:14px;position:relative}.logo{position:absolute;left:22px;top:60%;transform:translateY(-50%);z-index:60;display:flex;align-items:center}.logo img{height:56px;width:auto;object-fit:contain}.navlinks{display:flex;gap:20px;font-size:14px;align-items:center;margin-left:auto}.navlinks a:hover{color:var(--gold)}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 22px;border-radius:999px;border:1px solid #555;font-weight:700;transition:all .25s ease}.btn:hover{transform:translateY(-2px)}.gold{background:var(--gold);color:#17130c!important;border-color:transparent;box-shadow:0 4px 20px rgba(216,179,106,0.25)}.gold:hover{background:#e3bf79;box-shadow:0 6px 25px rgba(216,179,106,0.4)}.menu-btn{display:none;margin-left:auto;position:relative;z-index:70;background:transparent;border:1px solid #4a4a4d;color:var(--cream);width:44px;height:44px;border-radius:10px;font-size:23px;cursor:pointer}.mobile-menu{display:none}.mobile-menu.open{display:flex;flex-direction:column;padding:10px 22px 18px;border-top:1px solid var(--line);background:#070708}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 8% 8%,rgba(215,217,220,.09),transparent 28%),radial-gradient(circle at 92% 12%,rgba(166,31,38,.12),transparent 26%),linear-gradient(135deg,var(--bg),var(--bg2) 55%,#070708);color:var(--cream);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}body:before{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(120deg,transparent 0%,rgba(255,255,255,.025) 45%,transparent 70%);z-index:-1}a{color:inherit;text-decoration:none}.wrap{max-width:1180px;margin:auto;padding:0 22px}nav{position:sticky;top:0;z-index:50;background:rgba(5,5,6,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.navin{height:74px;display:flex;align-items:center;justify-content:flex-end;gap:14px;position:relative}.logo{position:absolute;left:22px;top:60%;transform:translateY(-50%);z-index:60;display:flex;align-items:center}.logo img{height:56px;width:auto;object-fit:contain}.navlinks{display:flex;gap:20px;font-size:14px;align-items:center;margin-left:auto}.navlinks a:hover{color:var(--gold)}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 22px;border-radius:999px;border:1px solid #555;font-weight:700;transition:all .25s ease}.btn:hover{transform:translateY(-2px)}.gold{background:var(--gold);color:#17130c!important;border-color:transparent;box-shadow:0 4px 20px rgba(216,179,106,0.25)}.gold:hover{background:#e3bf79;box-shadow:0 6px 25px rgba(216,179,106,0.4)}.menu-btn{display:none;margin-left:auto;position:relative;z-index:70;background:transparent;border:1px solid #4a4a4d;color:var(--cream);width:44px;height:44px;border-radius:10px;font-size:23px;cursor:pointer}.mobile-menu{display:none}.mobile-menu.open{display:flex;flex-direction:column;padding:10px 22px 18px;border-top:1px solid var(--line);background:#070708}.mobile-menu a{padding:11px 0;border-bottom:1px solid #222}
 
+/* HERO SECTION LÜKS TASARIM */
 .hero{padding:90px 0 70px;position:relative;overflow:hidden;background:radial-gradient(circle at 80% 30%,rgba(216,179,106,.12),transparent 45%),radial-gradient(circle at 20% 70%,rgba(166,31,38,.12),transparent 40%)}
 .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
 .badge-pill{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;background:rgba(216,179,106,0.1);border:1px solid rgba(216,179,106,0.3);color:var(--gold);font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:16px}
@@ -41,12 +42,8 @@ p{color:var(--muted)}
 .visual-overlay{position:absolute;bottom:0;left:0;right:0;padding:24px;background:linear-gradient(to top, rgba(5,5,6,0.95) 10%, transparent 100%)}
 .visual-tag{display:inline-block;padding:4px 10px;background:var(--gold);color:#111;font-size:11px;font-weight:800;border-radius:6px;margin-bottom:6px;text-transform:uppercase}
 
-section{padding:80px 0}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.card{background:rgba(17,17,20,.92);border:1px solid var(--line);border-radius:18px;padding:25px}.card h3{font-size:24px;margin:8px 0}
-.gallery-cta{margin-top:20px;text-align:center}
-.video-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.video-grid video{width:100%;aspect-ratio:16/10;object-fit:contain;border-radius:16px;border:1px solid var(--line);background:#000}.hours-table{display:grid;grid-template-columns:1fr 130px;gap:0;border-top:1px solid #303034}.hours-row{display:contents}.hours-row>div{padding:9px 0;border-bottom:1px solid #26262a}.hours-day{font-weight:700;color:var(--cream)}.hours-time{text-align:right;font-variant-numeric:tabular-nums;letter-spacing:.2px}.hours-row.closed .hours-day,.hours-row.closed .hours-time{color:#ef555d}.contact{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.faq details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:10px 0}.faq summary{cursor:pointer;font-weight:700}.cta{background:linear-gradient(120deg,#201a13,#101014);border:1px solid #3a3126;border-radius:24px;padding:40px;display:flex;justify-content:space-between;gap:25px;align-items:center}footer{border-top:1px solid var(--line);padding:30px 0;color:#89847d;font-size:13px}.foot{display:flex;justify-content:space-between}
+section{padding:80px 0}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.card{background:rgba(17,17,20,.92);border:1px solid var(--line);border-radius:18px;padding:25px}.card h3{font-size:24px;margin:8px 0}.gallery img{width:100%;height:330px;object-fit:cover;border-radius:16px;border:1px solid var(--line);display:block;transition:transform .2s,filter .2s}.gallery a:hover img{transform:translateY(-3px);filter:brightness(1.06)}.gallery .tile{position:relative}.gallery .tile span{display:none}.video-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.video-grid video{width:100%;aspect-ratio:16/10;object-fit:contain;border-radius:16px;border:1px solid var(--line);background:#000}.hours-table{display:grid;grid-template-columns:1fr 130px;gap:0;border-top:1px solid #303034}.hours-row{display:contents}.hours-row>div{padding:9px 0;border-bottom:1px solid #26262a}.hours-day{font-weight:700;color:var(--cream)}.hours-time{text-align:right;font-variant-numeric:tabular-nums;letter-spacing:.2px}.hours-row.closed .hours-day,.hours-row.closed .hours-time{color:#ef555d}.contact{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.product img{width:100%;height:300px;object-fit:contain;background:#0b0b0d;border-radius:14px 14px 0 0}.product .body{padding:16px}.source{font-size:12px;margin-top:20px;color:#8e877f}.source a{text-decoration:underline;color:var(--gold)}.faq details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:10px 0}.faq summary{cursor:pointer;font-weight:700}.cta{background:linear-gradient(120deg,#201a13,#101014);border:1px solid #3a3126;border-radius:24px;padding:40px;display:flex;justify-content:space-between;gap:25px;align-items:center}footer{border-top:1px solid var(--line);padding:30px 0;color:#89847d;font-size:13px}.foot{display:flex;justify-content:space-between}
 .float{position:fixed;right:18px;bottom:18px;z-index:40;background:#25D366;color:#fff;padding:12px 20px;border-radius:999px;font-weight:800;display:inline-flex;align-items:center;gap:8px;box-shadow:0 4px 15px rgba(37,211,102,0.4)}
-
-.quick-action-bar{display:none}
 
 @media(max-width:960px){
   .hero-grid{grid-template-columns:1fr;gap:35px}
@@ -54,58 +51,26 @@ section{padding:80px 0}.grid3{display:grid;grid-template-columns:repeat(3,1fr);g
   .visual-card img{height:380px}
   .navlinks{display:none}.menu-btn{display:block;flex:0 0 44px}.navin>.btn{display:none}.grid4{grid-template-columns:repeat(2,1fr)}.grid3,.contact,.video-grid{grid-template-columns:1fr 1fr}.cta{display:block}
 }
+@media(max-width:600px){.grid4,.grid3,.contact,.video-grid{grid-template-columns:1fr}.gallery img{height:420px}.hero{padding:60px 0 50px}h2{font-size:34px}.hours-table{grid-template-columns:1fr 110px}}
 
-@media(max-width:768px){
-  body{padding-bottom:70px}
-  .float{display:none!important}
-  .quick-action-bar{
-    display:flex;
-    position:fixed;
-    bottom:0;
-    left:0;
-    right:0;
-    z-index:999;
-    background:rgba(11,11,13,0.95);
-    backdrop-filter:blur(12px);
-    border-top:1px solid var(--line);
-    padding:8px 12px;
-    justify-content:space-around;
-    align-items:center;
-    box-shadow:0 -5px 25px rgba(0,0,0,0.5);
-  }
-  .quick-action-bar a{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:4px;
-    font-size:11px;
-    font-weight:600;
-    color:var(--muted);
-    flex:1;
-    text-align:center;
-    transition:color .2s;
-  }
-  .quick-action-bar a:hover{
-    color:var(--gold);
-  }
-  .quick-action-bar svg{
-    width:20px;
-    height:20px;
-  }
-  .quick-action-bar .action-btn-highlight{
-    background:var(--gold);
-    color:#111!important;
-    padding:8px 12px;
-    border-radius:12px;
-    font-weight:800;
-  }
-}
-
-@media(max-width:600px){.grid4,.grid3,.contact,.video-grid{grid-template-columns:1fr}.hero{padding:60px 0 50px}h2{font-size:34px}.hours-table{grid-template-columns:1fr 110px}}
-
+.booking-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:20px;align-items:stretch}
+.booking-form{background:rgba(17,17,20,.92);border:1px solid var(--line);border-radius:18px;padding:25px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form-field{display:flex;flex-direction:column;gap:7px}
+.form-field.full{grid-column:1/-1}
+.form-field label{font-size:13px;font-weight:700;color:var(--cream)}
+.form-field input,.form-field select,.form-field textarea{width:100%;border:1px solid #3a3a3f;background:#0b0b0d;color:var(--cream);border-radius:12px;padding:12px 13px;font:inherit;outline:none}
+.form-field input:focus,.form-field select:focus,.form-field textarea:focus{border-color:var(--gold)}
+.form-field textarea{min-height:105px;resize:vertical}
+.form-note{font-size:12px;color:#8e877f;margin:12px 0 0}
+.feature-list{display:grid;gap:10px;margin-top:18px}
+.feature-list div{padding:13px 15px;border:1px solid var(--line);border-radius:12px;background:#0d0d10}
+.feature-list strong{color:var(--gold)}
+.review-cta{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;background:linear-gradient(120deg,#151217,#0e0e10);border:1px solid var(--line);border-radius:22px;padding:30px}
 .before-note{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .before-note .card{min-height:170px;display:flex;flex-direction:column;justify-content:center}
-@media(max-width:900px){.before-note{grid-template-columns:1fr}}
+@media(max-width:900px){.booking-grid{grid-template-columns:1fr}.before-note{grid-template-columns:1fr}}
+@media(max-width:600px){.form-grid{grid-template-columns:1fr}.form-field.full{grid-column:auto}.review-cta{grid-template-columns:1fr}}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"HairSalon","name":"Ares Kuaför","url":"https://areskuafor.github.io/","telephone":"+90 553 129 33 38","image":"https://areskuafor.github.io/logo.png","address":{"@type":"PostalAddress","streetAddress":"Ahi Evran Mahallesi, Şehit Polis Köksal Demirci Caddesi","addressLocality":"Kırşehir","addressCountry":"TR"},"sameAs":["https://www.instagram.com/areskuaforkirsehir"],"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"08:00","closes":"20:00"}],"additionalProperty":{"@type":"PropertyValue","name":"Salı çalışma durumu","value":"Kapalı"}}
@@ -179,4 +144,165 @@ section{padding:80px 0}.grid3{display:grid;grid-template-columns:repeat(3,1fr);g
         </div>
       </div>
 
-      <div class="hero-visual
+      <div class="hero-visual">
+        <div class="visual-card">
+          <img src="logo.png" alt="Ares Kuaför Kırşehir Saç Tasarımı" style="padding:40px;background:#08080a;object-fit:contain" />
+          <div class="visual-overlay">
+            <span class="visual-tag">Lüks Salon Deneyimi</span>
+            <h3 style="margin:4px 0;font-size:20px;color:var(--cream)">Kişiye Özel Saç Tasarımı</h3>
+            <p style="font-size:13px;margin:0;color:var(--muted)">Tarzınızı yansıtan kesim, canlı renkler ve mikro kaynak çözümleri.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="hizmetler">
+  <div class="wrap">
+    <div class="kicker" style="color:var(--gold);font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:800">Hizmetler</div>
+    <h2>Kırşehir’de hizmetlerimiz</h2>
+    <p>Ares Kuaför’de saç tasarımı, renklendirme, mikro kaynak ve özel gün hazırlıkları için hizmetlerimizi inceleyebilirsiniz.</p>
+    <div class="grid4">
+      <a class="card" href="kadin-kuaforu.html"><h3>Kırşehir Kadın Kuaförü</h3><p>Saç kesimi, fön, renklendirme, bakım, makyaj ve özel gün hazırlıkları.</p></a>
+      <a class="card" href="ombre.html"><h3>Kırşehir Ombre</h3><p>Ombre, sombre ve balyaj seçenekleri hakkında bilgi alın.</p></a>
+      <a class="card" href="gelin-saci.html"><h3>Kırşehir Gelin Saçı</h3><p>Gelin saçı, nişan saçı ve özel gün saç tasarımı.</p></a>
+      <a class="card" href="mikro-kaynak.html"><h3>Kırşehir Mikro Kaynak</h3><p>Mikro kaynak uygulaması öncesi değerlendirme ve randevu.</p></a>
+    </div>
+  </div>
+</section>
+
+<section id="galeri">
+  <div class="wrap">
+    <div class="kicker" style="color:var(--gold);font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:800">Galeri</div>
+    <h2>Çalışmalarımız</h2>
+    <p>Instagram hesabımızdan güncel saç ve bakım çalışmalarımız.</p>
+
+    <!-- CANLI INSTAGRAM AKIŞI (BEHOLD WIDGET) -->
+    <behold-widget feed-id="auNu4w1EijP8wVtgxN3W"></behold-widget>
+    <script>
+      (() => {
+        if(window.__bhldScript)return;window.__bhldScript=true;
+        const d=document,s=d.createElement("script");s.type="module";
+        s.src="https://w.behold.so/widget.js";setTimeout(()=>{d.head.append(s);},0);
+      })();
+    </script>
+
+    <div style="margin-top:70px">
+      <div class="kicker" style="color:var(--gold);font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:800">Video Galeri</div>
+      <h2>Çalışmalarımızı hareketli görün.</h2>
+      <p>Video çalışmalarımızı izleyebilirsiniz.</p>
+      <div class="video-grid">
+        <video controls muted playsinline preload="metadata" src="IMG_4454.mp4"></video>
+        <video controls muted playsinline preload="metadata" src="IMG_5891.mp4"></video>
+        <video controls muted playsinline preload="metadata" src="IMG_5900.mp4"></video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="oncesi-sonrasi">
+  <div class="wrap">
+    <div class="kicker" style="color:var(--gold);font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:800">Öncesi / Sonrası</div>
+    <h2>Değişimi birlikte planlayalım.</h2>
+    <div class="before-note">
+      <div class="card">
+        <h3>Saçınızın başlangıç hali</h3>
+        <p>İşleme başlamadan önce saçınızın mevcut durumu değerlendirilir. Böylece uygulanabilecek işlemler daha doğru planlanır.</p>
+      </div>
+      <div class="card">
+        <h3>Hedeflediğiniz görünüm</h3>
+        <p>İstediğiniz renk, uzunluk veya hacmi konuşup size uygun işlem planını birlikte oluşturabilirsiniz.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="cta">
+      <div>
+        <div class="kicker" style="color:var(--gold);font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:800">Yeni görünümünüz için</div>
+        <h2>Randevunuzu ayıralım.</h2>
+        <p>WhatsApp veya Instagram'dan bize ulaşabilirsiniz.</p>
+      </div>
+      <a class="btn gold" href="https://wa.me/905531293338" rel="noopener" target="_blank">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="sss">
+  <div class="wrap faq">
+    <div class="kicker" style="color:var(--gold);font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:800">Sık Sorulan Sorular</div>
+    <h2>Merak ettikleriniz.</h2>
+    <details><summary>Randevu nasıl alabilirim?</summary><p>Randevu formunu doldurup WhatsApp'tan talebinizi gönderebilirsiniz. Randevu, salon tarafından onaylandığında kesinleşir.</p></details>
+    <details><summary>Salı günü açık mısınız?</summary><p>Hayır. Salı günleri kapalıyız. Diğer günler 08:00 – 20:00 arasında hizmet veriyoruz.</p></details>
+    <details><summary>Mikro kaynak için önceden görüşmek gerekir mi?</summary><p>Saçınızın mevcut durumu ve istediğiniz görünüm hakkında ön bilgi almak, uygulamanın planlanmasına yardımcı olur.</p></details>
+    <details><summary>Hizmet fiyatlarını nasıl öğrenebilirim?</summary><p>İşlemin türü ve saçın mevcut durumuna göre değişebileceğinden güncel bilgi için WhatsApp üzerinden iletişime geçebilirsiniz.</p></details>
+    <details><summary>Salon nerede?</summary><p>Ahi Evran Mahallesi, Şehit Polis Köksal Demirci Caddesi, Kırşehir.</p></details>
+  </div>
+</section>
+
+<section id="iletisim">
+  <div class="wrap">
+    <div class="kicker" style="color:var(--gold);font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:800">İletişim</div>
+    <h2>Bizi bulmak çok kolay.</h2>
+    <div class="contact">
+      <div class="card">
+        <h3>📍 Salonumuz</h3>
+        <p>Ahi Evran Mahallesi, Şehit Polis Köksal Demirci Caddesi, Kırşehir</p>
+        <a class="btn gold" href="https://maps.app.goo.gl/7nh9N5rrybAvzD2x8?g_st=ic" rel="noopener" target="_blank">Google Maps'te Yol Tarifi</a>
+      </div>
+      <div class="card">
+        <h3>💬 Randevu</h3>
+        <p>WhatsApp: 0553 129 33 38<br/>Instagram: @areskuaforkirsehir</p>
+      </div>
+      <div class="card hours">
+        <h3>🕒 Çalışma Saatleri</h3>
+        <div aria-label="Çalışma saatleri" class="hours-table">
+          <div class="hours-row"><div class="hours-day">Pazartesi</div><div class="hours-time">08:00 – 20:00</div></div>
+          <div class="hours-row closed"><div class="hours-day">Salı</div><div class="hours-time">Kapalı</div></div>
+          <div class="hours-row"><div class="hours-day">Çarşamba</div><div class="hours-time">08:00 – 20:00</div></div>
+          <div class="hours-row"><div class="hours-day">Perşembe</div><div class="hours-time">08:00 – 20:00</div></div>
+          <div class="hours-row"><div class="hours-day">Cuma</div><div class="hours-time">08:00 – 20:00</div></div>
+          <div class="hours-row"><div class="hours-day">Cumartesi</div><div class="hours-time">08:00 – 20:00</div></div>
+          <div class="hours-row"><div class="hours-day">Pazar</div><div class="hours-time">08:00 – 20:00</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <div>© Ares Kuaför · Kırşehir</div>
+    <div><a href="index.html">Ana Sayfa</a> · <a href="mikro-kaynak.html">Mikro Kaynak</a> · <a href="markalar.html">Markalar</a> · <a href="randevu.html">Randevu</a></div>
+  </div>
+</footer>
+
+<a class="float" href="https://wa.me/905531293338" rel="noopener" target="_blank">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+  WhatsApp
+</a>
+
+<script>
+(function(){
+  const b=document.querySelector('.menu-btn'),m=document.querySelector('.mobile-menu');
+  if(!b||!m)return;
+  b.addEventListener('click',()=>{
+    const open=m.classList.toggle('open');
+    b.setAttribute('aria-expanded',open?'true':'false');
+    b.textContent=open?'✕':'☰'
+  });
+  m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+    m.classList.remove('open');
+    b.setAttribute('aria-expanded','false');
+    b.textContent='☰'
+  }));
+})();
+</script>
+</body>
+</html>
