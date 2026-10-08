@@ -10,7 +10,13 @@
 <link rel="icon" href="/favicon.ico">
 <style>
 :root{--bg:#050506;--bg2:#0b0b0d;--card:#111114;--gold:#d8b36a;--gold-glow:rgba(216,179,106,0.18);--silver:#d7d9dc;--red:#a61f26;--cream:#f7f3ec;--muted:#b8b4ae;--line:#28282c}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 8% 8%,rgba(215,217,220,.09),transparent 28%),radial-gradient(circle at 92% 12%,rgba(166,31,38,.12),transparent 26%),linear-gradient(135deg,var(--bg),var(--bg2) 55%,#070708);color:var(--cream);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6;padding-bottom:0}body:before{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(120deg,transparent 0%,rgba(255,255,255,.025) 45%,transparent 70%);z-index:-1}a{color:inherit;text-decoration:none}.wrap{max-width:1180px;margin:auto;padding:0 22px}
+*{box-sizing:border-box}
+/* Kaydırma çubuğunu sabitleyerek tüm sayfalarda logo kaymasını tamamen önlüyoruz */
+html{scroll-behavior:smooth;overflow-y:scroll}
+body{margin:0;background:radial-gradient(circle at 8% 8%,rgba(215,217,220,.09),transparent 28%),radial-gradient(circle at 92% 12%,rgba(166,31,38,.12),transparent 26%),linear-gradient(135deg,var(--bg),var(--bg2) 55%,#070708);color:var(--cream);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6;padding-bottom:0}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(120deg,transparent 0%,rgba(255,255,255,.025) 45%,transparent 70%);z-index:-1}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:auto;padding:0 22px}
 
 /* Navbar ve Sabit Logo Düzeni */
 nav{position:sticky;top:0;z-index:50;background:rgba(5,5,6,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
@@ -29,18 +35,41 @@ nav{position:sticky;top:0;z-index:50;background:rgba(5,5,6,.92);backdrop-filter:
 .mobile-menu a{padding:11px 0;border-bottom:1px solid #222}
 
 .hero{padding:90px 0 70px;position:relative;overflow:hidden;background:radial-gradient(circle at 80% 30%,rgba(216,179,106,.12),transparent 45%),radial-gradient(circle at 20% 70%,rgba(166,31,38,.12),transparent 40%)}
-.kicker{color:var(--gold);font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:800}h1,h2,h3{font-family:Georgia,serif;font-weight:500}h1{font-size:clamp(42px,5.5vw,76px);line-height:1.05;margin:10px 0 20px}h2{font-size:42px;line-height:1.1}p{color:var(--muted)}section{padding:80px 0}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.card{background:rgba(17,17,20,.92);border:1px solid var(--line);border-radius:18px;padding:25px;transition:border-color .2s}.card:hover{border-color:var(--gold)}.card h3{font-size:22px;margin:8px 0;color:var(--cream)}.cta{background:linear-gradient(120deg,#201a13,#101014);border:1px solid #3a3126;border-radius:24px;padding:40px;display:flex;justify-content:space-between;gap:25px;align-items:center}footer{border-top:1px solid var(--line);padding:30px 0;color:#89847d;font-size:13px}.foot{display:flex;justify-content:space-between}
+.kicker{color:var(--gold);font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:800}
+h1,h2,h3{font-family:Georgia,serif;font-weight:500}
+h1{font-size:clamp(42px,5.5vw,76px);line-height:1.05;margin:10px 0 20px}
+h2{font-size:42px;line-height:1.1}
+p{color:var(--muted)}
+section{padding:80px 0}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.card{background:rgba(17,17,20,.92);border:1px solid var(--line);border-radius:18px;padding:25px;transition:border-color .2s}
+.card:hover{border-color:var(--gold)}
+.card h3{font-size:22px;margin:8px 0;color:var(--cream)}
+.cta{background:linear-gradient(120deg,#201a13,#101014);border:1px solid #3a3126;border-radius:24px;padding:40px;display:flex;justify-content:space-between;gap:25px;align-items:center}
+footer{border-top:1px solid var(--line);padding:30px 0;color:#89847d;font-size:13px}
+.foot{display:flex;justify-content:space-between}
 .float{position:fixed;right:18px;bottom:18px;z-index:40;background:#25D366;color:#fff;padding:12px 20px;border-radius:999px;font-weight:800;display:inline-flex;align-items:center;gap:8px;box-shadow:0 4px 15px rgba(37,211,102,0.4)}
 
 .price-box{margin-top:22px;background:linear-gradient(135deg,#17130f,#0d0d10);border:1px solid #5a472b;border-radius:20px;padding:35px;text-align:center}
-.price-box .price-icon{font-size:32px;margin-bottom:8px}.price-box h3{font-size:28px;margin:5px 0 8px;color:var(--gold)}
-.price-box p{max-width:680px;margin:0 auto 20px}.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.why-card{background:rgba(17,17,20,.92);border:1px solid var(--line);border-radius:18px;padding:24px}.why-card .icon{font-size:26px}
+.price-box .price-icon{font-size:32px;margin-bottom:8px}
+.price-box h3{font-size:28px;margin:5px 0 8px;color:var(--gold)}
+.price-box p{max-width:680px;margin:0 auto 20px}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.why-card{background:rgba(17,17,20,.92);border:1px solid var(--line);border-radius:18px;padding:24px}
+.why-card .icon{font-size:26px}
 .why-card h3{font-size:20px;margin:8px 0}
 
 .quick-action-bar{display:none}
 
-@media(max-width:960px){.navlinks{display:none}.menu-btn{display:block}.navin>.btn{display:none}.grid4{grid-template-columns:repeat(2,1fr)}.grid3,.why-grid{grid-template-columns:1fr 1fr}.cta{display:block}}
+@media(max-width:960px){
+  .navlinks{display:none}
+  .menu-btn{display:block}
+  .navin>.btn{display:none}
+  .grid4{grid-template-columns:repeat(2,1fr)}
+  .grid3,.why-grid{grid-template-columns:1fr 1fr}
+  .cta{display:block}
+}
 @media(max-width:768px){
   body{padding-bottom:70px}
   .float{display:none!important}
@@ -54,14 +83,17 @@ nav{position:sticky;top:0;z-index:50;background:rgba(5,5,6,.92);backdrop-filter:
   .quick-action-bar svg{width:20px;height:20px}
   .quick-action-bar .action-btn-highlight{background:var(--gold);color:#111!important;padding:8px 12px;border-radius:12px;font-weight:800}
 }
-@media(max-width:600px){.grid4,.grid3,.why-grid{grid-template-columns:1fr}.hero{padding:60px 0 50px}h2{font-size:34px}}
+@media(max-width:600px){
+  .grid4,.grid3,.why-grid{grid-template-columns:1fr}
+  .hero{padding:60px 0 50px}
+  h2{font-size:34px}
+}
 </style>
 </head>
 <body>
 <nav>
   <div class="wrap navin">
-    <!-- Logoyu esnek düzene (flex) uyarladık, böylece her sayfada aynı hizada kalır -->
-    <a class="logo" href="/index.html"><img alt="Ares Kuaför Kırşehir logosu" src="/logo.png"/></a>
+    <a class="logo" href="/index.html"><img alt="Ares Kuaför Kırşehir logosu" src="/logo.png"></a>
     <div class="navlinks">
       <a href="/index.html">Anasayfa</a>
       <a href="/hizmetler.html" class="active" style="color:var(--gold)">Hizmetler</a>
@@ -103,7 +135,7 @@ nav{position:sticky;top:0;z-index:50;background:rgba(5,5,6,.92);backdrop-filter:
       <a class="card" href="/mikro-kaynak.html"><h3>Kırşehir Mikro Kaynak</h3><p>Mikro kaynak uygulaması ve ön değerlendirme.</p></a>
       <div class="card"><h3>Saç Kesimi</h3><p>İstediğiniz görünüme uygun saç kesimi ve şekillendirme.</p></div>
       <div class="card"><h3>Fön</h3><p>Günlük veya özel günler için saç şekillendirme.</p></div>
-      <div class="card"><h3>Saç Boyama</h3><p>Saç renginזine ve istediğiniz görünüme uygun renklendirme.</p></div>
+      <div class="card"><h3>Saç Boyama</h3><p>Saç renginize ve istediğiniz görünüme uygun renklendirme.</p></div>
       <div class="card"><h3>Röfle</h3><p>Saç renginize uygun röfle seçenekleri.</p></div>
       <div class="card"><h3>Makyaj</h3><p>Özel gün ve davet hazırlıkları için makyaj.</p></div>
       <div class="card"><h3>Ağda</h3><p>Kişisel bakım hizmetleri.</p></div>
