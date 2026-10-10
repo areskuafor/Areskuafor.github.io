@@ -1,1 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://areskuafor.github.io/</loc></url><url><loc>https://areskuafor.github.io/mikro-kaynak.html</loc></url><url><loc>https://areskuafor.github.io/markalar.html</loc></url><url><loc>https://areskuafor.github.io/randevu.html</loc></url><url><loc>https://areskuafor.github.io/kadin-kuaforu.html</loc></url><url><loc>https://areskuafor.github.io/ombre.html</loc></url><url><loc>https://areskuafor.github.io/gelin-saci.html</loc></url><url><loc>https://areskuafor.github.io/hizmetler.html</loc></url></urlset>
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://areskuafor.com.tr/</loc></url>
+  <url><loc>https://areskuafor.com.tr/mikro-kaynak.html</loc></url>
+  <url><loc>https://areskuafor.com.tr/markalar.html</loc></url>
+  <url><loc>https://areskuafor.com.tr/randevu.html</loc></url>
+  <url><loc>https://areskuafor.com.tr/kadin-kuaforu.html</loc></url>
+  <url><loc>https://areskuafor.com.tr/ombre.html</loc></url>
+  <url><loc>https://areskuafor.com.tr/gelin-saci.html</loc></url>
+  <url><loc>https://areskuafor.com.tr/hizmetler.html</loc></url>
+</urlset>
+```
