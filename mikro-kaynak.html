@@ -61,8 +61,11 @@ section{padding:80px 0}
 .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
 .card{background:rgba(17,17,20,.92);border:1px solid var(--line);border-radius:18px;padding:25px}
 .card h3{font-size:24px;margin:8px 0}
-.gallery img{width:100%;height:330px;object-fit:cover;border-radius:16px;border:1px solid var(--line);display:block;transition:transform .2s,filter .2s}
-.gallery img:hover{transform:translateY(-3px);filter:brightness(1.06)}
+.gallery img,.gallery video{width:100%;height:330px;object-fit:cover;border-radius:16px;border:1px solid var(--line);display:block;background:#080808;transition:transform .2s,filter .2s}
+.gallery img:hover,.gallery video:hover{transform:translateY(-3px);filter:brightness(1.06)}
+.gallery video{object-fit:contain;controls:true}
+.gallery-card-title{margin:12px 2px 6px;color:var(--gold);font-weight:700;font-size:15px}
+.gallery-card-note{margin:0 2px;color:var(--muted);font-size:13px;line-height:1.5}
 .faq details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:10px 0}
 .faq summary{cursor:pointer;font-weight:700}
 footer{border-top:1px solid var(--line);padding:30px 0;color:#89847d;font-size:13px}
@@ -116,7 +119,7 @@ footer{border-top:1px solid var(--line);padding:30px 0;color:#89847d;font-size:1
 }
 
 @media(max-width:600px){
-  .gallery img{height:360px}
+  .gallery img,.gallery video{height:360px}
   .hero{padding:60px 0 50px}
   h2{font-size:34px}
 }
@@ -232,16 +235,59 @@ footer{border-top:1px solid var(--line);padding:30px 0;color:#89847d;font-size:1
   <div class="wrap">
     <div class="kicker">Mikro Kaynak İlham</div>
     <h2>Çalışmalarımızdan Örnekler</h2>
+    <p style="max-width:760px;color:var(--muted);line-height:1.7">Ares Kuaför'de yapılan gerçek mikro kaynak uygulamalarından videolar. İzlemek için videonun üzerindeki oynat düğmesine basabilirsiniz.</p>
     <div class="grid3 gallery">
-      <div style="position:relative">
-        <img alt="Mikro kaynak saç uzatma uygulaması" loading="lazy" src="https://dreamsbeautystore.com/cdn/shop/articles/ChatGPT_Image_Jan_11_2026_04_33_38_PM.png?v=1768225630"/>
+      <div style="position:relative;min-width:0">
+        <video controls playsinline preload="metadata" poster="mikro-kaynak-kapak-1.jpg" aria-label="225 adet mikro kaynak uygulaması videosu">
+          <source src="mikro-kaynak-video-1.mp4" type="video/mp4">
+          Tarayıcınız video oynatmayı desteklemiyor.
+        </video>
+        <div class="gallery-card-title">225 Adet Mikro Kaynak Uygulaması</div>
+        <p class="gallery-card-note">Mikro kaynak uygulamasından gerçek görüntüler.</p>
       </div>
-      <div style="position:relative">
-        <img alt="Mikro kaynak öncesi ve sonrası saç görünümü" loading="lazy" src="https://izmirhairbeauty.com/upload/images/mikro-medikal-kaynak/dogalsacmikrokaynak.jpg"/>
+      <div style="position:relative;min-width:0">
+        <video controls playsinline preload="metadata" poster="mikro-kaynak-kapak-2.jpg" aria-label="Fön yok maşa yok çünkü gerek yok videosu">
+          <source src="mikro-kaynak-video-2.mp4" type="video/mp4">
+          Tarayıcınız video oynatmayı desteklemiyor.
+        </video>
+        <div class="gallery-card-title">Fön Yok, Maşa Yok</div>
+        <p class="gallery-card-note">Doğal görünüm ve kolay şekil alan saçlar.</p>
       </div>
-      <div style="position:relative">
-        <img alt="Mikro kaynak saç uzatma dönüşümü" loading="lazy" src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80"/>
+      <div style="position:relative;min-width:0">
+        <video controls playsinline preload="metadata" poster="mikro-kaynak-kapak-3.jpg" aria-label="250 adet kumral seri mikro kaynak uygulaması videosu">
+          <source src="mikro-kaynak-video-3.mp4" type="video/mp4">
+          Tarayıcınız video oynatmayı desteklemiyor.
+        </video>
+        <div class="gallery-card-title">250 Adet Kumral Seri Mikro Kaynak</div>
+        <p class="gallery-card-note">Kumral saçlarda mikro kaynak uygulaması.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<section id="hayalet-kaynak">
+  <div class="wrap">
+    <div class="card" style="border-color:rgba(216,179,106,.42);background:linear-gradient(135deg,rgba(216,179,106,.08),var(--card));">
+      <div class="kicker">Mikro Kaynak & Hayalet Kaynak</div>
+      <h2>Hayalet kaynak nedir, mikro kaynaktan farkı nedir?</h2>
+      <p><strong>Hayalet kaynak</strong> (İngilizcede çoğunlukla <em>invisible extensions</em> olarak anılır), saç eklerinin bağlantı noktalarının mümkün olduğunca az fark edilmesini ve saçın içinde doğal görünmesini hedefleyen uygulamalar için kullanılan bir isimdir. Bu ifade her salonda aynı, tek bir teknik anlamına gelmeyebilir.</p>
+      <p><strong>Mikro kaynak</strong> ise ince tutamların küçük bağlantılarla doğal saça eklenmesini ifade eder. Bu nedenle mikro kaynak ile hayalet kaynak arasında her zaman keskin ve standart bir teknik ayrım bulunduğunu söylemek doğru değildir; kullanılan bağlantı yöntemi, saç tutamlarının yerleştirilmesi ve uygulama tekniği sonucu belirler.</p>
+      <div class="grid3" style="margin-top:18px">
+        <div style="padding:16px;border:1px solid var(--line);border-radius:12px">
+          <h3 style="margin-top:0">Doğal görünüm</h3>
+          <p style="margin-bottom:0">Bağlantıların saç rengi ve yapısıyla uyumlu, doğru yerleştirilmiş olması hedeflenir.</p>
+        </div>
+        <div style="padding:16px;border:1px solid var(--line);border-radius:12px">
+          <h3 style="margin-top:0">Hangi yöntem uygun?</h3>
+          <p style="margin-bottom:0">Karar; saçın yoğunluğu, uzunluğu, mevcut durumu ve istenen sonuç değerlendirilerek verilmelidir.</p>
+        </div>
+        <div style="padding:16px;border:1px solid var(--line);border-radius:12px">
+          <h3 style="margin-top:0">Uzman değerlendirmesi</h3>
+          <p style="margin-bottom:0">Uygulama öncesi saç analizi, uygun yöntemi ve kullanılacak saç miktarını belirlemeye yardımcı olur.</p>
+        </div>
+      </div>
+      <p style="margin:18px 0 0;color:var(--muted)">Ares Kuaför Kırşehir'de saçınıza uygun mikro kaynak seçeneğini görüşmek için randevu öncesinde saç analizi talep edebilirsiniz.</p>
+      <a class="btn" href="randevu.html" style="display:inline-block;margin-top:14px">Randevu ve Bilgi</a>
     </div>
   </div>
 </section>
@@ -261,7 +307,8 @@ footer{border-top:1px solid var(--line);padding:30px 0;color:#89847d;font-size:1
       <details><summary>8. Mikro kaynaklı saçlara fön ve şekillendirme yapılabilir mi?</summary><p>Evet. Mikro kaynak uygulamasından sonra saçlara fön, maşa ve düzleştirici gibi şekillendirme işlemleri uygulanabilir. Ancak yüksek ısıyı kaynak noktalarına doğrudan uygulamamak ve uygun bakım ürünleri kullanmak önemlidir.</p></details>
       <details><summary>9. Mikro kaynak çıkarılırken saçlara zarar verir mi?</summary><p>Profesyonel şekilde ve uygun ekipman kullanılarak çıkarıldığında saçın zarar görme riski oldukça düşüktür. Kaynakların kesinlikle evde veya bilinçsiz şekilde çıkarılmaması gerekir.</p></details>
       <details><summary>10. Mikro kaynak yaptırmadan önce saç analizi yapılır mı?</summary><p>Evet. Saçın mevcut durumu, yoğunluğu, uzunluğu ve yapısı değerlendirilerek uygulanabilecek kaynak türü ve uygun saç miktarı belirlenir. Böylece daha doğal ve saç yapısına uygun bir sonuç hedeflenir.</p></details>
-      <details><summary>11. Saçlar gerçek saç mı?</summary><p>Evet. Saçlarımız %100 gerçek saçdır.</p></details>
+      <details><summary>11. Hayalet kaynak ile mikro kaynak arasındaki fark nedir?</summary><p>Hayalet kaynak adı, bağlantı noktalarının mümkün olduğunca görünmez olmasını hedefleyen uygulamalar için kullanılır; ancak her salonda aynı tekniği ifade etmeyebilir. Kullanılan bağlantı yöntemi ve yerleştirme tekniği önemlidir. Size uygun seçenek saç analiziyle belirlenmelidir.</p></details>
+      <details><summary>12. Saçlar gerçek saç mı?</summary><p>Evet. Uygulamada kullanılacak saçın türü ve özellikleri danışmanlık sırasında netleştirilir.</p></details>
     </div>
   </div>
 </section>
