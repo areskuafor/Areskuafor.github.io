@@ -63,6 +63,10 @@ section{padding:80px 0}
 .card h3{font-size:24px;margin:8px 0}
 .gallery img{width:100%;height:330px;object-fit:cover;border-radius:16px;border:1px solid var(--line);display:block;transition:transform .2s,filter .2s}
 .gallery img:hover{transform:translateY(-3px);filter:brightness(1.06)}
+.reel-cover{position:relative;display:block;overflow:hidden;border-radius:16px;border:1px solid rgba(216,179,106,.3);background:#111114}
+.reel-cover img{width:100%;height:330px;object-fit:cover;display:block;transition:transform .25s,filter .25s}
+.reel-cover:hover img{transform:scale(1.03);filter:brightness(.8)}
+.reel-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;padding-left:4px;background:rgba(216,179,106,.94);color:#111;font-size:23px;box-shadow:0 4px 22px rgba(0,0,0,.45)}
 .faq details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:10px 0}
 .faq summary{cursor:pointer;font-weight:700}
 /* Hayalet kaynak bilgi alanı */
@@ -124,7 +128,7 @@ footer{border-top:1px solid var(--line);padding:30px 0;color:#89847d;font-size:1
 }
 
 @media(max-width:600px){
-  .gallery img{height:360px}
+  .gallery img,.reel-cover img{height:360px}
   .hero{padding:60px 0 50px}
   h2{font-size:34px}
 }
@@ -278,15 +282,18 @@ footer{border-top:1px solid var(--line);padding:30px 0;color:#89847d;font-size:1
     <div class="kicker">Mikro Kaynak İlham</div>
     <h2>Çalışmalarımızdan Örnekler</h2>
     <div class="grid3 gallery">
-      <div style="position:relative">
-        <img alt="Mikro kaynak saç uzatma uygulaması" loading="lazy" src="https://dreamsbeautystore.com/cdn/shop/articles/ChatGPT_Image_Jan_11_2026_04_33_38_PM.png?v=1768225630"/>
-      </div>
-      <div style="position:relative">
-        <img alt="Mikro kaynak öncesi ve sonrası saç görünümü" loading="lazy" src="https://izmirhairbeauty.com/upload/images/mikro-medikal-kaynak/dogalsacmikrokaynak.jpg"/>
-      </div>
-      <div style="position:relative">
-        <img alt="Mikro kaynak saç uzatma dönüşümü" loading="lazy" src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80"/>
-      </div>
+      <a class="reel-cover" href="https://www.instagram.com/areskuaforkirsehir/reel/DbqtP4wNBfU/" target="_blank" rel="noopener noreferrer" aria-label="Ares Kuaför mikro kaynak çalışmasını Instagram'da izle">
+        <img alt="Ares Kuaför mikro kaynak çalışması – Instagram Reels kapağı" loading="lazy" src="https://www.instagram.com/p/DbqtP4wNBfU/media/?size=l" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&amp;fit=crop&amp;w=800&amp;q=80';"/>
+        <span class="reel-play" aria-hidden="true">▶</span>
+      </a>
+      <a class="reel-cover" href="https://www.instagram.com/areskuaforkirsehir/reel/DP4DGI-CNvo/" target="_blank" rel="noopener noreferrer" aria-label="Ares Kuaför saç uygulamasını Instagram'da izle">
+        <img alt="Ares Kuaför saç uygulaması – Instagram Reels kapağı" loading="lazy" src="https://www.instagram.com/p/DP4DGI-CNvo/media/?size=l" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&amp;fit=crop&amp;w=800&amp;q=80';"/>
+        <span class="reel-play" aria-hidden="true">▶</span>
+      </a>
+      <a class="reel-cover" href="https://www.instagram.com/areskuaforkirsehir/reel/C7HcMu5o9kh/" target="_blank" rel="noopener noreferrer" aria-label="Ares Kuaför saç dönüşümünü Instagram'da izle">
+        <img alt="Ares Kuaför saç dönüşümü – Instagram Reels kapağı" loading="lazy" src="https://www.instagram.com/p/C7HcMu5o9kh/media/?size=l" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&amp;fit=crop&amp;w=800&amp;q=80';"/>
+        <span class="reel-play" aria-hidden="true">▶</span>
+      </a>
     </div>
   </div>
 </section>
