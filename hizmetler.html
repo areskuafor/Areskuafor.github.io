@@ -36,10 +36,11 @@ h1{font-size:clamp(42px,5.5vw,76px);line-height:1.05;margin:10px 0 20px}
 h2{font-size:42px;line-height:1.1}
 p{color:var(--muted)}
 section{padding:80px 0}
-.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.card{background:rgba(17,17,20,.92);border:1px solid var(--line);border-radius:18px;padding:25px;transition:border-color .2s;display:flex;flex-direction:column;justify-content:space-between}
-.card:hover{border-color:var(--gold)}
-.card h3{font-size:22px;margin:8px 0;color:var(--cream)}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;align-items:stretch}
+.card{background:rgba(17,17,20,.92);border:1px solid var(--line);border-radius:18px;padding:25px;transition:all .25s ease;display:flex;flex-direction:column;justify-content:flex-start;height:100%}
+.card:hover{border-color:var(--gold);transform:translateY(-3px)}
+.card h3{font-size:22px;margin:0 0 10px 0;color:var(--cream)}
+.card p{margin:0;font-size:14px}
 .cta{background:linear-gradient(120deg,#201a13,#101014);border:1px solid #3a3126;border-radius:24px;padding:40px;display:flex;justify-content:space-between;gap:25px;align-items:center}
 footer{border-top:1px solid var(--line);padding:30px 0;color:#89847d;font-size:13px}
 .foot{display:flex;justify-content:space-between}
@@ -103,18 +104,18 @@ footer{border-top:1px solid var(--line);padding:30px 0;color:#89847d;font-size:1
 <section>
   <div class="wrap">
     <div class="grid4">
-      <a class="card" href="/kadin-kuaforu.html"><h3>Kırşehir Kadın Kuaförü</h3><p>Genel kadın kuaförü, saç tasarım ve kişisel bakım hizmetlerimiz.</p></a>
-      <a class="card" href="/ombre.html"><h3>Kırşehir Ombre</h3><p>Ombre, sombre ve balyaj uygulamaları hakkında bilgi alın.</p></a>
-      <a class="card" href="/perma.html"><h3>Kırşehir Perma</h3><p>Kalıcı dalgalı saçlar, hacimli bukleler ve profesyonel perma uygulamaları.</p></a>
-      <a class="card" href="/gelin-saci.html"><h3>Kırşehir Gelin Saçı</h3><p>Gelin, nişan ve özel günler için saç tasarımı.</p></a>
-      <a class="card" href="/mikro-kaynak.html"><h3>Kırşehir Mikro Kaynak</h3><p>Mikro kaynak uygulaması ve ön değerlendirme.</p></a>
-      <div class="card"><h3>Saç Kesimi</h3><p>İstediğiniz görünüme uygun saç kesimi ve şekillendirme.</p></a>
-      <div class="card"><h3>Fön</h3><p>Günlük veya özel günler için saç şekillendirme.</p></a>
-      <div class="card"><h3>Saç Boyama</h3><p>Saç renginize ve istediğiniz görünüme uygun renklendirme.</p></a>
-      <div class="card"><h3>Röfle</h3><p>Saç renginize uygun röfle seçenekleri.</p></a>
-      <div class="card"><h3>Makyaj</h3><p>Özel gün ve davet hazırlıkları için makyaj.</p></a>
-      <div class="card"><h3>Kaş Tasarımı</h3><p>Yüzünüze uygun kaş görünümü için bakım ve şekillendirme.</p></a>
-      <div class="card"><h3>Manikür &amp; Pedikür</h3><p>El ve ayak bakımı için kişisel bakım hizmetleri.</p></a>
+      <div class="card"><h3>Kırşehir Kadın Kuaförü</h3><p>Genel kadın kuaförü, saç tasarım ve kişisel bakım hizmetlerimiz.</p></div>
+      <div class="card"><h3>Kırşehir Ombre</h3><p>Ombre, sombre ve balyaj uygulamaları hakkında bilgi alın.</p></div>
+      <div class="card"><h3>Kırşehir Perma</h3><p>Kalıcı dalgalı saçlar, hacimli bukleler ve profesyonel perma uygulamaları.</p></div>
+      <div class="card"><h3>Kırşehir Gelin Saçı</h3><p>Gelin, nişan ve özel günler için saç tasarımı.</p></div>
+      <div class="card"><h3>Kırşehir Mikro Kaynak</h3><p>Mikro kaynak uygulaması ve ön değerlendirme.</p></div>
+      <div class="card"><h3>Saç Kesimi</h3><p>İstediğiniz görünüme uygun saç kesimi ve şekillendirme.</p></div>
+      <div class="card"><h3>Fön</h3><p>Günlük veya özel günler için saç şekillendirme.</p></div>
+      <div class="card"><h3>Saç Boyama</h3><p>Saç renginize ve istediğiniz görünüme uygun renklendirme.</p></div>
+      <div class="card"><h3>Röfle</h3><p>Saç renginize uygun röfle seçenekleri.</p></div>
+      <div class="card"><h3>Makyaj</h3><p>Özel gün ve davet hazırlıkları için makyaj.</p></div>
+      <div class="card"><h3>Kaş Tasarımı</h3><p>Yüzünüze uygun kaş görünümü için bakım ve şekillendirme.</p></div>
+      <div class="card"><h3>Manikür &amp; Pedikür</h3><p>El ve ayak bakımı için kişisel bakım hizmetleri.</p></div>
     </div>
   </div>
 </section>
