@@ -1,3 +1,8 @@
+
 User-agent: *
 Allow: /
-Sitemap: https://areskuafor.github.io/sitemap.xml
+
+User-agent: OAI-SearchBot
+Allow: /
+
+Sitemap: https://areskuafor.com.tr/sitemap.xml
