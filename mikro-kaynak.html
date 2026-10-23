@@ -127,6 +127,16 @@ footer{border-top:1px solid var(--line);padding:30px 0;color:#89847d;font-size:1
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Service","name":"Mikro Kaynak","serviceType":"Mikro kaynak saç uygulaması","provider":{"@type":"HairSalon","name":"Ares Kuaför","url":"https://areskuafor.com.tr/","telephone":"+90 553 129 33 38","address":{"@type":"PostalAddress","streetAddress":"Ahi Evran Mahallesi, Şehit Polis Köksal Demirci Caddesi","addressLocality":"Kırşehir","addressCountry":"TR"}},"areaServed":"Kırşehir"}
 </script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4QZ3QC3LW8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4QZ3QC3LW8');
+</script>
 </head>
 <body>
 <nav>
@@ -354,6 +364,21 @@ footer{border-top:1px solid var(--line);padding:30px 0;color:#89847d;font-size:1
     b.textContent='☰'
   }));
 })();
+</script>
+
+<script>
+/* Google Analytics: WhatsApp, arama ve yol tarifi tıklamaları */
+document.addEventListener('click',function(e){
+  const a=e.target.closest('a'); if(!a||typeof gtag!=='function')return;
+  const h=a.getAttribute('href')||'';
+  let ev=null;
+  if(h.indexOf('wa.me')>-1)ev='whatsapp_click';
+  else if(h.indexOf('tel:')===0)ev='phone_click';
+  else if(h.indexOf('maps.app.goo.gl')>-1||h.indexOf('google.com/maps')>-1)ev='directions_click';
+  if(!ev)return;
+  const loc=a.closest('.quick-action-bar')?'mobil_alt_cubuk':a.closest('.hero')?'hero':a.classList.contains('float')?'yuzen_buton':a.closest('nav')?'menu':'diger';
+  gtag('event',ev,{link_location:loc,link_url:h,page_name:'mikro-kaynak',transport_type:'beacon'});
+});
 </script>
 </body>
 </html>
