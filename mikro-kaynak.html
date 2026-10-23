@@ -61,7 +61,8 @@ section{padding:80px 0}
 .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
 .card{background:rgba(17,17,20,.92);border:1px solid var(--line);border-radius:18px;padding:25px}
 .card h3{font-size:24px;margin:8px 0}
-.gallery img,.gallery video{width:100%;height:330px;object-fit:cover;border-radius:16px;border:1px solid var(--line);display:block;background:#080808;transition:transform .2s,filter .2s}
+.gallery img,.gallery video{width:100%;height:330px;object-fit:cover;border-radius:16px;border:1px solid var(--line);display:block;background:transparent;transition:transform .2s,filter .2s}
+.gallery video{aspect-ratio:9/16;height:auto;max-height:520px;object-fit:contain;background:transparent}
 .gallery img:hover,.gallery video:hover{transform:translateY(-3px);filter:brightness(1.06)}
 .gallery video{object-fit:contain;controls:true}
 .gallery-card-title{margin:12px 2px 6px;color:var(--gold);font-weight:700;font-size:15px}
@@ -119,7 +120,8 @@ footer{border-top:1px solid var(--line);padding:30px 0;color:#89847d;font-size:1
 }
 
 @media(max-width:600px){
-  .gallery img,.gallery video{height:360px}
+  .gallery img{height:360px}
+  .gallery video{height:auto;max-height:520px;aspect-ratio:9/16;object-fit:contain}
   .hero{padding:60px 0 50px}
   h2{font-size:34px}
 }
