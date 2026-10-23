@@ -74,6 +74,15 @@ section{padding:80px 0}
 .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
 .card{background:rgba(17,17,20,.92);border:1px solid var(--line);border-radius:18px;padding:25px}
 .card h3{font-size:24px;margin:8px 0}
+/* Ana sayfadaki hizmet kartlarının tıklanabilir olduğu belli olsun */
+.service-card{position:relative;display:flex;flex-direction:column;min-height:210px;border-color:rgba(216,179,106,.55);transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease,background .22s ease}
+.service-card h3{color:var(--cream);transition:color .2s ease}
+.service-card::after{content:"DETAYLARI İNCELE  →";display:inline-flex;align-items:center;align-self:flex-start;margin-top:auto;padding-top:16px;color:var(--gold);font-size:12px;font-weight:800;letter-spacing:.5px}
+.service-card:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+@media(hover:hover) and (pointer:fine){
+  .service-card:hover{transform:translateY(-5px);border-color:var(--gold);box-shadow:0 12px 28px rgba(216,179,106,.14);background:rgba(24,20,15,.96)}
+  .service-card:hover h3{color:var(--gold)}
+}
 .gallery img{width:100%;height:330px;object-fit:cover;border-radius:16px;border:1px solid var(--line);display:block;transition:transform .2s,filter .2s}
 .gallery a:hover img{transform:translateY(-3px);filter:brightness(1.06)}
 .gallery .tile{position:relative}
@@ -292,10 +301,10 @@ gtag('js',new Date());gtag('config','G-4QZ3QC3LW8');
     <h2>Kırşehir’de hizmetlerimiz</h2>
     <p>Ares Kuaför’de saç tasarımı, renklendirme, mikro kaynak ve özel gün hazırlıkları için hizmetlerimizi inceleyebilirsiniz. <a href="kadin-kuaforu.html" style="color:var(--gold);text-decoration:underline;">Kırşehir kadın kuaförü</a> hizmetlerimizi, <a href="ombre.html" style="color:var(--gold);text-decoration:underline;">ombre ve balyaj</a> seçeneklerimizi, <a href="gelin-saci.html" style="color:var(--gold);text-decoration:underline;">gelin saçı</a> tasarımlarımızı ve <a href="mikro-kaynak.html" style="color:var(--gold);text-decoration:underline;">mikro kaynak</a> uygulamalarımızı ilgili sayfalardan ayrıntılı inceleyebilirsiniz.</p>
     <div class="grid4">
-      <a class="card" href="kadin-kuaforu.html"><h3>Kırşehir Kadın Kuaförü</h3><p>Saç kesimi, fön, renklendirme, bakım, makyaj ve özel gün hazırlıkları.</p></a>
-      <a class="card" href="ombre.html"><h3>Kırşehir Ombre</h3><p>Ombre, sombre ve balyaj seçenekleri hakkında bilgi alın.</p></a>
-      <a class="card" href="gelin-saci.html"><h3>Kırşehir Gelin Saçı</h3><p>Gelin saçı, nişan saçı ve özel gün saç tasarımı.</p></a>
-      <a class="card" href="mikro-kaynak.html"><h3>Kırşehir Mikro Kaynak</h3><p>Mikro kaynak uygulaması öncesi değerlendirme ve randevu.</p></a>
+      <a class="card service-card" href="kadin-kuaforu.html"><h3>Kırşehir Kadın Kuaförü</h3><p>Saç kesimi, fön, renklendirme, bakım, makyaj ve özel gün hazırlıkları.</p></a>
+      <a class="card service-card" href="ombre.html"><h3>Kırşehir Ombre</h3><p>Ombre, sombre ve balyaj seçenekleri hakkında bilgi alın.</p></a>
+      <a class="card service-card" href="gelin-saci.html"><h3>Kırşehir Gelin Saçı</h3><p>Gelin saçı, nişan saçı ve özel gün saç tasarımı.</p></a>
+      <a class="card service-card" href="mikro-kaynak.html"><h3>Kırşehir Mikro Kaynak</h3><p>Mikro kaynak uygulaması öncesi değerlendirme ve randevu.</p></a>
     </div>
   </div>
 </section>
