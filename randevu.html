@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Randevu | Ares Kuaför Kırşehir</title>
-<meta name="description" content="Ares Kuaför Kırşehir randevu formu. Hizmet, tarih ve saat bilgilerinizi göndererek WhatsApp üzerinden randevu talebi oluşturun.">
+<title>Kırşehir Kuaför Randevusu | Ares Kuaför</title>
+<meta name="description" content="Kırşehir kuaför randevusu: Ares Kuaför'e hizmet, tarih ve saat bilgilerinizi WhatsApp ile iletin. Salı günleri kapalı, diğer günler 08:00–20:00.">
 <link rel="canonical" href="https://areskuafor.com.tr/randevu.html">
 <link rel="stylesheet" href="/menu.css"/>
 <script src="/menu.js" defer></script>
@@ -19,12 +19,38 @@ body{margin:0;background:radial-gradient(circle at 8% 8%,rgba(215,217,220,.09),t
 .kicker{color:var(--gold);font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:800}h1,h2,h3{font-family:Georgia,serif;font-weight:500}h1{font-size:clamp(42px,5.5vw,76px);line-height:1.05;margin:10px 0 20px}h2{font-size:42px;line-height:1.1}p{color:var(--muted)}section{padding:80px 0}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.card{background:rgba(17,17,20,.92);border:1px solid var(--line);border-radius:18px;padding:25px}.card h3{font-size:24px;margin:8px 0}
 .float{position:fixed;right:18px;bottom:18px;z-index:40;background:#25D366;color:#fff;padding:12px 20px;border-radius:999px;font-weight:800;display:inline-flex;align-items:center;gap:8px;box-shadow:0 4px 15px rgba(37,211,102,0.4)}
 .quick-action-bar{display:none}
+
+/* Form alanları */
+.field{display:flex;flex-direction:column;font-size:13px;font-weight:700}
+.field input,.field select,.field textarea{width:100%;padding:12px 14px;margin-top:6px;background:#0b0b0d;color:#fff;border:1px solid #3a3a3f;border-radius:12px;outline:none;font:inherit;font-weight:400;font-size:15px}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--gold)}
+.field input:user-invalid,.field select:user-invalid{border-color:var(--red)}
+.field-error{color:#ff8a8f;font-size:12.5px;font-weight:600;margin-top:6px;min-height:0}
+.field-error:empty{display:none}
+.hours-note{display:inline-flex;align-items:center;gap:8px;margin-top:6px;padding:8px 16px;border:1px solid var(--line);border-radius:999px;background:rgba(17,17,20,.7);color:var(--cream);font-size:14px}
+.consent{display:flex;gap:12px;align-items:flex-start;margin-top:22px;font-size:13.5px;color:var(--muted);line-height:1.5;cursor:pointer}
+.consent input{margin-top:3px;width:18px;height:18px;flex-shrink:0;accent-color:var(--gold)}
+.success{display:none;margin-top:22px;padding:20px 22px;border-radius:16px;border:1px solid rgba(216,179,106,.5);background:var(--gold-glow)}
+.success.show{display:block}
+.success strong{color:var(--gold);font-size:17px;display:block;margin-bottom:6px}
+.success p{margin:0 0 8px;color:var(--cream);font-size:15px}
+.success a{color:var(--gold);text-decoration:underline;font-weight:700}
+.seo-text h2{font-size:30px;margin:0 0 14px}
+.seo-text h3{font-size:20px;margin:22px 0 6px}
+.seo-text a{color:var(--gold);text-decoration:underline}
+
 @media(max-width:960px){.grid3{grid-template-columns:1fr}}
 @media(max-width:768px){body{padding-bottom:70px}.float{display:none!important}.quick-action-bar{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:999;background:rgba(11,11,13,0.95);backdrop-filter:blur(12px);border-top:1px solid var(--line);padding:8px 12px;justify-content:space-around;align-items:center;box-shadow:0 -5px 25px rgba(0,0,0,0.5)}.quick-action-bar a{display:flex;flex-direction:column;align-items:center;gap:4px;font-size:11px;font-weight:600;color:var(--muted);flex:1;text-align:center}.quick-action-bar svg{width:20px;height:20px}.quick-action-bar .action-btn-highlight{background:var(--gold);color:#111!important;padding:8px 12px;border-radius:12px;font-weight:800}}
-@media(max-width:600px){.hero{padding:60px 0 50px}h2{font-size:34px}}
+@media(max-width:600px){.hero{padding:60px 0 50px}h2{font-size:34px}.seo-text h2{font-size:26px}}
 </style>
 </head>
 <body>
+
+<!-- WhatsApp ikonu (tek sefer tanımlı, aşağıda tekrar kullanılıyor) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa-icon" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.018.458.13.606.134.133.297.347.446.521.151.172.2.296.3.495.099.198.05.372-.025.521-.075.148-.669 1.611-.916 2.206-.242.579-.487.501-.669.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.173-1.29.173-1.414z"/></symbol>
+</svg>
+
 <!-- ORTAK MENÜ: menu.js tarafından doldurulur -->
 <nav id="site-nav" aria-label="Ana menü">
   <noscript>
@@ -44,9 +70,10 @@ body{margin:0;background:radial-gradient(circle at 8% 8%,rgba(215,217,220,.09),t
 
 <header class="hero">
   <div class="wrap">
-    <div class="kicker">Randevu</div>
-    <h1>Randevunuzu <span style="color:var(--gold)">oluşturun.</span></h1>
-    <p style="max-width:720px;font-size:18px">Hizmet, tarih ve saat tercihlerinizi yazın. Gönderdiğiniz bilgiler WhatsApp üzerinden Ares Kuaför'e iletilir. Randevu, salon tarafından onaylandığında kesinleşir.</p>
+    <div class="kicker">Kırşehir · Kuaför Randevusu</div>
+    <h1>Kırşehir kuaför <span style="color:var(--gold)">randevusu</span> oluşturun.</h1>
+    <p style="max-width:720px;font-size:18px">Ares Kuaför Kırşehir için hizmet, tarih ve saat tercihlerinizi yazın. Gönderdiğiniz bilgiler WhatsApp üzerinden salona iletilir. Randevu, salon tarafından onaylandığında kesinleşir.</p>
+    <div class="hours-note">🕒 Salı günleri kapalıyız · Diğer günler 08:00 – 20:00</div>
   </div>
 </header>
 
@@ -54,42 +81,108 @@ body{margin:0;background:radial-gradient(circle at 8% 8%,rgba(215,217,220,.09),t
   <section style="padding-top:20px">
     <div class="wrap">
       <div class="card" style="max-width:800px;margin:0 auto;padding:32px;border-radius:24px">
-        <form id="appointment-form">
+        <form id="appointment-form" novalidate>
           <div class="grid3">
-            <label style="display:flex;flex-direction:column;font-size:13px;font-weight:700">Ad Soyad
-              <input required name="name" placeholder="Örn: Ayşe Yılmaz" style="width:100%;padding:12px 14px;margin-top:6px;background:#0b0b0d;color:#fff;border:1px solid #3a3a3f;border-radius:12px;outline:none">
+            <label class="field" for="name">Ad Soyad
+              <input id="name" required name="name" autocomplete="name" placeholder="Örn: Ayşe Yılmaz">
             </label>
-            <label style="display:flex;flex-direction:column;font-size:13px;font-weight:700">Telefon
-              <input required name="phone" type="tel" placeholder="05XX XXX XX XX" style="width:100%;padding:12px 14px;margin-top:6px;background:#0b0b0d;color:#fff;border:1px solid #3a3a3f;border-radius:12px;outline:none">
-            </label>
-            <label style="display:flex;flex-direction:column;font-size:13px;font-weight:700">Hizmet
-              <select required name="service" style="width:100%;padding:12px 14px;margin-top:6px;background:#0b0b0d;color:#fff;border:1px solid #3a3a3f;border-radius:12px;outline:none">
+            <div>
+              <label class="field" for="phone">Telefon
+                <input id="phone" required name="phone" type="tel" inputmode="numeric" autocomplete="tel" maxlength="14" placeholder="05XX XXX XX XX" aria-describedby="phone-error">
+              </label>
+              <div class="field-error" id="phone-error" role="alert"></div>
+            </div>
+            <label class="field" for="service">Hizmet
+              <select id="service" required name="service">
                 <option value="">Seçiniz</option>
-                <option>Saç Kesim &amp; Şekillendirme</option>
-                <option>Renk &amp; Renklendirme</option>
-                <option>Saç Bakımı</option>
-                <option>Mikro Kaynak</option>
-                <option>Özel Gün Hazırlığı</option>
-                <option>Manikür &amp; Pedikür</option>
+                <optgroup label="Saç Kesim &amp; Şekillendirme">
+                  <option>Saç Kesimi</option>
+                  <option>Fön</option>
+                  <option>Saç Şekillendirme (Maşa / Dalga)</option>
+                </optgroup>
+                <optgroup label="Renk &amp; Renklendirme">
+                  <option>Saç Boyama</option>
+                  <option>Ombre</option>
+                  <option>Sombre</option>
+                  <option>Balyaj</option>
+                  <option>Röfle</option>
+                </optgroup>
+                <optgroup label="Saç Bakımı &amp; Kalıcı İşlemler">
+                  <option>Keratin Bakım</option>
+                  <option>Saç Bakımı / Onarım</option>
+                  <option>Perma</option>
+                </optgroup>
+                <optgroup label="Mikro Kaynak">
+                  <option>Mikro Kaynak Uygulaması</option>
+                  <option>Mikro Kaynak Bakım / Kontrol</option>
+                  <option>Mikro Kaynak Ön Danışmanlık</option>
+                </optgroup>
+                <optgroup label="Özel Gün Hazırlığı">
+                  <option>Gelin Saçı</option>
+                  <option>Nişan Saçı</option>
+                  <option>Özel Gün Saç Tasarımı</option>
+                  <option>Makyaj</option>
+                </optgroup>
+                <optgroup label="El &amp; Ayak Bakımı">
+                  <option>Manikür</option>
+                  <option>Pedikür</option>
+                  <option>Manikür &amp; Pedikür</option>
+                </optgroup>
+                <option>Diğer / Emin Değilim</option>
               </select>
             </label>
           </div>
           <div class="grid3" style="margin-top:16px">
-            <label style="display:flex;flex-direction:column;font-size:13px;font-weight:700">Tarih
-              <input required name="date" type="date" style="width:100%;padding:12px 14px;margin-top:6px;background:#0b0b0d;color:#fff;border:1px solid #3a3a3f;border-radius:12px;outline:none">
-            </label>
-            <label style="display:flex;flex-direction:column;font-size:13px;font-weight:700">Saat
-              <input required name="time" type="time" style="width:100%;padding:12px 14px;margin-top:6px;background:#0b0b0d;color:#fff;border:1px solid #3a3a3f;border-radius:12px;outline:none">
-            </label>
-            <label style="display:flex;flex-direction:column;font-size:13px;font-weight:700">Not
-              <textarea name="note" rows="1" placeholder="Ek bilgi..." style="width:100%;padding:12px 14px;margin-top:6px;background:#0b0b0d;color:#fff;border:1px solid #3a3a3f;border-radius:12px;outline:none;resize:vertical"></textarea>
+            <div>
+              <label class="field" for="date">Tarih
+                <input id="date" required name="date" type="date" aria-describedby="date-error">
+              </label>
+              <div class="field-error" id="date-error" role="alert"></div>
+            </div>
+            <div>
+              <label class="field" for="time">Saat
+                <input id="time" required name="time" type="time" min="08:00" max="20:00" aria-describedby="time-error">
+              </label>
+              <div class="field-error" id="time-error" role="alert"></div>
+            </div>
+            <label class="field" for="note">Not
+              <textarea id="note" name="note" rows="1" placeholder="Ek bilgi..."></textarea>
             </label>
           </div>
+
+          <label class="consent" for="consent">
+            <input id="consent" name="consent" type="checkbox" required>
+            <span>Adım, soyadım ve telefon numaramın randevu talebimin değerlendirilmesi ve tarafıma dönüş yapılması amacıyla işlenmesini kabul ediyorum.</span>
+            <!-- KVKK aydınlatma metni sayfanız hazır olunca yukarıdaki metne bağlantı ekleyin: <a href="/kvkk.html">Aydınlatma metni</a> -->
+          </label>
+          <div class="field-error" id="consent-error" role="alert"></div>
+
           <button class="btn gold" type="submit" style="width:100%;margin-top:24px;padding:14px;font-size:16px;cursor:pointer;border:none">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.018.458.13.606.134.133.297.347.446.521.151.172.2.296.3.495.099.198.05.372-.025.521-.075.148-.669 1.611-.916 2.206-.242.579-.487.501-.669.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.173-1.29.173-1.414z"/></svg>
+            <svg width="20" height="20" fill="currentColor" aria-hidden="true"><use href="#wa-icon"/></svg>
             WhatsApp'tan Randevu Talebi Gönder
           </button>
+
+          <div class="success" id="success" role="status" aria-live="polite">
+            <strong>✓ Randevu talebiniz hazırlandı</strong>
+            <p>WhatsApp penceresi açıldıysa mesajı <b>göndererek</b> talebinizi tamamlayın. Talebiniz salona ulaştığında en kısa sürede size dönüş yapılacaktır.</p>
+            <p>WhatsApp açılmadıysa <a id="wa-fallback" href="https://wa.me/905531293338" target="_blank" rel="noopener">buraya dokunarak</a> mesajı gönderebilirsiniz.</p>
+          </div>
         </form>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="card seo-text" style="max-width:800px;margin:0 auto;padding:32px;border-radius:24px">
+        <h2>Kırşehir Kuaför Randevusu Nasıl Alınır?</h2>
+        <p>Ares Kuaför Kırşehir'de randevu almak için yukarıdaki formu doldurmanız yeterli. Formdaki bilgiler WhatsApp mesajı olarak salona iletilir; randevunuz salon onayladığında kesinleşir. Salonumuz salı günleri kapalıdır, diğer günler 08:00 – 20:00 arasında hizmet veriyoruz.</p>
+
+        <h3>Hangi hizmetler için randevu alabilirsiniz?</h3>
+        <p>Kırşehir kadın kuaförü olarak <a href="kadin-kuaforu.html">saç kesimi ve şekillendirme</a>, <a href="ombre.html">ombre ve balyaj</a>, <a href="perma.html">perma</a>, <a href="keratinbakim.html">keratin bakım</a>, <a href="mikro-kaynak.html">mikro kaynak</a> ve <a href="gelin-saci.html">gelin saçı</a> hizmetleri için randevu talebi oluşturabilirsiniz. Hangi işlemin size uygun olduğundan emin değilseniz "Diğer / Emin Değilim" seçeneğini işaretleyip not alanına isteğinizi yazabilirsiniz.</p>
+
+        <h3>Randevu öncesi ipucu</h3>
+        <p>Ombre, mikro kaynak ve keratin gibi işlemlerde saçınızın güncel durumunu gösteren bir fotoğrafı WhatsApp'tan göndermeniz, işlem planının ve fiyat bilgisinin daha hızlı netleşmesini sağlar.</p>
       </div>
     </div>
   </section>
@@ -107,7 +200,7 @@ body{margin:0;background:radial-gradient(circle at 8% 8%,rgba(215,217,220,.09),t
 
 <!-- Masaüstü Sabit WhatsApp Butonu -->
 <a class="float" href="https://wa.me/905531293338" rel="noopener" target="_blank">
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.018.458.13.606.134.133.297.347.446.521.151.172.2.296.3.495.099.198.05.372-.025.521-.075.148-.669 1.611-.916 2.206-.242.579-.487.501-.669.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.173-1.29.173-1.414z"/></svg>
+  <svg width="20" height="20" fill="currentColor" aria-hidden="true"><use href="#wa-icon"/></svg>
   WhatsApp
 </a>
 
@@ -118,7 +211,7 @@ body{margin:0;background:radial-gradient(circle at 8% 8%,rgba(215,217,220,.09),t
     Ara
   </a>
   <a href="https://wa.me/905531293338" rel="noopener" target="_blank" style="color:#25D366">
-    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.018.458.13.606.134.133.297.347.446.521.151.172.2.296.3.495.099.198.05.372-.025.521-.075.148-.669 1.611-.916 2.206-.242.579-.487.501-.669.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.173-1.29.173-1.414z"/></svg>
+    <svg fill="currentColor" aria-hidden="true"><use href="#wa-icon"/></svg>
     WhatsApp
   </a>
   <a href="https://maps.app.goo.gl/7nh9N5rrybAvzD2x8?g_st=ic" rel="noopener" target="_blank">
@@ -129,12 +222,126 @@ body{margin:0;background:radial-gradient(circle at 8% 8%,rgba(215,217,220,.09),t
 </div>
 
 <script>
-document.getElementById('appointment-form').addEventListener('submit',function(e){
-  e.preventDefault();
-  const f=new FormData(this);
-  const msg=`Merhaba Ares Kuaför, randevu talebi oluşturmak istiyorum.%0A%0AAd Soyad: ${encodeURIComponent(f.get('name'))}%0ATelefon: ${encodeURIComponent(f.get('phone'))}%0AHizmet: ${encodeURIComponent(f.get('service'))}%0ATarih: ${encodeURIComponent(f.get('date'))}%0ASaat: ${encodeURIComponent(f.get('time'))}%0ANot: ${encodeURIComponent(f.get('note')||'Yok')}`;
-  window.open('https://wa.me/905531293338?text='+msg,'_blank');
-});
+(function(){
+  var form    = document.getElementById('appointment-form');
+  var phone   = document.getElementById('phone');
+  var date    = document.getElementById('date');
+  var time    = document.getElementById('time');
+  var consent = document.getElementById('consent');
+  var success = document.getElementById('success');
+  var fallback= document.getElementById('wa-fallback');
+
+  var pad = function(n){ return String(n).padStart(2,'0'); };
+
+  // Geçmiş tarihleri engelle (yerel saate göre bugün)
+  var now = new Date();
+  date.min = now.getFullYear() + '-' + pad(now.getMonth()+1) + '-' + pad(now.getDate());
+
+  function setError(input, errId, msg){
+    input.setCustomValidity(msg || '');
+    document.getElementById(errId).textContent = msg || '';
+  }
+
+  // ---- TELEFON: 0 ile başlamalı, 11 hane ----
+  function formatPhone(digits){
+    return [digits.slice(0,4), digits.slice(4,7), digits.slice(7,9), digits.slice(9,11)]
+      .filter(Boolean).join(' ');
+  }
+  function checkPhone(){
+    var d = phone.value.replace(/\D/g,'');
+    if (d.length === 0) { setError(phone,'phone-error',''); return; }
+    if (!/^0\d{10}$/.test(d)) {
+      setError(phone,'phone-error','Telefon numarası 0 ile başlamalı ve 11 haneli olmalıdır (örn. 0553 129 33 38).');
+    } else {
+      setError(phone,'phone-error','');
+    }
+  }
+  phone.addEventListener('input', function(){
+    var d = phone.value.replace(/\D/g,'').slice(0,11);
+    if (d.charAt(0) === '5') d = '0' + d;          // 5XX... yazılırsa başa 0 ekle
+    phone.value = formatPhone(d);
+    checkPhone();
+  });
+  phone.addEventListener('blur', checkPhone);
+
+  // ---- TARİH: salı günleri kapalı ----
+  function isTuesday(v){
+    if (!v) return false;
+    var p = v.split('-').map(Number);
+    return new Date(p[0], p[1]-1, p[2]).getDay() === 2;
+  }
+  function checkDate(){
+    if (isTuesday(date.value)) {
+      setError(date,'date-error','Salı günleri kapalıyız. Lütfen başka bir gün seçin.');
+    } else {
+      setError(date,'date-error','');
+    }
+  }
+  date.addEventListener('input', checkDate);
+  date.addEventListener('change', checkDate);
+
+  // ---- SAAT: 08:00 – 20:00 ----
+  function checkTime(){
+    var v = time.value;
+    if (v && (v < '08:00' || v > '20:00')) {
+      setError(time,'time-error','Çalışma saatlerimiz 08:00 – 20:00 arasındadır.');
+    } else {
+      setError(time,'time-error','');
+    }
+  }
+  time.addEventListener('input', checkTime);
+  time.addEventListener('change', checkTime);
+
+  // ---- RIZA ----
+  consent.addEventListener('change', function(){
+    document.getElementById('consent-error').textContent = '';
+  });
+
+  function trDate(v){
+    var p = v.split('-');
+    var gunler = ['Pazar','Pazartesi','Salı','Çarşamba','Perşembe','Cuma','Cumartesi'];
+    var g = gunler[new Date(+p[0], +p[1]-1, +p[2]).getDay()];
+    return p[2] + '.' + p[1] + '.' + p[0] + ' ' + g;
+  }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    checkPhone(); checkDate(); checkTime();
+
+    if (!consent.checked) {
+      document.getElementById('consent-error').textContent = 'Devam etmek için kişisel veri onayını işaretlemeniz gerekir.';
+    }
+    if (!form.checkValidity() || !consent.checked) {
+      var first = form.querySelector(':invalid') || consent;
+      first.focus();
+      if (first.reportValidity) first.reportValidity();
+      return;
+    }
+
+    var f = new FormData(form);
+    var text = [
+      'Merhaba Ares Kuaför, randevu talebi oluşturmak istiyorum.',
+      '',
+      'Ad Soyad: ' + f.get('name'),
+      'Telefon: '  + f.get('phone'),
+      'Hizmet: '   + f.get('service'),
+      'Tarih: '    + trDate(f.get('date')),
+      'Saat: '     + f.get('time'),
+      'Not: '      + (f.get('note') || 'Yok')
+    ].join('\n');
+    var url = 'https://wa.me/905531293338?text=' + encodeURIComponent(text);
+
+    fallback.href = url;
+    success.classList.add('show');
+    success.scrollIntoView({behavior:'smooth', block:'center'});
+
+    var w = window.open(url, '_blank');
+    if (!w) { window.location.href = url; }   // açılır pencere engellendiyse aynı sekmede aç
+
+    form.reset();
+    [phone, date, time].forEach(function(el){ el.setCustomValidity(''); });
+  });
+})();
 </script>
 </body>
 </html>
