@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -84,8 +85,6 @@ section{padding:80px 0}
 /* Masaüstü için yan yana 5 kutu düzeni */
 .grid5{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
 .card{background:rgba(17,17,20,.92);border:1px solid var(--line);border-radius:18px;padding:20px}
-.card h3{font-size:20px;margin:8px 0}
-.card p{font-size:13px}
 /* Ana sayfadaki hizmet kartlarının tıklanabilir olduğu belli olsun */
 .service-card{position:relative;display:flex;flex-direction:column;min-height:210px;border-color:rgba(216,179,106,.55);transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease,background .22s ease}
 .service-card h3{color:var(--cream);transition:color .2s ease}
@@ -107,6 +106,8 @@ section{padding:80px 0}
 .hours-day{font-weight:700;color:var(--cream)}
 .hours-time{text-align:right;font-variant-numeric:tabular-nums;letter-spacing:.2px}
 .hours-row.closed .hours-day,.hours-row.closed .hours-time{color:#ef555d}
+.hours-row.today>div{background:rgba(216,179,106,.08);color:var(--gold)}
+.hours-row.today .hours-day::after{content:" • Bugün";font-size:11px;font-weight:600}
 .contact{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .product img{width:100%;height:300px;object-fit:contain;background:#0b0b0d;border-radius:14px 14px 0 0}
 .product .body{padding:16px}
@@ -171,8 +172,6 @@ footer{border-top:1px solid var(--line);padding:30px 0;color:#89847d;font-size:1
 .open-status.open i{background:#25D366;box-shadow:0 0 8px #25D366}
 .open-status.closed{color:#ef555d;border-color:rgba(239,85,93,.4)}
 .open-status.closed i{background:#ef555d}
-.hours-row.today>div{background:rgba(216,179,106,.08);color:var(--gold)}
-.hours-row.today .hours-day::after{content:" • Bugün";font-size:11px;font-weight:600}
 
 /* Harita ve arama butonu */
 .map-wrap{margin-top:16px;border-radius:18px;overflow:hidden;border:1px solid var(--line)}
@@ -220,13 +219,13 @@ footer{border-top:1px solid var(--line);padding:30px 0;color:#89847d;font-size:1
 /* Logo kartı: logoyu büyüt, yazıyı logonun altına al */
 .visual-card img{height:auto!important;aspect-ratio:1/1;padding:12px!important;background:transparent!important}
 .visual-overlay{position:static;background:none;padding:0 24px 24px}
-
 </style>
+
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"HairSalon","name":"Ares Kuaför","url":"https://areskuafor.com.tr/","telephone":"+905531293338","image":"https://areskuafor.com.tr/logo.png","hasMap":"https://maps.app.goo.gl/7nh9N5rrybAvzD2x8?g_st=ic","address":{"@type":"PostalAddress","streetAddress":"Ahi Evran Mahallesi, Şehit Polis Köksal Demirci Caddesi","addressLocality":"Kırşehir","addressCountry":"TR"},"sameAs":["https://www.instagram.com/areskuaforkirsehir"],"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"08:00","closes":"20:00"}],"additionalProperty":{"@type":"PropertyValue","name":"Salı çalışma durumu","value":"Kapalı"}}
 </script>
 
-<!-- Google Analytics (G-4QZ3QC3LW8 yerine kendi Ölçüm Kimliğini yaz) -->
+<!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4QZ3QC3LW8"></script>
 <script>
 window.dataLayer=window.dataLayer||[];
@@ -253,7 +252,7 @@ gtag('js',new Date());gtag('config','G-4QZ3QC3LW8');
   </noscript>
 </nav>
 
-<!-- HERO BÖLÜMÜ -->
+<!-- HERO BÖLÜMÜ: LOGO VE TANITIM AYNI KALDI -->
 <header class="hero">
   <div class="wrap">
     <div class="hero-grid">
@@ -267,7 +266,7 @@ gtag('js',new Date());gtag('config','G-4QZ3QC3LW8');
         </p>
         <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center">
           <a class="btn gold" href="https://wa.me/905531293338" rel="noopener" target="_blank">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.2.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
             WhatsApp'tan Randevu Al
           </a>
           <a class="btn" href="https://www.instagram.com/areskuaforkirsehir" rel="noopener" target="_blank">
@@ -275,7 +274,7 @@ gtag('js',new Date());gtag('config','G-4QZ3QC3LW8');
             Instagram
           </a>
         </div>
-        
+
         <div class="open-status" data-open-status style="margin-top:18px"></div>
         <p style="margin-top:18px;font-size:13px;color:#999">📍 Ahi Evran · Şehit Polis Köksal Demirci Cd. · Kırşehir</p>
 
@@ -308,6 +307,7 @@ gtag('js',new Date());gtag('config','G-4QZ3QC3LW8');
   </div>
 </header>
 
+<!-- HİZMETLER -->
 <section id="hizmetler">
   <div class="wrap">
     <div class="kicker" style="color:var(--gold);font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:800">Hizmetler</div>
@@ -324,31 +324,38 @@ gtag('js',new Date());gtag('config','G-4QZ3QC3LW8');
   </div>
 </section>
 
+<!-- TAŞINAN INSTAGRAM GALERİSİ: HİZMET KARTLARININ HEMEN ALTI -->
 <section id="galeri">
   <div class="wrap">
-    <div class="kicker" style="color:var(--gold);font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:800">Galeri</div>
-    <h2>Çalışmalarımız</h2>
-    <p>Instagram hesabımızdan güncel saç ve bakım çalışmalarımız.</p>
+    <div class="kicker" style="color:var(--gold);font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:800">Instagram</div>
+    <h2>Gerçek çalışmalarımızı keşfedin</h2>
+    <p>Instagram hesabımızdan güncel saç ve bakım çalışmalarımızı inceleyebilirsiniz.</p>
 
-    <!-- CANLI İNSTAGRAM AKIŞI (BEHOLD WİDGET) -->
+    <!-- CANLI INSTAGRAM AKIŞI (BEHOLD WIDGET) -->
     <behold-widget feed-id="auNu4w1EijP8wVtgxN3W"></behold-widget>
     <script>
       (() => {
-        if(window.__bhldScript)return;window.__bhldScript=true;
-        const d=document,s=d.createElement("script");s.type="module";
-        s.src="https://w.behold.so/widget.js";setTimeout(()=>{d.head.append(s);},0);
+        if(window.__bhldScript)return;
+        window.__bhldScript=true;
+        const d=document,s=d.createElement("script");
+        s.type="module";
+        s.src="https://w.behold.so/widget.js";
+        setTimeout(()=>{d.head.append(s);},0);
       })();
     </script>
+  </div>
+</section>
 
-    <div style="margin-top:70px">
-      <div class="kicker" style="color:var(--gold);font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:800">Video Galeri</div>
-      <h2>Çalışmalarımızı hareketli görün.</h2>
-      <p>Video çalışmalarımızı izleyebilirsiniz.</p>
-      <div class="video-grid">
-        <video controls muted playsinline preload="metadata" src="/IMG_4454.mp4#t=0.1"></video>
-        <video controls muted playsinline preload="metadata" src="/IMG_5891.mp4#t=0.1"></video>
-        <video controls muted playsinline preload="metadata" src="/IMG_5900.mp4#t=0.1"></video>
-      </div>
+<!-- VİDEO GALERİSİ: VİDEOLAR AYNI KALDI -->
+<section id="video-galeri">
+  <div class="wrap">
+    <div class="kicker" style="color:var(--gold);font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:800">Video Galeri</div>
+    <h2>Çalışmalarımızı hareketli görün.</h2>
+    <p>Video çalışmalarımızı izleyebilirsiniz.</p>
+    <div class="video-grid">
+      <video controls muted playsinline preload="metadata" src="/IMG_4454.mp4#t=0.1"></video>
+      <video controls muted playsinline preload="metadata" src="/IMG_5891.mp4#t=0.1"></video>
+      <video controls muted playsinline preload="metadata" src="/IMG_5900.mp4#t=0.1"></video>
     </div>
   </div>
 </section>
@@ -381,7 +388,7 @@ gtag('js',new Date());gtag('config','G-4QZ3QC3LW8');
         <p>WhatsApp veya Instagram'dan bize ulaşabilirsiniz.</p>
       </div>
       <a class="btn gold" href="https://wa.me/905531293338" rel="noopener" target="_blank">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.2.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
         WhatsApp
       </a>
     </div>
@@ -447,7 +454,7 @@ gtag('js',new Date());gtag('config','G-4QZ3QC3LW8');
 </footer>
 
 <a class="float" href="https://wa.me/905531293338" rel="noopener" target="_blank">
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
   WhatsApp
 </a>
 
