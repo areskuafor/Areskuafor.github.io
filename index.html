@@ -76,12 +76,15 @@ p{color:var(--muted)}
 section{padding:80px 0}
 .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.card{background:rgba(17,17,20,.92);border:1px solid var(--line);border-radius:18px;padding:25px}
-.card h3{font-size:24px;margin:8px 0}
+/* Masaüstü için yan yana 5 kutu düzeni */
+.grid5{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.card{background:rgba(17,17,20,.92);border:1px solid var(--line);border-radius:18px;padding:20px}
+.card h3{font-size:20px;margin:8px 0}
+.card p{font-size:13px}
 /* Ana sayfadaki hizmet kartlarının tıklanabilir olduğu belli olsun */
 .service-card{position:relative;display:flex;flex-direction:column;min-height:210px;border-color:rgba(216,179,106,.55);transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease,background .22s ease}
 .service-card h3{color:var(--cream);transition:color .2s ease}
-.service-card::after{content:"DETAYLARI İNCELE  →";display:inline-flex;align-items:center;align-self:flex-start;margin-top:auto;padding-top:16px;color:var(--gold);font-size:12px;font-weight:800;letter-spacing:.5px}
+.service-card::after{content:"DETAYLARI İNCELE  →";display:inline-flex;align-items:center;align-self:flex-start;margin-top:auto;padding-top:16px;color:var(--gold);font-size:11px;font-weight:800;letter-spacing:.5px}
 .service-card:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
 @media(hover:hover) and (pointer:fine){
   .service-card:hover{transform:translateY(-5px);border-color:var(--gold);box-shadow:0 12px 28px rgba(216,179,106,.14);background:rgba(24,20,15,.96)}
@@ -118,12 +121,12 @@ footer{border-top:1px solid var(--line);padding:30px 0;color:#89847d;font-size:1
   .navlinks{display:none}
   .menu-btn{display:block;flex:0 0 44px}
   .navin>.btn{display:none}
-  .grid4{grid-template-columns:repeat(2,1fr)}
+  .grid4,.grid5{grid-template-columns:repeat(2,1fr)}
   .grid3,.contact,.video-grid{grid-template-columns:1fr 1fr}
   .cta{display:block}
 }
 @media(max-width:600px){
-  .grid4,.grid3,.contact,.video-grid{grid-template-columns:1fr}
+  .grid4,.grid5,.grid3,.contact,.video-grid{grid-template-columns:1fr}
   .gallery img{height:420px}
   .hero{padding:60px 0 50px}
   h2{font-size:34px}
@@ -235,6 +238,7 @@ gtag('js',new Date());gtag('config','G-4QZ3QC3LW8');
       <a href="kadin-kuaforu.html">Kadın Kuaförü</a>
       <a href="ombre.html">Ombre</a>
       <a href="perma.html">Perma</a>
+      <a href="keratinbakim.html">Keratin Bakım</a>
       <a href="mikro-kaynak.html">Mikro Kaynak</a>
       <a href="gelin-saci.html">Gelin Saçı</a>
       <a href="markalar.html">Markalar</a>
@@ -302,11 +306,12 @@ gtag('js',new Date());gtag('config','G-4QZ3QC3LW8');
   <div class="wrap">
     <div class="kicker" style="color:var(--gold);font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:800">Hizmetler</div>
     <h2>Kırşehir’de hizmetlerimiz</h2>
-    <p>Ares Kuaför’de saç tasarımı, renklendirme, mikro kaynak ve özel gün hazırlıkları için hizmetlerimizi inceleyebilirsiniz. <a href="kadin-kuaforu.html" style="color:var(--gold);text-decoration:underline;">Kırşehir kadın kuaförü</a> hizmetlerimizi, <a href="ombre.html" style="color:var(--gold);text-decoration:underline;">ombre ve balyaj</a> seçeneklerimizi, <a href="gelin-saci.html" style="color:var(--gold);text-decoration:underline;">gelin saçı</a> tasarımlarımızı, <a href="perma.html" style="color:var(--gold);text-decoration:underline;">perma</a> uygulamalarımızı ve <a href="mikro-kaynak.html" style="color:var(--gold);text-decoration:underline;">mikro kaynak</a> uygulamalarımızı ilgili sayfalardan ayrıntılı inceleyebilirsiniz.</p>
-    <div class="grid4">
+    <p>Ares Kuaför’de saç tasarımı, renklendirme, mikro kaynak ve özel gün hazırlıkları için hizmetlerimizi inceleyebilirsiniz. <a href="kadin-kuaforu.html" style="color:var(--gold);text-decoration:underline;">Kırşehir kadın kuaförü</a> hizmetlerimizi, <a href="ombre.html" style="color:var(--gold);text-decoration:underline;">ombre ve balyaj</a> seçeneklerimizi, <a href="gelin-saci.html" style="color:var(--gold);text-decoration:underline;">gelin saçı</a> tasarımlarımızı, <a href="perma.html" style="color:var(--gold);text-decoration:underline;">perma</a> uygulamalarımızı, <a href="keratinbakim.html" style="color:var(--gold);text-decoration:underline;">keratin bakım</a> hizmetimizi ve <a href="mikro-kaynak.html" style="color:var(--gold);text-decoration:underline;">mikro kaynak</a> uygulamalarımızı ilgili sayfalardan ayrıntılı inceleyebilirsiniz.</p>
+    <div class="grid5">
       <a class="card service-card" href="kadin-kuaforu.html"><h3>Kırşehir Kadın Kuaförü</h3><p>Saç kesimi, fön, renklendirme, bakım, makyaj ve özel gün hazırlıkları.</p></a>
       <a class="card service-card" href="ombre.html"><h3>Kırşehir Ombre</h3><p>Ombre, sombre ve balyaj seçenekleri hakkında bilgi alın.</p></a>
-      <a class="card service-card" href="gelin-saci.html"><h3>Kırşehir Gelin Saçı</h3><p>Gelin saçı, nişan saçı ve özel gün saç tasarımı.</p></a>
+      <a class="card service-card" href="perma.html"><h3>Kırşehir Perma</h3><p>Kalıcı dalgalı saçlar, hacimli bukleler ve perma uygulamaları.</p></a>
+      <a class="card service-card" href="keratinbakim.html"><h3>Keratin Bakım</h3><p>Yıpranmış saçlar için profesyonel onarım ve parlaklık kazandıran bakım.</p></a>
       <a class="card service-card" href="mikro-kaynak.html"><h3>Kırşehir Mikro Kaynak</h3><p>Mikro kaynak uygulaması öncesi değerlendirme ve randevu.</p></a>
     </div>
   </div>
@@ -442,7 +447,7 @@ gtag('js',new Date());gtag('config','G-4QZ3QC3LW8');
 <!-- MOBİL ALT SABİT HIZLI EYLEM ÇUBUĞU -->
 <div class="quick-action-bar">
   <a href="tel:+905531293338">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0-1 .45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
     Ara
   </a>
   <a href="https://wa.me/905531293338" class="action-btn-highlight" rel="noopener" target="_blank">
