@@ -8,15 +8,37 @@
 <meta name="robots" content="index,follow,max-image-preview:large">
 <link rel="canonical" href="https://areskuafor.com.tr/ombre.html">
 <link rel="icon" href="/favicon.ico">
+
+<!-- Ortak menü + footer (tüm sayfalarda aynı dosyalar) -->
+<link rel="stylesheet" href="/menu.css">
+<script src="/menu.js" defer></script>
+
 <style>
 :root{--bg:#050506;--bg2:#0b0b0d;--card:#111114;--gold:#d8b36a;--silver:#d7d9dc;--red:#a61f26;--cream:#f7f3ec;--muted:#b8b4ae;--line:#28282c}
-*{box-sizing:border-box}html{scroll-behavior:smooth;overflow-y:scroll}body{margin:0;background:radial-gradient(circle at 8% 8%,rgba(215,217,220,.09),transparent 28%),radial-gradient(circle at 92% 12%,rgba(166,31,38,.12),transparent 26%),linear-gradient(135deg,var(--bg),var(--bg2) 55%,#070708);color:var(--cream);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}body:before{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(120deg,transparent 0%,rgba(255,255,255,.025) 45%,transparent 70%);z-index:-1}a{color:inherit;text-decoration:none}.wrap{max-width:1180px;margin:auto;padding:0 22px}nav{position:sticky;top:0;z-index:50;background:rgba(5,5,6,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.navin{height:74px;display:flex;align-items:center;justify-content:space-between;gap:14px;position:relative}
-.logo{display:flex;align-items:center;z-index:60;flex-shrink:0}.logo img{height:56px;width:auto;object-fit:contain;display:block}
-.navlinks{display:flex;gap:20px;font-size:14px;align-items:center;margin-left:auto}.navlinks a:hover,.navlinks a.active{color:var(--gold)}
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 19px;border-radius:999px;border:1px solid #555;font-weight:700;transition:all .25s ease;flex-shrink:0}.btn:hover{transform:translateY(-2px)}.gold{background:var(--gold);color:#17130c!important;border-color:transparent}
-.menu-btn{display:none;margin-left:auto;position:relative;z-index:70;background:transparent;border:1px solid #4a4a4d;color:var(--cream);width:44px;height:44px;border-radius:10px;font-size:23px;cursor:pointer}
-.mobile-menu{display:none}.mobile-menu.open{display:flex;flex-direction:column;padding:10px 22px 18px;border-top:1px solid var(--line);background:#070708}.mobile-menu a{padding:11px 0;border-bottom:1px solid #222}
-.hero{padding:100px 0 70px;background:radial-gradient(circle at 75% 20%,rgba(166,31,38,.18),transparent 30%),radial-gradient(circle at 35% 10%,rgba(215,217,220,.09),transparent 28%)}.kicker{color:var(--gold);font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:800}h1,h2,h3{font-family:Georgia,serif;font-weight:500}h1{font-size:clamp(40px,6vw,72px);line-height:1.05;margin:15px 0 22px}h2{font-size:38px;line-height:1.1}p{color:var(--muted)}section{padding:70px 0}.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.card{background:rgba(17,17,20,.92);border:1px solid var(--line);border-radius:18px;padding:30px}.card h3{font-size:24px;margin:10px 0 12px;color:var(--cream)}.card p{font-size:15px;line-height:1.7}.faq details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin:12px 0}.faq summary{cursor:pointer;font-weight:700;font-size:17px}.cta{background:linear-gradient(120deg,#201a13,#101014);border:1px solid #3a3126;border-radius:24px;padding:40px;display:flex;justify-content:space-between;gap:25px;align-items:center}footer{border-top:1px solid var(--line);padding:30px 0;color:#89847d;font-size:13px}.foot{display:flex;justify-content:space-between}.float{position:fixed;right:18px;bottom:18px;z-index:40;background:#25D366;color:#07170d;padding:13px 18px;border-radius:999px;font-weight:800}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-y:scroll}
+body{margin:0;background:radial-gradient(circle at 8% 8%,rgba(215,217,220,.09),transparent 28%),radial-gradient(circle at 92% 12%,rgba(166,31,38,.12),transparent 26%),linear-gradient(135deg,var(--bg),var(--bg2) 55%,#070708);color:var(--cream);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(120deg,transparent 0%,rgba(255,255,255,.025) 45%,transparent 70%);z-index:-1}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:auto;padding:0 22px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 19px;border-radius:999px;border:1px solid #555;font-weight:700;transition:all .25s ease;flex-shrink:0}
+.btn:hover{transform:translateY(-2px)}
+.gold{background:var(--gold);color:#17130c!important;border-color:transparent}
+.hero{padding:100px 0 70px;background:radial-gradient(circle at 75% 20%,rgba(166,31,38,.18),transparent 30%),radial-gradient(circle at 35% 10%,rgba(215,217,220,.09),transparent 28%)}
+.kicker{color:var(--gold);font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:800}
+h1,h2,h3{font-family:Georgia,serif;font-weight:500}
+h1{font-size:clamp(40px,6vw,72px);line-height:1.05;margin:15px 0 22px}
+h2{font-size:38px;line-height:1.1}
+p{color:var(--muted)}
+section{padding:70px 0}
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.card{background:rgba(17,17,20,.92);border:1px solid var(--line);border-radius:18px;padding:30px}
+.card h3{font-size:24px;margin:10px 0 12px;color:var(--cream)}
+.card p{font-size:15px;line-height:1.7}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin:12px 0}
+.faq summary{cursor:pointer;font-weight:700;font-size:17px}
+.cta{background:linear-gradient(120deg,#201a13,#101014);border:1px solid #3a3126;border-radius:24px;padding:40px;display:flex;justify-content:space-between;gap:25px;align-items:center}
+.float{position:fixed;right:18px;bottom:18px;z-index:40;background:#25D366;color:#07170d;padding:13px 18px;border-radius:999px;font-weight:800}
 
 /* Galeri Stilleri */
 .real-gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;align-items:start;margin-top:25px}
@@ -27,7 +49,7 @@
 
 .quick-action-bar{display:none}
 
-@media(max-width:960px){.navlinks{display:none}.menu-btn{display:block;flex:0 0 44px}.navin>.btn{display:none}.grid2{grid-template-columns:1fr}.real-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}.cta{display:block}}
+@media(max-width:960px){.grid2{grid-template-columns:1fr}.real-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}.cta{display:block}}
 @media(max-width:768px){
   body{padding-bottom:70px}
   .float{display:none!important}
@@ -80,31 +102,21 @@
 </script>
 </head>
 <body>
-<nav>
-  <div class="wrap navin">
-    <a class="logo" href="/index.html"><img alt="Ares Kuaför Kırşehir logosu" src="/logo.png"/></a>
-    <div class="navlinks">
-      <a href="/index.html">Anasayfa</a>
-      <a href="/hizmetler.html">Hizmetler</a>
-      <a href="/index.html#galeri">Galeri</a>
-      <a href="/mikro-kaynak.html">Mikro Kaynak</a>
-      <a href="/perma.html">Perma</a>
-      <a href="/markalar.html">Markalar</a>
-      <a href="/index.html#iletisim">İletişim</a>
-      <a href="/randevu.html">Randevu</a>
+<!-- ORTAK MENÜ: menu.js tarafından doldurulur -->
+<nav id="site-nav" aria-label="Ana menü">
+  <noscript>
+    <div class="wrap" style="padding-top:14px;padding-bottom:14px;display:flex;gap:16px;flex-wrap:wrap">
+      <a href="/">Anasayfa</a>
+      <a href="hizmetler.html">Hizmetler</a>
+      <a href="kadin-kuaforu.html">Kadın Kuaförü</a>
+      <a href="ombre.html">Ombre</a>
+      <a href="perma.html">Perma</a>
+      <a href="mikro-kaynak.html">Mikro Kaynak</a>
+      <a href="gelin-saci.html">Gelin Saçı</a>
+      <a href="markalar.html">Markalar</a>
+      <a href="randevu.html">Randevu</a>
     </div>
-    <button aria-expanded="false" aria-label="Menüyü aç" class="menu-btn" type="button">☰</button>
-    <a class="btn gold" href="/randevu.html">Randevu</a>
-  </div>
-  <div class="mobile-menu">
-    <a href="/index.html">Anasayfa</a>
-    <a href="/hizmetler.html">Hizmetler</a>
-    <a href="/mikro-kaynak.html">Mikro Kaynak</a>
-    <a href="/perma.html">Perma</a>
-    <a href="/markalar.html">Markalar</a>
-    <a href="/index.html#iletisim">İletişim</a>
-    <a href="/randevu.html">Randevu</a>
-  </div>
+  </noscript>
 </nav>
 
 <header class="hero">
@@ -206,11 +218,14 @@
 </section>
 </main>
 
-<footer>
-  <div class="wrap foot">
-    <div>© Ares Kuaför · Kırşehir</div>
-    <div><a href="/index.html">Ana Sayfa</a> · <a href="/hizmetler.html">Hizmetler</a> · <a href="/perma.html">Perma</a> · <a href="/mikro-kaynak.html">Mikro Kaynak</a> · <a href="/randevu.html">Randevu</a></div>
-  </div>
+<!-- ORTAK FOOTER: menu.js tarafından doldurulur -->
+<footer id="site-footer">
+  <noscript>
+    <div class="wrap foot">
+      <div>© Ares Kuaför · Kırşehir</div>
+      <div><a href="/">Ana Sayfa</a> · <a href="hizmetler.html">Hizmetler</a> · <a href="perma.html">Perma</a> · <a href="mikro-kaynak.html">Mikro Kaynak</a> · <a href="randevu.html">Randevu</a></div>
+    </div>
+  </noscript>
 </footer>
 
 <a class="float" href="https://wa.me/905531293338" rel="noopener" target="_blank">💬 WhatsApp</a>
@@ -233,23 +248,6 @@
     Randevu
   </a>
 </div>
-
-<script>
-(function(){
-  const b=document.querySelector('.menu-btn'),m=document.querySelector('.mobile-menu');
-  if(!b||!m)return;
-  b.addEventListener('click',()=>{
-    const open=m.classList.toggle('open');
-    b.setAttribute('aria-expanded',open?'true':'false');
-    b.textContent=open?'✕':'☰'
-  });
-  m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
-    m.classList.remove('open');
-    b.setAttribute('aria-expanded','false');
-    b.textContent='☰'
-  }));
-})();
-</script>
 
 <script>
 /* Google Analytics: WhatsApp, arama ve yol tarifi tıklamaları */
