@@ -6,65 +6,40 @@
 <title>Randevu | Ares Kuaför Kırşehir</title>
 <meta name="description" content="Ares Kuaför Kırşehir randevu formu. Hizmet, tarih ve saat bilgilerinizi göndererek WhatsApp üzerinden randevu talebi oluşturun.">
 <link rel="canonical" href="https://areskuafor.com.tr/randevu.html">
+<link rel="stylesheet" href="/menu.css"/>
+<script src="/menu.js" defer></script>
 <style>
 :root{--bg:#050506;--bg2:#0b0b0d;--card:#111114;--gold:#d8b36a;--gold-glow:rgba(216,179,106,0.18);--silver:#d7d9dc;--red:#a61f26;--cream:#f7f3ec;--muted:#b8b4ae;--line:#28282c}
 *{box-sizing:border-box}
 /* Kaydırma çubuğunu sabitleyerek tüm sayfalarda logo kaymasını tamamen önlüyoruz */
 html{scroll-behavior:smooth;overflow-y:scroll}
-body{margin:0;background:radial-gradient(circle at 8% 8%,rgba(215,217,220,.09),transparent 28%),radial-gradient(circle at 92% 12%,rgba(166,31,38,.12),transparent 26%),linear-gradient(135deg,var(--bg),var(--bg2) 55%,#070708);color:var(--cream);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6;padding-bottom:0}body:before{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(120deg,transparent 0%,rgba(255,255,255,.025) 45%,transparent 70%);z-index:-1}a{color:inherit;text-decoration:none}.wrap{max-width:1180px;margin:auto;padding:0 22px}nav{position:sticky;top:0;z-index:50;background:rgba(5,5,6,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.navin{height:74px;display:flex;align-items:center;justify-content:space-between;gap:14px;position:relative}
-.logo{display:flex;align-items:center;z-index:60;flex-shrink:0}
-.logo img{height:56px;width:auto;object-fit:contain;display:block}
-.navlinks{display:flex;gap:20px;font-size:14px;align-items:center;margin-left:auto}.navlinks a:hover,.navlinks a.active{color:var(--gold)}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 22px;border-radius:999px;border:1px solid #555;font-weight:700;transition:all .25s ease;flex-shrink:0}.btn:hover{transform:translateY(-2px)}.gold{background:var(--gold);color:#17130c!important;border-color:transparent;box-shadow:0 4px 20px rgba(216,179,106,0.25)}.gold:hover{background:#e3bf79;box-shadow:0 6px 25px rgba(216,179,106,0.4)}.menu-btn{display:none;margin-left:auto;position:relative;z-index:70;background:transparent;border:1px solid #4a4a4d;color:var(--cream);width:44px;height:44px;border-radius:10px;font-size:23px;cursor:pointer}.mobile-menu{display:none}.mobile-menu.open{display:flex;flex-direction:column;padding:10px 22px 18px;border-top:1px solid var(--line);background:#070708}.mobile-menu a{padding:11px 0;border-bottom:1px solid #222}
-
+body{margin:0;background:radial-gradient(circle at 8% 8%,rgba(215,217,220,.09),transparent 28%),radial-gradient(circle at 92% 12%,rgba(166,31,38,.12),transparent 26%),linear-gradient(135deg,var(--bg),var(--bg2) 55%,#070708);color:var(--cream);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6;padding-bottom:0}body:before{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(120deg,transparent 0%,rgba(255,255,255,.025) 45%,transparent 70%);z-index:-1}a{color:inherit;text-decoration:none}.wrap{max-width:1180px;margin:auto;padding:0 22px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 22px;border-radius:999px;border:1px solid #555;font-weight:700;transition:all .25s ease;flex-shrink:0}.btn:hover{transform:translateY(-2px)}.gold{background:var(--gold);color:#17130c!important;border-color:transparent;box-shadow:0 4px 20px rgba(216,179,106,0.25)}.gold:hover{background:#e3bf79;box-shadow:0 6px 25px rgba(216,179,106,0.4)}
 .hero{padding:90px 0 70px;position:relative;overflow:hidden;background:radial-gradient(circle at 80% 30%,rgba(216,179,106,.12),transparent 45%),radial-gradient(circle at 20% 70%,rgba(166,31,38,.12),transparent 40%)}
 .kicker{color:var(--gold);font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:800}h1,h2,h3{font-family:Georgia,serif;font-weight:500}h1{font-size:clamp(42px,5.5vw,76px);line-height:1.05;margin:10px 0 20px}h2{font-size:42px;line-height:1.1}p{color:var(--muted)}section{padding:80px 0}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.card{background:rgba(17,17,20,.92);border:1px solid var(--line);border-radius:18px;padding:25px}.card h3{font-size:24px;margin:8px 0}
-footer{border-top:1px solid var(--line);padding:30px 0;color:#89847d;font-size:13px}.foot{display:flex;justify-content:space-between}
 .float{position:fixed;right:18px;bottom:18px;z-index:40;background:#25D366;color:#fff;padding:12px 20px;border-radius:999px;font-weight:800;display:inline-flex;align-items:center;gap:8px;box-shadow:0 4px 15px rgba(37,211,102,0.4)}
-
 .quick-action-bar{display:none}
-
-@media(max-width:960px){.navlinks{display:none}.menu-btn{display:block;flex:0 0 44px}.navin>.btn{display:none}.grid3{grid-template-columns:1fr}}
-@media(max-width:768px){
-  body{padding-bottom:70px}
-  .float{display:none!important}
-  .quick-action-bar{
-    display:flex;position:fixed;bottom:0;left:0;right:0;z-index:999;
-    background:rgba(11,11,13,0.95);backdrop-filter:blur(12px);
-    border-top:1px solid var(--line);padding:8px 12px;
-    justify-content:space-around;align-items:center;box-shadow:0 -5px 25px rgba(0,0,0,0.5);
-  }
-  .quick-action-bar a{display:flex;flex-direction:column;align-items:center;gap:4px;font-size:11px;font-weight:600;color:var(--muted);flex:1;text-align:center}
-  .quick-action-bar svg{width:20px;height:20px}
-  .quick-action-bar .action-btn-highlight{background:var(--gold);color:#111!important;padding:8px 12px;border-radius:12px;font-weight:800}
-}
+@media(max-width:960px){.grid3{grid-template-columns:1fr}}
+@media(max-width:768px){body{padding-bottom:70px}.float{display:none!important}.quick-action-bar{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:999;background:rgba(11,11,13,0.95);backdrop-filter:blur(12px);border-top:1px solid var(--line);padding:8px 12px;justify-content:space-around;align-items:center;box-shadow:0 -5px 25px rgba(0,0,0,0.5)}.quick-action-bar a{display:flex;flex-direction:column;align-items:center;gap:4px;font-size:11px;font-weight:600;color:var(--muted);flex:1;text-align:center}.quick-action-bar svg{width:20px;height:20px}.quick-action-bar .action-btn-highlight{background:var(--gold);color:#111!important;padding:8px 12px;border-radius:12px;font-weight:800}}
 @media(max-width:600px){.hero{padding:60px 0 50px}h2{font-size:34px}}
 </style>
 </head>
 <body>
-<nav>
-  <div class="wrap navin">
-    <a class="logo" href="index.html"><img alt="Ares Kuaför Kırşehir logosu" src="logo.png"/></a>
-    <div class="navlinks">
-      <a href="index.html">Anasayfa</a>
+<!-- ORTAK MENÜ: menu.js tarafından doldurulur -->
+<nav id="site-nav" aria-label="Ana menü">
+  <noscript>
+    <div class="wrap" style="padding-top:14px;padding-bottom:14px;display:flex;gap:16px;flex-wrap:wrap">
+      <a href="/">Anasayfa</a>
       <a href="hizmetler.html">Hizmetler</a>
-      <a href="index.html#galeri">Galeri</a>
+      <a href="kadin-kuaforu.html">Kadın Kuaförü</a>
+      <a href="ombre.html">Ombre</a>
+      <a href="perma.html">Perma</a>
       <a href="mikro-kaynak.html">Mikro Kaynak</a>
+      <a href="gelin-saci.html">Gelin Saçı</a>
       <a href="markalar.html">Markalar</a>
-      <a href="index.html#iletisim">İletişim</a>
-      <a href="randevu.html" class="active" style="color:var(--gold)">Randevu</a>
+      <a href="randevu.html">Randevu</a>
     </div>
-    <button aria-expanded="false" aria-label="Menüyü aç" class="menu-btn" type="button">☰</button>
-    <a class="btn gold" href="randevu.html">Randevu</a>
-  </div>
-  <div class="mobile-menu">
-    <a href="index.html">Anasayfa</a>
-    <a href="hizmetler.html">Hizmetler</a>
-    <a href="index.html#galeri">Galeri</a>
-    <a href="mikro-kaynak.html">Mikro Kaynak</a>
-    <a href="markalar.html">Markalar</a>
-    <a href="index.html#iletisim">İletişim</a>
-    <a href="randevu.html" style="color:var(--gold)">Randevu</a>
-  </div>
+  </noscript>
 </nav>
 
 <header class="hero">
@@ -111,7 +86,7 @@ footer{border-top:1px solid var(--line);padding:30px 0;color:#89847d;font-size:1
             </label>
           </div>
           <button class="btn gold" type="submit" style="width:100%;margin-top:24px;padding:14px;font-size:16px;cursor:pointer;border:none">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.018.458.13.606.134.133.297.347.446.521.151.172.2.296.3.495.099.198.05.372-.025.521-.075.148-.669 1.611-.916 2.206-.242.579-.487.501-.669.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.173-1.29.173-1.414z"/></svg>
             WhatsApp'tan Randevu Talebi Gönder
           </button>
         </form>
@@ -120,16 +95,19 @@ footer{border-top:1px solid var(--line);padding:30px 0;color:#89847d;font-size:1
   </section>
 </main>
 
-<footer>
-  <div class="wrap foot">
-    <div>© Ares Kuaför · Kırşehir</div>
-    <div><a href="index.html">Ana Sayfa</a> · <a href="hizmetler.html">Hizmetler</a> · <a href="mikro-kaynak.html">Mikro Kaynak</a> · <a href="markalar.html">Markalar</a> · <a href="randevu.html">Randevu</a></div>
-  </div>
+<!-- ORTAK FOOTER: menu.js tarafından doldurulur -->
+<footer id="site-footer">
+  <noscript>
+    <div class="wrap foot">
+      <div>© Ares Kuaför · Kırşehir</div>
+      <div><a href="/">Ana Sayfa</a> · <a href="hizmetler.html">Hizmetler</a> · <a href="perma.html">Perma</a> · <a href="mikro-kaynak.html">Mikro Kaynak</a> · <a href="randevu.html">Randevu</a></div>
+    </div>
+  </noscript>
 </footer>
 
 <!-- Masaüstü Sabit WhatsApp Butonu -->
 <a class="float" href="https://wa.me/905531293338" rel="noopener" target="_blank">
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.018.458.13.606.134.133.297.347.446.521.151.172.2.296.3.495.099.198.05.372-.025.521-.075.148-.669 1.611-.916 2.206-.242.579-.487.501-.669.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.173-1.29.173-1.414z"/></svg>
   WhatsApp
 </a>
 
@@ -140,16 +118,14 @@ footer{border-top:1px solid var(--line);padding:30px 0;color:#89847d;font-size:1
     Ara
   </a>
   <a href="https://wa.me/905531293338" rel="noopener" target="_blank" style="color:#25D366">
-    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.018.458.13.606.134.133.297.347.446.521.151.172.2.296.3.495.099.198.05.372-.025.521-.075.148-.669 1.611-.916 2.206-.242.579-.487.501-.669.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.173-1.29.173-1.414z"/></svg>
     WhatsApp
   </a>
   <a href="https://maps.app.goo.gl/7nh9N5rrybAvzD2x8?g_st=ic" rel="noopener" target="_blank">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
     Yol Tarifi
   </a>
-  <a href="randevu.html" class="action-btn-highlight">
-    Randevu
-  </a>
+  <a href="randevu.html" class="action-btn-highlight">Randevu</a>
 </div>
 
 <script>
@@ -159,21 +135,6 @@ document.getElementById('appointment-form').addEventListener('submit',function(e
   const msg=`Merhaba Ares Kuaför, randevu talebi oluşturmak istiyorum.%0A%0AAd Soyad: ${encodeURIComponent(f.get('name'))}%0ATelefon: ${encodeURIComponent(f.get('phone'))}%0AHizmet: ${encodeURIComponent(f.get('service'))}%0ATarih: ${encodeURIComponent(f.get('date'))}%0ASaat: ${encodeURIComponent(f.get('time'))}%0ANot: ${encodeURIComponent(f.get('note')||'Yok')}`;
   window.open('https://wa.me/905531293338?text='+msg,'_blank');
 });
-
-(function(){
-  const b=document.querySelector('.menu-btn'),m=document.querySelector('.mobile-menu');
-  if(!b||!m)return;
-  b.addEventListener('click',()=>{
-    const open=m.classList.toggle('open');
-    b.setAttribute('aria-expanded',open?'true':'false');
-    b.textContent=open?'✕':'☰'
-  });
-  m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
-    m.classList.remove('open');
-    b.setAttribute('aria-expanded','false');
-    b.textContent='☰'
-  }));
-})();
 </script>
 </body>
 </html>
