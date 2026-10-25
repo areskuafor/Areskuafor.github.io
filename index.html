@@ -39,6 +39,11 @@ a{color:inherit;text-decoration:none}
 .wrap{max-width:1180px;margin:auto;padding:0 22px}
 nav{position:sticky;top:0;z-index:50;background:rgba(5,5,6,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
 
+/* Menü/footer JS ile gelirken sayfanın kaymasını önler; başlığa gidilince menü altında kalmaz */
+#site-nav{min-height:75px}
+#site-footer{min-height:80px}
+section[id]{scroll-margin-top:90px}
+
 .navin{height:74px;display:flex;align-items:center;justify-content:space-between;gap:14px;position:relative}
 .logo{display:flex;align-items:center;z-index:60;flex-shrink:0}
 .logo img{height:56px;width:auto;object-fit:contain;display:block}
@@ -160,6 +165,7 @@ footer{border-top:1px solid var(--line);padding:30px 0;color:#89847d;font-size:1
 
 /* Açık / Kapalı rozeti */
 .open-status{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:#0d0d10;margin:0 0 12px}
+.open-status:empty{display:none}
 .open-status i{width:9px;height:9px;border-radius:50%;background:#888}
 .open-status.open{color:#4ade80;border-color:rgba(74,222,128,.4)}
 .open-status.open i{background:#25D366;box-shadow:0 0 8px #25D366}
@@ -217,7 +223,7 @@ footer{border-top:1px solid var(--line);padding:30px 0;color:#89847d;font-size:1
 
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"HairSalon","name":"Ares Kuaför","url":"https://areskuafor.com.tr/","telephone":"+90 553 129 33 38","image":"https://areskuafor.com.tr/logo.png","address":{"@type":"PostalAddress","streetAddress":"Ahi Evran Mahallesi, Şehit Polis Köksal Demirci Caddesi","addressLocality":"Kırşehir","addressCountry":"TR"},"sameAs":["https://www.instagram.com/areskuaforkirsehir"],"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"08:00","closes":"20:00"}],"additionalProperty":{"@type":"PropertyValue","name":"Salı çalışma durumu","value":"Kapalı"}}
+{"@context":"https://schema.org","@type":"HairSalon","name":"Ares Kuaför","url":"https://areskuafor.com.tr/","telephone":"+905531293338","image":"https://areskuafor.com.tr/logo.png","hasMap":"https://maps.app.goo.gl/7nh9N5rrybAvzD2x8?g_st=ic","address":{"@type":"PostalAddress","streetAddress":"Ahi Evran Mahallesi, Şehit Polis Köksal Demirci Caddesi","addressLocality":"Kırşehir","addressCountry":"TR"},"sameAs":["https://www.instagram.com/areskuaforkirsehir"],"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"08:00","closes":"20:00"}],"additionalProperty":{"@type":"PropertyValue","name":"Salı çalışma durumu","value":"Kapalı"}}
 </script>
 
 <!-- Google Analytics (G-4QZ3QC3LW8 yerine kendi Ölçüm Kimliğini yaz) -->
@@ -234,15 +240,15 @@ gtag('js',new Date());gtag('config','G-4QZ3QC3LW8');
   <noscript>
     <div class="wrap" style="padding-top:14px;padding-bottom:14px;display:flex;gap:16px;flex-wrap:wrap">
       <a href="/">Anasayfa</a>
-      <a href="hizmetler.html">Hizmetler</a>
-      <a href="kadin-kuaforu.html">Kadın Kuaförü</a>
-      <a href="ombre.html">Ombre</a>
-      <a href="perma.html">Perma</a>
-      <a href="keratinbakim.html">Keratin Bakım</a>
-      <a href="mikro-kaynak.html">Mikro Kaynak</a>
-      <a href="gelin-saci.html">Gelin Saçı</a>
-      <a href="markalar.html">Markalar</a>
-      <a href="randevu.html">Randevu</a>
+      <a href="/hizmetler.html">Hizmetler</a>
+      <a href="/kadin-kuaforu.html">Kadın Kuaförü</a>
+      <a href="/ombre.html">Ombre</a>
+      <a href="/perma.html">Perma</a>
+      <a href="/keratinbakim.html">Keratin Bakım</a>
+      <a href="/mikro-kaynak.html">Mikro Kaynak</a>
+      <a href="/gelin-saci.html">Gelin Saçı</a>
+      <a href="/markalar.html">Markalar</a>
+      <a href="/randevu.html">Randevu</a>
     </div>
   </noscript>
 </nav>
@@ -257,7 +263,7 @@ gtag('js',new Date());gtag('config','G-4QZ3QC3LW8');
         </div>
         <h1>Ares Kuaför <span style="color:var(--gold)">Kırşehir</span></h1>
         <p style="font-size:18px;line-height:1.6;margin-bottom:28px">
-          Kırşehir'in premium kadın kuaför salonunda profesyonel <a href="hizmetler.html" style="color:var(--gold); text-decoration:underline;">saç kesimi</a>, renklendirme, <a href="ombre.html" style="color:var(--gold); text-decoration:underline;">ombre</a>, <a href="perma.html" style="color:var(--gold); text-decoration:underline;">perma</a>, <a href="keratinbakim.html" style="color:var(--gold); text-decoration:underline;">keratin bakım</a> ve uzman <a href="mikro-kaynak.html" style="color:var(--gold); text-decoration:underline;">mikro kaynak</a> uygulamalarıyla hayalinizdeki görünüme kavuşun. Ayrıca <a href="gelin-saci.html" style="color:var(--gold); text-decoration:underline;">gelin saçı</a> ve özel gün hazırlıklarımız için <a href="randevu.html" style="color:var(--gold); text-decoration:underline;">randevu</a> alabilirsiniz.
+          Kırşehir'in premium kadın kuaför salonunda profesyonel <a href="/hizmetler.html" style="color:var(--gold); text-decoration:underline;">saç kesimi</a>, renklendirme, <a href="/ombre.html" style="color:var(--gold); text-decoration:underline;">ombre</a>, <a href="/perma.html" style="color:var(--gold); text-decoration:underline;">perma</a>, <a href="/keratinbakim.html" style="color:var(--gold); text-decoration:underline;">keratin bakım</a> ve uzman <a href="/mikro-kaynak.html" style="color:var(--gold); text-decoration:underline;">mikro kaynak</a> uygulamalarıyla hayalinizdeki görünüme kavuşun. Ayrıca <a href="/gelin-saci.html" style="color:var(--gold); text-decoration:underline;">gelin saçı</a> ve özel gün hazırlıklarımız için <a href="/randevu.html" style="color:var(--gold); text-decoration:underline;">randevu</a> alabilirsiniz.
         </p>
         <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center">
           <a class="btn gold" href="https://wa.me/905531293338" rel="noopener" target="_blank">
@@ -275,8 +281,8 @@ gtag('js',new Date());gtag('config','G-4QZ3QC3LW8');
 
         <div class="hero-stats">
           <div class="stat-item">
-            <span class="stat-val">⭐ 4.9 / 5.0</span>
-            <span class="stat-lbl">Müşteri Memnuniyeti</span>
+            <span class="stat-val">⭐ 4.6 / 5.0</span>
+            <span class="stat-lbl">Google Puanı</span>
           </div>
           <div class="stat-item">
             <span class="stat-val">✨ 20+ Yıl</span>
@@ -291,7 +297,7 @@ gtag('js',new Date());gtag('config','G-4QZ3QC3LW8');
 
       <div class="hero-visual">
         <div class="visual-card">
-          <img src="logo.png" alt="Ares Kuaför Kırşehir Saç Tasarımı" width="500" height="500" style="padding:40px;background:#08080a;object-fit:contain" />
+          <img src="/logo.png" alt="Ares Kuaför Kırşehir Saç Tasarımı" width="500" height="500" style="padding:40px;background:#08080a;object-fit:contain" />
           <div class="visual-overlay">
             <h3 style="margin:4px 0;font-size:20px;color:var(--cream)">Kişiye Özel Saç Tasarımı</h3>
             <p style="font-size:13px;margin:0;color:var(--muted)">Tarzınızı yansıtan kesim, canlı renkler, mikro ve hayalet kaynak uygulamaları.</p>
@@ -306,13 +312,13 @@ gtag('js',new Date());gtag('config','G-4QZ3QC3LW8');
   <div class="wrap">
     <div class="kicker" style="color:var(--gold);font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:800">Hizmetler</div>
     <h2>Kırşehir’de hizmetlerimiz</h2>
-    <p>Ares Kuaför’de saç tasarımı, renklendirme, mikro kaynak ve özel gün hazırlıkları için hizmetlerimizi inceleyebilirsiniz. <a href="kadin-kuaforu.html" style="color:var(--gold);text-decoration:underline;">Kırşehir kadın kuaförü</a> hizmetlerimizi, <a href="ombre.html" style="color:var(--gold);text-decoration:underline;">ombre ve balyaj</a> seçeneklerimizi, <a href="gelin-saci.html" style="color:var(--gold);text-decoration:underline;">gelin saçı</a> tasarımlarımızı, <a href="perma.html" style="color:var(--gold);text-decoration:underline;">perma</a> uygulamalarımızı, <a href="keratinbakim.html" style="color:var(--gold);text-decoration:underline;">keratin bakım</a> hizmetimizi ve <a href="mikro-kaynak.html" style="color:var(--gold);text-decoration:underline;">mikro kaynak</a> uygulamalarımızı ilgili sayfalardan ayrıntılı inceleyebilirsiniz.</p>
+    <p>Ares Kuaför’de saç tasarımı, renklendirme, mikro kaynak ve özel gün hazırlıkları için hizmetlerimizi inceleyebilirsiniz. <a href="/kadin-kuaforu.html" style="color:var(--gold);text-decoration:underline;">Kırşehir kadın kuaförü</a> hizmetlerimizi, <a href="/ombre.html" style="color:var(--gold);text-decoration:underline;">ombre ve balyaj</a> seçeneklerimizi, <a href="/gelin-saci.html" style="color:var(--gold);text-decoration:underline;">gelin saçı</a> tasarımlarımızı, <a href="/perma.html" style="color:var(--gold);text-decoration:underline;">perma</a> uygulamalarımızı, <a href="/keratinbakim.html" style="color:var(--gold);text-decoration:underline;">keratin bakım</a> hizmetimizi ve <a href="/mikro-kaynak.html" style="color:var(--gold);text-decoration:underline;">mikro kaynak</a> uygulamalarımızı ilgili sayfalardan ayrıntılı inceleyebilirsiniz.</p>
     <div class="grid5">
-      <a class="card service-card" href="kadin-kuaforu.html"><h3>Kırşehir Kadın Kuaförü</h3><p>Saç kesimi, fön, renklendirme, bakım, makyaj ve özel gün hazırlıkları.</p></a>
-      <a class="card service-card" href="ombre.html"><h3>Kırşehir Ombre</h3><p>Ombre, sombre ve balyaj seçenekleri hakkında bilgi alın.</p></a>
-      <a class="card service-card" href="perma.html"><h3>Kırşehir Perma</h3><p>Kalıcı dalgalı saçlar, hacimli bukleler ve perma uygulamaları.</p></a>
-      <a class="card service-card" href="keratinbakim.html"><h3>Keratin Bakım</h3><p>Yıpranmış saçlar için profesyonel onarım ve parlaklık kazandıran bakım.</p></a>
-      <a class="card service-card" href="mikro-kaynak.html"><h3>Kırşehir Mikro Kaynak</h3><p>Mikro kaynak uygulaması öncesi değerlendirme ve randevu.</p></a>
+      <a class="card service-card" href="/kadin-kuaforu.html"><h3>Kırşehir Kadın Kuaförü</h3><p>Saç kesimi, fön, renklendirme, bakım, makyaj ve özel gün hazırlıkları.</p></a>
+      <a class="card service-card" href="/ombre.html"><h3>Kırşehir Ombre</h3><p>Ombre, sombre ve balyaj seçenekleri hakkında bilgi alın.</p></a>
+      <a class="card service-card" href="/perma.html"><h3>Kırşehir Perma</h3><p>Kalıcı dalgalı saçlar, hacimli bukleler ve perma uygulamaları.</p></a>
+      <a class="card service-card" href="/keratinbakim.html"><h3>Keratin Bakım</h3><p>Yıpranmış saçlar için profesyonel onarım ve parlaklık kazandıran bakım.</p></a>
+      <a class="card service-card" href="/mikro-kaynak.html"><h3>Kırşehir Mikro Kaynak</h3><p>Mikro kaynak uygulaması öncesi değerlendirme ve randevu.</p></a>
     </div>
   </div>
 </section>
@@ -338,9 +344,9 @@ gtag('js',new Date());gtag('config','G-4QZ3QC3LW8');
       <h2>Çalışmalarımızı hareketli görün.</h2>
       <p>Video çalışmalarımızı izleyebilirsiniz.</p>
       <div class="video-grid">
-        <video controls muted playsinline preload="metadata" src="IMG_4454.mp4#t=0.1"></video>
-        <video controls muted playsinline preload="metadata" src="IMG_5891.mp4#t=0.1"></video>
-        <video controls muted playsinline preload="metadata" src="IMG_5900.mp4#t=0.1"></video>
+        <video controls muted playsinline preload="metadata" src="/IMG_4454.mp4#t=0.1"></video>
+        <video controls muted playsinline preload="metadata" src="/IMG_5891.mp4#t=0.1"></video>
+        <video controls muted playsinline preload="metadata" src="/IMG_5900.mp4#t=0.1"></video>
       </div>
     </div>
   </div>
@@ -352,12 +358,12 @@ gtag('js',new Date());gtag('config','G-4QZ3QC3LW8');
     <h2>Değişimi birlikte planlayalım.</h2>
     <div class="before-note">
       <div class="card">
-        <img src="1.jpg" alt="Ares Kuaför Kırşehir öncesi saç görüntüsü" loading="lazy">
+        <img src="/1.jpg" alt="Ares Kuaför Kırşehir öncesi saç görüntüsü" loading="lazy">
         <h3>Saçınızın başlangıç hali</h3>
         <p>İşleme başlamadan önce saçınızın mevcut durumu değerlendirilir. Böylece uygulanabilecek işlemler daha doğru planlanır.</p>
       </div>
       <div class="card">
-        <img src="2.jpg" alt="Ares Kuaför Kırşehir sonrası saç görüntüsü" loading="lazy">
+        <img src="/2.jpg" alt="Ares Kuaför Kırşehir sonrası saç görüntüsü" loading="lazy">
         <h3>Hedeflediğiniz görünüm</h3>
         <p>İstediğiniz renk, uzunluk veya hacmi konuşup size uygun işlem planını birlikte oluşturabilirsiniz.</p>
       </div>
@@ -405,7 +411,7 @@ gtag('js',new Date());gtag('config','G-4QZ3QC3LW8');
       </div>
       <div class="card">
         <h3>💬 Randevu</h3>
-        <p>WhatsApp: 0553 129 33 38<br/>Instagram: @areskuaforkirsehir</p>
+        <p>WhatsApp: <a href="tel:+905531293338" style="color:var(--gold);text-decoration:underline">0553 129 33 38</a><br/>Instagram: @areskuaforkirsehir</p>
         <a class="btn gold" href="tel:+905531293338">📞 Hemen Ara</a>
       </div>
       <div class="card hours">
@@ -434,7 +440,7 @@ gtag('js',new Date());gtag('config','G-4QZ3QC3LW8');
   <noscript>
     <div class="wrap foot">
       <div>© Ares Kuaför · Kırşehir</div>
-      <div><a href="/">Ana Sayfa</a> · <a href="hizmetler.html">Hizmetler</a> · <a href="perma.html">Perma</a> · <a href="mikro-kaynak.html">Mikro Kaynak</a> · <a href="randevu.html">Randevu</a></div>
+      <div><a href="/">Ana Sayfa</a> · <a href="/hizmetler.html">Hizmetler</a> · <a href="/perma.html">Perma</a> · <a href="/keratinbakim.html">Keratin Bakım</a> · <a href="/mikro-kaynak.html">Mikro Kaynak</a> · <a href="/randevu.html">Randevu</a></div>
     </div>
   </noscript>
 </footer>
@@ -459,6 +465,42 @@ gtag('js',new Date());gtag('config','G-4QZ3QC3LW8');
     Yol Tarifi
   </a>
 </div>
+
+<!-- Açık / Kapalı rozeti + bugünün satırı (Türkiye saati, Salı kapalı) -->
+<script>
+(function () {
+  var parts = new Intl.DateTimeFormat('en-US', {
+    timeZone: 'Europe/Istanbul', weekday: 'short', hour: 'numeric', minute: 'numeric', hourCycle: 'h23'
+  }).formatToParts(new Date());
+  function get(t) {
+    for (var k = 0; k < parts.length; k++) { if (parts[k].type === t) return parts[k].value; }
+    return '0';
+  }
+  var days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+  var names = ['Pazartesi', 'Salı', 'Çarşamba', 'Perşembe', 'Cuma', 'Cumartesi', 'Pazar'];
+  var i = days.indexOf(get('weekday'));
+  if (i < 0) return;
+  var mins = parseInt(get('hour'), 10) * 60 + parseInt(get('minute'), 10);
+  var isOpen = i !== 1 && mins >= 480 && mins < 1200;
+  var text;
+  if (isOpen) {
+    text = "Şu an açık · 20:00'ye kadar";
+  } else {
+    var next = (i !== 1 && mins < 480) ? i : (i + 1) % 7;
+    if (next === 1) next = 2;
+    var when = next === i ? 'bugün' : (next === (i + 1) % 7 ? 'yarın' : names[next]);
+    text = 'Şu an kapalı · ' + when + " 08:00'de açılıyoruz";
+  }
+  document.querySelectorAll('[data-open-status]').forEach(function (el) {
+    el.textContent = '';
+    el.appendChild(document.createElement('i'));
+    el.appendChild(document.createTextNode(text));
+    el.classList.add(isOpen ? 'open' : 'closed');
+  });
+  var rows = document.querySelectorAll('.hours-row');
+  if (rows[i]) rows[i].classList.add('today');
+})();
+</script>
 
 </body>
 </html>
