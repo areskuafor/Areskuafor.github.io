@@ -11,7 +11,8 @@
     ['ombre.html', 'Ombre &amp; Balyaj'],
     ['perma.html', 'Perma'],
     ['mikro-kaynak.html', 'Mikro Kaynak'],
-    ['gelin-saci.html', 'Gelin Saçı']
+    ['gelin-saci.html', 'Gelin Saçı'],
+    ['keratinbakim.html', 'Keratin Bakım']
   ];
 
   /* Açık sayfayı bul (örn. "mikro-kaynak") */
@@ -71,6 +72,7 @@
         '<a href="perma.html">Perma</a> · ' +
         '<a href="gelin-saci.html">Gelin Saçı</a> · ' +
         '<a href="mikro-kaynak.html">Mikro Kaynak</a> · ' +
+        '<a href="keratinbakim.html">Keratin Bakım</a> · ' +
         '<a href="markalar.html">Markalar</a> · ' +
         '<a href="randevu.html">Randevu</a>' +
       '</div>' +
