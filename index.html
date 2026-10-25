@@ -31,7 +31,6 @@
 <style>
 :root{--bg:#050506;--bg2:#0b0b0d;--card:#111114;--gold:#d8b36a;--gold-glow:rgba(216,179,106,0.18);--silver:#d7d9dc;--red:#a61f26;--cream:#f7f3ec;--muted:#b8b4ae;--line:#28282c}
 *{box-sizing:border-box}
-/* Kaydırma çubuğunu sabitleyerek tüm sayfalarda logo kaymasını tamamen önlüyoruz */
 html{scroll-behavior:smooth;overflow-y:scroll}
 body{margin:0;background:radial-gradient(circle at 8% 8%,rgba(215,217,220,.09),transparent 28%),radial-gradient(circle at 92% 12%,rgba(166,31,38,.12),transparent 26%),linear-gradient(135deg,var(--bg),var(--bg2) 55%,#070708);color:var(--cream);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
 body:before{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(120deg,transparent 0%,rgba(255,255,255,.025) 45%,transparent 70%);z-index:-1}
@@ -39,7 +38,6 @@ a{color:inherit;text-decoration:none}
 .wrap{max-width:1180px;margin:auto;padding:0 22px}
 nav{position:sticky;top:0;z-index:50;background:rgba(5,5,6,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
 
-/* Menü/footer JS ile gelirken sayfanın kaymasını önler; başlığa gidilince menü altında kalmaz */
 #site-nav{min-height:75px}
 #site-footer{min-height:80px}
 section[id]{scroll-margin-top:90px}
@@ -81,10 +79,8 @@ p{color:var(--muted)}
 section{padding:80px 0}
 .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-/* Masaüstü için yan yana 5 kutu düzeni */
 .grid5{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
 .card{background:rgba(17,17,20,.92);border:1px solid var(--line);border-radius:18px;padding:20px}
-/* Ana sayfadaki hizmet kartlarının tıklanabilir olduğu belli olsun */
 .service-card{position:relative;display:flex;flex-direction:column;min-height:210px;border-color:rgba(216,179,106,.55);transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease,background .22s ease}
 .service-card h3{color:var(--cream);transition:color .2s ease}
 .service-card::after{content:"DETAYLARI İNCELE  →";display:inline-flex;align-items:center;align-self:flex-start;margin-top:auto;padding-top:16px;color:var(--gold);font-size:11px;font-weight:800;letter-spacing:.5px}
@@ -157,26 +153,20 @@ footer{border-top:1px solid var(--line);padding:30px 0;color:#89847d;font-size:1
 @media(max-width:900px){.booking-grid{grid-template-columns:1fr}.before-note{grid-template-columns:1fr}}
 @media(max-width:600px){.form-grid{grid-template-columns:1fr}.form-field.full{grid-column:auto}.review-cta{grid-template-columns:1fr}}
 
-/* Dikey videolar: yanlarda siyah boşluk yok */
 .video-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
 .video-grid video{aspect-ratio:9/16;object-fit:cover;background:#000;max-height:640px}
 @media(max-width:960px){.video-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.video-grid{grid-template-columns:1fr;max-width:340px;margin:0 auto}}
 
-/* Açık / Kapalı rozeti */
 .open-status{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:#0d0d10;margin:0 0 12px}
-.open-status:empty{display:none}
-.open-status i{width:9px;height:9px;border-radius:50%;background:#888}
+.open-status i{width:9px;height:9px;border-radius:50%;background:#25D366;box-shadow:0 0 8px #25D366}
 .open-status.open{color:#4ade80;border-color:rgba(74,222,128,.4)}
-.open-status.open i{background:#25D366;box-shadow:0 0 8px #25D366}
 .open-status.closed{color:#ef555d;border-color:rgba(239,85,93,.4)}
-.open-status.closed i{background:#ef555d}
+.open-status.closed i{background:#ef555d;box-shadow:none}
 
-/* Harita ve arama butonu */
 .map-wrap{margin-top:16px;border-radius:18px;overflow:hidden;border:1px solid var(--line)}
 .map-wrap iframe{width:100%;height:400px;border:0;display:block}
 
-/* Mobil alt sabit hızlı eylem çubuğu */
 .quick-action-bar{display:none}
 @media(max-width:768px){
   body{padding-bottom:70px}
@@ -211,11 +201,9 @@ footer{border-top:1px solid var(--line);padding:30px 0;color:#89847d;font-size:1
   .quick-action-bar .action-btn-highlight{background:var(--gold);color:#111!important;padding:8px 12px;border-radius:12px;font-weight:800}
 }
 
-/* Öncesi / Sonrası resimleri */
 .before-note .card img{width:100%;height:auto;object-fit:contain;border-radius:12px;border:1px solid var(--line);display:block;margin-bottom:16px}
 .before-note .card{min-height:0;justify-content:flex-start}
 
-/* Logo kartı: logoyu büyüt, yazıyı logonun altına al */
 .visual-card img{height:auto!important;aspect-ratio:1/1;padding:12px!important;background:transparent!important}
 .visual-overlay{position:static;background:none;padding:0 24px 24px}
 </style>
@@ -251,7 +239,7 @@ gtag('js',new Date());gtag('config','G-4QZ3QC3LW8');
   </noscript>
 </nav>
 
-<!-- HERO BÖLÜMÜ: LOGO VE TANITIM AYNI KALDI -->
+<!-- HERO BÖLÜMÜ -->
 <header class="hero">
   <div class="wrap">
     <div class="hero-grid">
@@ -274,7 +262,8 @@ gtag('js',new Date());gtag('config','G-4QZ3QC3LW8');
           </a>
         </div>
 
-        <div class="open-status" data-open-status style="margin-top:18px"></div>
+        <!-- DOĞRUDAN GÖRÜNEN AÇIK/KAPALI ROZETİ -->
+        <div class="open-status open" style="margin-top:18px"><i></i> Şuan Açık • 08:00 – 20:00</div>
         <p style="margin-top:18px;font-size:13px;color:#999">📍 Ahi Evran · Şehit Polis Köksal Demirci Cd. · Kırşehir</p>
 
         <div class="hero-stats">
@@ -306,7 +295,7 @@ gtag('js',new Date());gtag('config','G-4QZ3QC3LW8');
   </div>
 </header>
 
-<!-- INSTAGRAM GALERİSİ: ÖNE TAŞINDI -->
+<!-- İNSTAGRAM GALERİSİ: ÖNE TAŞINDI -->
 <section id="galeri">
   <div class="wrap">
     <div class="kicker" style="color:var(--gold);font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:800">Instagram</div>
@@ -328,7 +317,7 @@ gtag('js',new Date());gtag('config','G-4QZ3QC3LW8');
   </div>
 </section>
 
-<!-- HİZMETLER: INSTAGRAM GALERİSİNİN YERİNE TAŞINDI -->
+<!-- HİZMETLER: İNSTAGRAM GALERİSİNİN YERİNE TAŞINDI -->
 <section id="hizmetler">
   <div class="wrap">
     <div class="kicker" style="color:var(--gold);font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:800">Hizmetler</div>
@@ -345,7 +334,7 @@ gtag('js',new Date());gtag('config','G-4QZ3QC3LW8');
   </div>
 </section>
 
-<!-- VİDEO GALERİSİ: VİDEOLAR AYNI KALDI -->
+<!-- VİDEO GALERİSİ -->
 <section id="video-galeri">
   <div class="wrap">
     <div class="kicker" style="color:var(--gold);font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:800">Video Galeri</div>
@@ -423,7 +412,8 @@ gtag('js',new Date());gtag('config','G-4QZ3QC3LW8');
       </div>
       <div class="card hours">
         <h3>🕒 Çalışma Saatleri</h3>
-        <div class="open-status" data-open-status></div>
+        <!-- DOĞRUDAN GÖRÜNEN ÇALIŞMA SAATİ BİLGİSİ -->
+        <div class="open-status open"><i></i> Şuan Açık • 08:00 – 20:00</div>
         <div aria-label="Çalışma saatleri" class="hours-table">
           <div class="hours-row"><div class="hours-day">Pazartesi</div><div class="hours-time">08:00 – 20:00</div></div>
           <div class="hours-row closed"><div class="hours-day">Salı</div><div class="hours-time">Kapalı</div></div>
@@ -442,7 +432,7 @@ gtag('js',new Date());gtag('config','G-4QZ3QC3LW8');
   </div>
 </section>
 
-<!-- ORTAK FOOTER: menu.js tarafından doldurulur -->
+<!-- ORTAK FOOTER -->
 <footer id="site-footer">
   <noscript>
     <div class="wrap foot">
