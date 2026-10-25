@@ -1,0 +1,60 @@
+/* ===== ORTAK MENÜ + FOOTER (tüm sayfalarda aynı) ===== */
+
+/* Menü yüklenene kadar sayfa zıplamasın */
+#site-nav{min-height:75px}
+
+nav{position:sticky;top:0;z-index:50;background:rgba(5,5,6,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.navin{height:74px;display:flex;align-items:center;justify-content:space-between;gap:14px;position:relative}
+.logo{display:flex;align-items:center;z-index:60;flex-shrink:0}
+.logo img{height:56px;width:auto;object-fit:contain;display:block}
+.navlinks{display:flex;gap:20px;font-size:14px;align-items:center;margin-left:auto}
+.navlinks a:hover,.navlinks a.active{color:var(--gold)}
+
+/* Randevu butonu */
+nav .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 22px;border-radius:999px;border:1px solid #555;font-weight:700;transition:all .25s ease;flex-shrink:0}
+nav .btn:hover{transform:translateY(-2px)}
+nav .gold{background:var(--gold);color:#17130c!important;border-color:transparent;box-shadow:0 4px 20px rgba(216,179,106,0.25)}
+nav .gold:hover{background:#e3bf79;box-shadow:0 6px 25px rgba(216,179,106,0.4)}
+
+/* Mobil menü düğmesi */
+.menu-btn{display:none;margin-left:auto;position:relative;z-index:70;background:transparent;border:1px solid #4a4a4d;color:var(--cream);width:44px;height:44px;border-radius:10px;font-size:23px;cursor:pointer}
+.mobile-menu{display:none}
+.mobile-menu.open{display:flex;flex-direction:column;padding:10px 22px 18px;border-top:1px solid var(--line);background:#070708}
+.mobile-menu a{padding:11px 0;border-bottom:1px solid #222}
+.mobile-menu a.active{color:var(--gold)}
+
+/* Hizmetler açılır menü (masaüstü) */
+.dropdown{position:relative}
+.dropdown-toggle{background:none;border:0;color:inherit;font:inherit;cursor:pointer;display:inline-flex;align-items:center;gap:6px;padding:0}
+.dropdown-toggle::after{content:"▾";font-size:11px;transition:transform .2s}
+.dropdown-toggle:hover,.dropdown.open .dropdown-toggle,.dropdown-toggle.active{color:var(--gold)}
+.dropdown.open .dropdown-toggle::after{transform:rotate(180deg)}
+.dropdown-menu{display:none;position:absolute;top:calc(100% + 16px);left:-16px;min-width:230px;padding:8px;background:#0d0d10;border:1px solid var(--line);border-radius:14px;box-shadow:0 14px 34px rgba(0,0,0,.6);z-index:80}
+.dropdown-menu::before{content:"";position:absolute;top:-16px;left:0;right:0;height:16px}
+.dropdown-menu a{display:block;padding:10px 14px;border-radius:10px;white-space:nowrap}
+.dropdown-menu a:hover,.dropdown-menu a.active{background:rgba(216,179,106,.1);color:var(--gold)}
+.dropdown.open .dropdown-menu{display:block}
+@media(hover:hover) and (pointer:fine){
+  .dropdown:hover .dropdown-menu,.dropdown:focus-within .dropdown-menu{display:block}
+}
+
+/* Hizmetler açılır menü (mobil) */
+.m-toggle{display:flex;justify-content:space-between;align-items:center;width:100%;padding:11px 0;background:none;border:0;border-bottom:1px solid #222;color:inherit;font:inherit;text-align:left;cursor:pointer}
+.m-toggle::after{content:"▾";transition:transform .2s}
+.m-toggle[aria-expanded="true"],.m-toggle.active{color:var(--gold)}
+.m-toggle[aria-expanded="true"]::after{transform:rotate(180deg)}
+.m-sub{display:none;flex-direction:column;padding-left:14px}
+.m-sub.open{display:flex}
+.m-sub a{color:var(--muted);font-size:14px}
+.m-sub a.active{color:var(--gold)}
+
+@media(max-width:960px){
+  .navlinks{display:none}
+  .menu-btn{display:block;flex:0 0 44px}
+  .navin>.btn{display:none}
+}
+
+/* Footer */
+footer{border-top:1px solid var(--line);padding:30px 0;color:#89847d;font-size:13px}
+.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+footer a:hover{color:var(--gold)}

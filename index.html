@@ -24,6 +24,10 @@
 <meta content="Ares Kuaför Kırşehir; saç kesimi ve şekillendirme, renklendirme, saç bakımı, mikro kaynak, özel gün hazırlığı ve manikür-pedikür hizmetleri." name="description"/>
 <meta content="index,follow,max-image-preview:large" name="robots"/>
 <link href="https://areskuafor.com.tr/" rel="canonical"/>
+<!-- Ortak menü + footer (tüm sayfalarda aynı dosyalar) -->
+<link rel="stylesheet" href="/menu.css"/>
+<script src="/menu.js" defer></script>
+
 <style>
 :root{--bg:#050506;--bg2:#0b0b0d;--card:#111114;--gold:#d8b36a;--gold-glow:rgba(216,179,106,0.18);--silver:#d7d9dc;--red:#a61f26;--cream:#f7f3ec;--muted:#b8b4ae;--line:#28282c}
 *{box-sizing:border-box}
@@ -208,29 +212,6 @@ footer{border-top:1px solid var(--line);padding:30px 0;color:#89847d;font-size:1
 .visual-card img{height:auto!important;aspect-ratio:1/1;padding:12px!important;background:transparent!important}
 .visual-overlay{position:static;background:none;padding:0 24px 24px}
 
-/* Hizmetler açılır menü (masaüstü) */
-.dropdown{position:relative}
-.dropdown-toggle{background:none;border:0;color:inherit;font:inherit;cursor:pointer;display:inline-flex;align-items:center;gap:6px;padding:0}
-.dropdown-toggle::after{content:"▾";font-size:11px;transition:transform .2s}
-.dropdown-toggle:hover,.dropdown.open .dropdown-toggle{color:var(--gold)}
-.dropdown.open .dropdown-toggle::after{transform:rotate(180deg)}
-.dropdown-menu{display:none;position:absolute;top:calc(100% + 16px);left:-16px;min-width:230px;padding:8px;background:#0d0d10;border:1px solid var(--line);border-radius:14px;box-shadow:0 14px 34px rgba(0,0,0,.6);z-index:80}
-.dropdown-menu::before{content:"";position:absolute;top:-16px;left:0;right:0;height:16px}
-.dropdown-menu a{display:block;padding:10px 14px;border-radius:10px;white-space:nowrap}
-.dropdown-menu a:hover{background:rgba(216,179,106,.1);color:var(--gold)}
-.dropdown.open .dropdown-menu{display:block}
-@media(hover:hover) and (pointer:fine){
-  .dropdown:hover .dropdown-menu,.dropdown:focus-within .dropdown-menu{display:block}
-}
-
-/* Hizmetler açılır menü (mobil) */
-.m-toggle{display:flex;justify-content:space-between;align-items:center;width:100%;padding:11px 0;background:none;border:0;border-bottom:1px solid #222;color:inherit;font:inherit;text-align:left;cursor:pointer}
-.m-toggle::after{content:"▾";transition:transform .2s}
-.m-toggle[aria-expanded="true"]{color:var(--gold)}
-.m-toggle[aria-expanded="true"]::after{transform:rotate(180deg)}
-.m-sub{display:none;flex-direction:column;padding-left:14px}
-.m-sub.open{display:flex}
-.m-sub a{color:var(--muted);font-size:14px}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"HairSalon","name":"Ares Kuaför","url":"https://areskuafor.com.tr/","telephone":"+90 553 129 33 38","image":"https://areskuafor.com.tr/logo.png","address":{"@type":"PostalAddress","streetAddress":"Ahi Evran Mahallesi, Şehit Polis Köksal Demirci Caddesi","addressLocality":"Kırşehir","addressCountry":"TR"},"sameAs":["https://www.instagram.com/areskuaforkirsehir"],"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"08:00","closes":"20:00"}],"additionalProperty":{"@type":"PropertyValue","name":"Salı çalışma durumu","value":"Kapalı"}}
@@ -245,48 +226,21 @@ gtag('js',new Date());gtag('config','G-4QZ3QC3LW8');
 </script>
 </head>
 <body>
-<nav>
-  <div class="wrap navin">
-    <a class="logo" href="/"><img alt="Ares Kuaför Kırşehir logosu" src="logo.png" width="500" height="500"></a>
-    <div class="navlinks">
+<!-- ORTAK MENÜ: menu.js tarafından doldurulur -->
+<nav id="site-nav" aria-label="Ana menü">
+  <noscript>
+    <div class="wrap" style="padding-top:14px;padding-bottom:14px;display:flex;gap:16px;flex-wrap:wrap">
       <a href="/">Anasayfa</a>
-      <div class="dropdown">
-        <button class="dropdown-toggle" type="button" aria-expanded="false" aria-haspopup="true">Hizmetler</button>
-        <div class="dropdown-menu">
-          <a href="hizmetler.html">Tüm Hizmetler</a>
-          <a href="kadin-kuaforu.html">Kadın Kuaförü</a>
-          <a href="ombre.html">Ombre &amp; Balyaj</a>
-          <a href="perma.html">Perma</a>
-          <a href="mikro-kaynak.html">Mikro Kaynak</a>
-          <a href="gelin-saci.html">Gelin Saçı</a>
-        </div>
-      </div>
-      <a href="/#galeri">Galeri</a>
-      <a href="mikro-kaynak.html">Mikro Kaynak</a>
-      <a href="markalar.html">Markalar</a>
-      <a href="/#iletisim">İletişim</a>
-      <a href="randevu.html">Randevu</a>
-    </div>
-    <button aria-expanded="false" aria-label="Menüyü aç" class="menu-btn" type="button">☰</button>
-    <a class="btn gold" href="randevu.html">Randevu</a>
-  </div>
-  <div class="mobile-menu">
-    <a href="/">Anasayfa</a>
-    <button class="m-toggle" type="button" aria-expanded="false">Hizmetler</button>
-    <div class="m-sub">
-      <a href="hizmetler.html">Tüm Hizmetler</a>
+      <a href="hizmetler.html">Hizmetler</a>
       <a href="kadin-kuaforu.html">Kadın Kuaförü</a>
-      <a href="ombre.html">Ombre &amp; Balyaj</a>
+      <a href="ombre.html">Ombre</a>
       <a href="perma.html">Perma</a>
       <a href="mikro-kaynak.html">Mikro Kaynak</a>
       <a href="gelin-saci.html">Gelin Saçı</a>
+      <a href="markalar.html">Markalar</a>
+      <a href="randevu.html">Randevu</a>
     </div>
-    <a href="/#galeri">Galeri</a>
-    <a href="mikro-kaynak.html">Mikro Kaynak</a>
-    <a href="markalar.html">Markalar</a>
-    <a href="/#iletisim">İletişim</a>
-    <a href="randevu.html">Randevu</a>
-  </div>
+  </noscript>
 </nav>
 
 <!-- HERO BÖLÜMÜ -->
@@ -470,11 +424,14 @@ gtag('js',new Date());gtag('config','G-4QZ3QC3LW8');
   </div>
 </section>
 
-<footer>
-  <div class="wrap foot">
-    <div>© Ares Kuaför · Kırşehir</div>
-    <div><a href="/">Ana Sayfa</a> · <a href="kadin-kuaforu.html">Kadın Kuaförü</a> · <a href="ombre.html">Ombre</a> · <a href="perma.html">Perma</a> · <a href="gelin-saci.html">Gelin Saçı</a> · <a href="mikro-kaynak.html">Mikro Kaynak</a> · <a href="markalar.html">Markalar</a> · <a href="randevu.html">Randevu</a></div>
-  </div>
+<!-- ORTAK FOOTER: menu.js tarafından doldurulur -->
+<footer id="site-footer">
+  <noscript>
+    <div class="wrap foot">
+      <div>© Ares Kuaför · Kırşehir</div>
+      <div><a href="/">Ana Sayfa</a> · <a href="hizmetler.html">Hizmetler</a> · <a href="perma.html">Perma</a> · <a href="mikro-kaynak.html">Mikro Kaynak</a> · <a href="randevu.html">Randevu</a></div>
+    </div>
+  </noscript>
 </footer>
 
 <a class="float" href="https://wa.me/905531293338" rel="noopener" target="_blank">
@@ -500,52 +457,6 @@ gtag('js',new Date());gtag('config','G-4QZ3QC3LW8');
     Randevu
   </a>
 </div>
-
-<script>
-(function(){
-  /* Masaüstü: tıklayınca aç/kapa, dışarı tıklayınca veya Esc ile kapat */
-  const dd=document.querySelector('.dropdown');
-  if(dd){
-    const t=dd.querySelector('.dropdown-toggle');
-    t.addEventListener('click',e=>{
-      e.stopPropagation();
-      const o=dd.classList.toggle('open');
-      t.setAttribute('aria-expanded',o?'true':'false');
-    });
-    document.addEventListener('click',e=>{
-      if(!dd.contains(e.target)){dd.classList.remove('open');t.setAttribute('aria-expanded','false')}
-    });
-    document.addEventListener('keydown',e=>{
-      if(e.key==='Escape'){dd.classList.remove('open');t.setAttribute('aria-expanded','false')}
-    });
-  }
-  /* Mobil: alt menüyü aç/kapa */
-  const mt=document.querySelector('.m-toggle'),ms=document.querySelector('.m-sub');
-  if(mt&&ms){
-    mt.addEventListener('click',()=>{
-      const o=ms.classList.toggle('open');
-      mt.setAttribute('aria-expanded',o?'true':'false');
-    });
-  }
-})();
-</script>
-
-<script>
-(function(){
-  const b=document.querySelector('.menu-btn'),m=document.querySelector('.mobile-menu');
-  if(!b||!m)return;
-  b.addEventListener('click',()=>{
-    const open=m.classList.toggle('open');
-    b.setAttribute('aria-expanded',open?'true':'false');
-    b.textContent=open?'✕':'☰'
-  });
-  m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
-    m.classList.remove('open');
-    b.setAttribute('aria-expanded','false');
-    b.textContent='☰'
-  }));
-})();
-</script>
 
 <script>
 /* Açık/Kapalı (Türkiye saatine göre, Salı kapalı, 08:00-20:00) */
