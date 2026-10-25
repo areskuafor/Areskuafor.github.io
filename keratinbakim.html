@@ -117,6 +117,18 @@ footer{border-top:1px solid var(--line);padding:30px 0;color:#89847d;font-size:1
   .quick-action-bar .action-btn-highlight{background:var(--gold);color:#111!important;padding:8px 12px;border-radius:12px;font-weight:800}
   .video-grid{grid-template-columns:1fr;max-width:340px;margin:20px auto}
   .brand-logos img{width:140px;height:100px}
+  
+  /* Mobilde CTA butonunun taşmasını engelleme */
+  .cta{display:block;padding:25px 20px;text-align:center}
+  .cta .btn{width:100%;margin-top:20px;white-space:normal;text-align:center}
+}
+
+@media(max-width:960px){
+  .navlinks{display:none}
+  .menu-btn{display:block;flex:0 0 44px}
+  .navin>.btn{display:none}
+  .cta{display:block}
+  .cta .btn{margin-top:20px}
 }
 </style>
 
