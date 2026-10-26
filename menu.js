@@ -1,7 +1,7 @@
 /* ===== ORTAK MENÜ + FOOTER =====
    Menüye yeni bir sayfa/hizmet eklemek için sadece bu dosyayı düzenleyin.
    Sayfalarda şu iki boş alan bulunmalıdır:
-   <nav id="site-nav"></nav>   ve   <footer id="site-footer"></footer>
+   <nav id="site-nav"></nav>    ve    <footer id="site-footer"></footer>
 */
 (function () {
   /* Hizmetler alt menüsü: [dosya, görünen ad] */
@@ -12,6 +12,7 @@
     ['perma.html', 'Perma'],
     ['mikro-kaynak.html', 'Mikro Kaynak'],
     ['gelin-saci.html', 'Gelin Saçı'],
+    ['makyaj.html', 'Makyaj'],
     ['keratinbakim.html', 'Keratin Bakım']
   ];
 
@@ -76,6 +77,7 @@
         '<a href="' + p('ombre.html') + '">Ombre</a> · ' +
         '<a href="' + p('perma.html') + '">Perma</a> · ' +
         '<a href="' + p('gelin-saci.html') + '">Gelin Saçı</a> · ' +
+        '<a href="' + p('makyaj.html') + '">Makyaj</a> · ' +
         '<a href="' + p('mikro-kaynak.html') + '">Mikro Kaynak</a> · ' +
         '<a href="' + p('keratinbakim.html') + '">Keratin Bakım</a> · ' +
         '<a href="' + p('markalar.html') + '">Markalar</a> · ' +
@@ -83,9 +85,7 @@
       '</div>' +
     '</div>';
 
-  /* ---- MOBİL ALT SABİT HIZLI EYLEM ÇUBUĞU (tüm sayfalarda aynı) ----
-     Sayfalardaki eski/farklı çubuklar silinir, bu çubuk eklenir.
-     Değiştirmek için sadece burayı düzenleyin. */
+  /* ---- MOBİL ALT SABİT HIZLI EYLEM ÇUBUĞU (tüm sayfalarda aynı) ---- */
   var BAR_CSS =
     '.quick-action-bar{display:none}' +
     '@media(max-width:768px){' +
