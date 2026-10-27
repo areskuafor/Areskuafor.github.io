@@ -1,3 +1,82 @@
+Claude
+Bir dosya düzenlendi, bir komut çalıştırdı, paylaşılan dosyalar
+perma.html dosyasına iki ekleme yaptım:
+
+og: ve twitter: etiketleri: Başlık, açıklama, URL ve görsel eklendi. Görsel olarak ana sayfadaki og-image.png kullanıldı. Perma için ayrı bir görsel istersen yolunu değiştirebilirsin.
+FAQPage JSON-LD: 7 sorunun tamamı eklendi. Cevap metinleri sayfadaki SSS ile aynı. JSON’un geçerli olduğunu kontrol ettim.
+Daha önce yazdığım “Google’da soru-cevap olarak görünme şansı artar” cümlesi fazla iddialıydı. Google bu zengin sonuç görünümünü bugün çoğunlukla devlet ve sağlık sitelerine gösteriyor. Şemanın faydası daha çok Google’ın sayfa içeriğini doğru anlaması ve diğer arama sistemlerinin de bunu okuyabilmesi. Zararı yok, kalabilir.
+
+Yüklemeden sonra Google’ın “Zengin Sonuçlar Testi” aracına sayfa adresini yapıştırıp şemanın hatasız okunduğunu kontrol edebilirsin. Diğer sayfaların kodlarını gönderdiğinde galeri sırasını ve aynı etiketleri onlara da uygularım.
+
+Perma
+Kod
+·HTML
+
+<!DOCTYPE html> <html lang="tr"> <head> <meta charset="utf-8"/> <meta content="width=device-width,initial-scale=1" name="viewport"/> <title>Mikro Kaynak Kırşehir | Ares Kuaför</title> <meta content="Kırşehir mikro kaynak: Ares Kuaför’de saçlara uzunluk ve hacim kazandırmaya yönelik mikro kaynak uygu
+
+pasted
+
+Updated mikro-kaynak.html: videos under hero, FAQ at bottom, fixes
+Şimdi SSS şemasını, sayfadaki sorulardan otomatik üretip ekliyorum, böylece metinler birebir aynı olur.
+
+Bir komut çalıştırdı, paylaşılan dosyalar
+mikro-kaynak.html dosyasını düzenledim. Sıra artık şöyle: giriş (hero) → 3 video → 3 kart ve “Mikro Kaynak Nedir” → hayalet kaynak → SSS → CTA. SSS en altta kaldı (sadece altına yeni CTA bölümü ekledim).
+
+Yaptığım değişiklikler
+
+Video galerisi girişin hemen altına taşındı.
+FAQPage JSON-LD eklendi. 12 soruyu sayfadaki SSS’den otomatik üretip ekledim, metinler birebir aynı. JSON’un geçerli olduğunu kontrol ettim. Mevcut Service şeması da duruyor.
+og: ve twitter: etiketleri eklendi.
+Randevu Formu butonu hero’ya ve yeni CTA bölümüne eklendi.
+Dosya yolları microkaynak.jpg, kapak resimleri ve mp4 dosyaları için / ile başlayan hale getirildi.
+Hero görseline width ve height eklendi.
+noscript menü ve footer linkleri güncellendi, keratin bakım ve makyaj eklendi. Mobil çubuktaki tel: linki de +905531293338 formatına çevrildi.
+İç linkler eklendi: “Mikro Kaynak Nedir” kutusundan hizmetler, keratin bakım ve ombre sayfalarına.
+Kod temizliği: WhatsApp ikonu 3 kez tekrar ediyordu, tek tanıma indirdim. Favicon etiketleri ve scroll-margin-top eklendi.
+Yazım hatası: “Salonumuz da yapılan” ifadesini “Salonumuzda yapılan” olarak düzelttim.
+Dikkat etmen gerekenler
+
+Hayalet kaynak bölümü ve SSS metinlerine dokunmadım.
+Mikro kaynak ve video dosyalarının sitede kök dizinde durduğundan emin ol. Ben sadece kodu gördüm.
+Sırada kadin-kuaforu, ombre, keratinbakim, gelin-saci ve makyaj sayfaları var. Kodlarını gönderdikçe aynı şekilde yaparım.
+
+Mikro kaynak
+Kod
+·HTML
+
+<!DOCTYPE html> <html lang="tr"> <head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width,initial-scale=1"> <title>Kırşehir Gelin Saçı | Ares Kuaför</title> <meta name="description" content="Kırşehir gelin saçı ve nişan saçı için Ares Kuaför. Özel gününüz için istediğiniz saç
+
+pasted
+
+Bir dosya oluşturuldu, bir komut çalıştırdı, paylaşılan dosyalar
+gelin-saci.html dosyasını düzenledim. Sıra artık şöyle: giriş (hero) → 12 resimlik galeri → 4 bilgi kartı → SSS → CTA. SSS en altta kaldı.
+
+Önemli bir sorun buldum: SSS şeması ile görünen SSS metni uyuşmuyordu
+
+Şemadaki “Makyaj hizmeti veriyor musunuz?” cevabında “Kalıcı makyaj (dövme tekniği) uygulaması yapmıyoruz” cümlesi vardı, sayfadaki cevapta yoktu.
+Şemadaki fiyat cevabında “saç uzunluğuna” ifadesi vardı, sayfadaki cevapta yoktu.
+Google, şemadaki metnin sayfada da görünmesini şart koşar. Uyuşmazlık şemanın yok sayılmasına yol açabilir.
+Şemayı sayfadaki görünen metinden yeniden ürettim, artık birebir aynı (6 soru, geçerli JSON). Kalıcı makyaj cümlesini ve “saç uzunluğu” ifadesini bilerek sildiysen bir şey yapman gerekmiyor. Kalmasını istiyorsan söyle, hem sayfaya hem şemaya eklerim.
+Diğer değişiklikler
+
+Galeri girişin hemen altına taşındı.
+12 görselin yolu /gelin-saci-1.jpg gibi / ile başlayan hale getirildi, width ve height eklendi.
+Hero ve CTA bölümüne Randevu Formu eklendi. CTA’ya Instagram butonu da eklendi, çünkü metinde Instagram’dan söz ediliyordu ama link yoktu.
+“Makyaj ile Birlikte Planlama” kartına /makyaj.html linki eklendi.
+noscript menü ve footer’a makyaj linki eklendi.
+Favicon etiketleri, og:site_name, scroll-margin-top ve tek tanımlı WhatsApp ikonu eklendi.
+Sırada kadin-kuaforu, ombre, keratinbakim ve makyaj sayfaları var. Kodlarını gönderdiğinde aynı şekilde yaparım.
+
+Gelin saci
+Kod
+·HTML
+
+
+
+Claude bir yapay zekadır ve hata yapabilir.
+
+
+Gelin saci · HTML
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -7,11 +86,14 @@
 <meta name="description" content="Kırşehir gelin saçı ve nişan saçı için Ares Kuaför. Özel gününüz için istediğiniz saç modelini ve makyajı birlikte planlayın, randevunuzu oluşturun.">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <link rel="canonical" href="https://areskuafor.com.tr/gelin-saci.html">
-<link rel="icon" href="/favicon.ico">
-
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+ 
 <!-- Sosyal paylaşım etiketleri -->
 <meta property="og:type" content="website">
 <meta property="og:locale" content="tr_TR">
+<meta property="og:site_name" content="Ares Kuaför">
 <meta property="og:title" content="Kırşehir Gelin Saçı | Ares Kuaför">
 <meta property="og:description" content="Gelin saçı, nişan saçı ve özel gün hazırlıkları için Ares Kuaför Kırşehir. Gerçek çalışmalarımızı inceleyin, randevunuzu oluşturun.">
 <meta property="og:url" content="https://areskuafor.com.tr/gelin-saci.html">
@@ -20,11 +102,11 @@
 <meta name="twitter:title" content="Kırşehir Gelin Saçı | Ares Kuaför">
 <meta name="twitter:description" content="Gelin saçı, nişan saçı ve özel gün hazırlıkları için Ares Kuaför Kırşehir. Gerçek çalışmalarımızı inceleyin, randevunuzu oluşturun.">
 <meta name="twitter:image" content="https://areskuafor.com.tr/og-image.png">
-
+ 
 <!-- Ortak menü + footer (tüm sayfalarda aynı dosyalar) -->
 <link rel="stylesheet" href="/menu.css">
 <script src="/menu.js" defer></script>
-
+ 
 <style>
 :root{--bg:#050506;--bg2:#0b0b0d;--card:#111114;--gold:#d8b36a;--silver:#d7d9dc;--red:#a61f26;--cream:#f7f3ec;--muted:#b8b4ae;--line:#28282c}
 *{box-sizing:border-box}
@@ -33,7 +115,10 @@ body{margin:0;background:radial-gradient(circle at 8% 8%,rgba(215,217,220,.09),t
 body:before{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(120deg,transparent 0%,rgba(255,255,255,.025) 45%,transparent 70%);z-index:-1}
 a{color:inherit;text-decoration:none}
 .wrap{max-width:1180px;margin:auto;padding:0 22px}
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 19px;border-radius:999px;border:1px solid #555;font-weight:700}
+#site-nav{min-height:75px}
+#site-footer{min-height:80px}
+section[id]{scroll-margin-top:90px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 19px;border-radius:999px;border:1px solid #555;font-weight:700}
 .gold{background:var(--gold);color:#17130c!important;border-color:transparent}
 .hero{padding:110px 0 90px;background:radial-gradient(circle at 75% 20%,rgba(166,31,38,.18),transparent 30%),radial-gradient(circle at 35% 10%,rgba(215,217,220,.09),transparent 28%)}
 .kicker{color:var(--gold);font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:800}
@@ -66,7 +151,7 @@ section{padding:80px 0}
 .more-links{margin-top:28px;max-width:900px}
 @media(max-width:900px){.grid4{grid-template-columns:repeat(2,1fr)}.grid3,.contact{grid-template-columns:1fr 1fr}.cta{display:block}}
 @media(max-width:600px){.grid4,.grid3,.contact{grid-template-columns:1fr}.hero{padding:80px 0}h2{font-size:34px}.hours-table{grid-template-columns:1fr 110px}}
-
+ 
 /* Gerçek 12'li Görsel Galerisi */
 .real-gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;align-items:start}
 .real-gallery .gallery-card{background:#0b0b0d;border:1px solid var(--line);border-radius:16px;overflow:hidden;padding:8px}
@@ -75,7 +160,7 @@ section{padding:80px 0}
 .real-gallery .gallery-photo:hover img{transform:scale(1.04)}
 @media(max-width:900px){.real-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.real-gallery{grid-template-columns:1fr}.real-gallery .gallery-card{max-width:430px;width:100%;margin:0 auto}}
-
+ 
 .quick-action-bar{display:none}
 @media(max-width:768px){
   body{padding-bottom:70px}
@@ -111,19 +196,26 @@ section{padding:80px 0}
 }
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"HairSalon","name":"Ares Kuaför","url":"https://areskuafor.com.tr/","telephone":"+90 553 129 33 38","image":"https://areskuafor.com.tr/logo.png","hasMap":"https://maps.app.goo.gl/7nh9N5rrybAvzD2x8?g_st=ic","address":{"@type":"PostalAddress","streetAddress":"Ahi Evran Mahallesi, Şehit Polis Köksal Demirci Caddesi","addressLocality":"Kırşehir","addressCountry":"TR"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"08:00","closes":"20:00"}],"sameAs":["https://www.instagram.com/areskuaforkirsehir"]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Gelin saçı için önceden görüşme ve planlama yapılıyor mu?","acceptedAnswer":{"@type":"Answer","text":"Özel günleriniz öncesinde konseptinize, gelinliğinize ve yüz tipinize en uygun modeli belirlemek için ön görüşme ve planlama yapıyoruz. Detaylar için WhatsApp üzerinden bize yazabilirsiniz."}},{"@type":"Question","name":"Nişan saçı da yapıyor musunuz?","acceptedAnswer":{"@type":"Answer","text":"Evet, nişan saçı ve özel gün saç tasarımı hizmeti sunuyoruz."}},{"@type":"Question","name":"Makyaj hizmeti veriyor musunuz?","acceptedAnswer":{"@type":"Answer","text":"Evet, gelin, nişan, davet ve diğer özel günler için profesyonel makyaj hizmeti veriyoruz. Kalıcı makyaj (dövme tekniği) uygulaması yapmıyoruz."}},{"@type":"Question","name":"Gelin saçı randevusu nasıl alınır?","acceptedAnswer":{"@type":"Answer","text":"WhatsApp veya Instagram üzerinden tarih ve istediğiniz model hakkında bilgi vererek randevu talebinde bulunabilirsiniz."}},{"@type":"Question","name":"Gelin saçı için randevuyu ne kadar önceden almalıyım?","acceptedAnswer":{"@type":"Answer","text":"Özel gün tarihleri dolabileceği için mümkün olduğunca erken iletişime geçmenizi öneririz."}},{"@type":"Question","name":"Gelin saçı fiyatlarını nasıl öğrenebilirim?","acceptedAnswer":{"@type":"Answer","text":"Fiyat; saç uzunluğuna, istenen modele ve makyaj gibi ek hizmetlere göre değişebilir. Güncel bilgi için WhatsApp üzerinden bize ulaşabilirsiniz."}}]}</script>
-
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Gelin saçı için önceden görüşme ve planlama yapılıyor mu?", "acceptedAnswer": {"@type": "Answer", "text": "Özel günleriniz öncesinde konseptinize, gelinliğinize ve yüz tipinize en uygun modeli belirlemek için ön görüşme ve planlama yapıyoruz. Detaylar için WhatsApp üzerinden bize yazabilirsiniz."}}, {"@type": "Question", "name": "Nişan saçı da yapıyor musunuz?", "acceptedAnswer": {"@type": "Answer", "text": "Evet, nişan saçı ve özel gün saç tasarımı hizmeti sunuyoruz."}}, {"@type": "Question", "name": "Makyaj hizmeti veriyor musunuz?", "acceptedAnswer": {"@type": "Answer", "text": "Evet, gelin, nişan, davet ve diğer özel günler için profesyonel makyaj hizmeti veriyoruz."}}, {"@type": "Question", "name": "Gelin saçı randevusu nasıl alınır?", "acceptedAnswer": {"@type": "Answer", "text": "WhatsApp veya Instagram üzerinden tarih ve istediğiniz model hakkında bilgi vererek randevu talebinde bulunabilirsiniz."}}, {"@type": "Question", "name": "Gelin saçı için randevuyu ne kadar önceden almalıyım?", "acceptedAnswer": {"@type": "Answer", "text": "Özel gün tarihleri dolabileceği için mümkün olduğunca erken iletişime geçmenizi öneririz."}}, {"@type": "Question", "name": "Gelin saçı fiyatlarını nasıl öğrenebilirim?", "acceptedAnswer": {"@type": "Answer", "text": "Fiyat; istenen modele ve makyaj gibi ek hizmetlere göre değişebilir. Güncel bilgi için WhatsApp üzerinden bize ulaşabilirsiniz."}}]}
+</script>
+ 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4QZ3QC3LW8"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
+ 
   gtag('config', 'G-4QZ3QC3LW8');
 </script>
 </head>
 <body>
+<!-- WhatsApp ikonu (tek sefer tanımlı) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa-icon" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></symbol>
+</svg>
+ 
 <!-- ORTAK MENÜ: menu.js tarafından doldurulur -->
 <nav id="site-nav" aria-label="Ana menü">
   <noscript>
@@ -136,41 +228,44 @@ section{padding:80px 0}
       <a href="/keratinbakim.html">Keratin Bakım</a>
       <a href="/mikro-kaynak.html">Mikro Kaynak</a>
       <a href="/gelin-saci.html">Gelin Saçı</a>
+      <a href="/makyaj.html">Makyaj</a>
       <a href="/markalar.html">Markalar</a>
       <a href="/randevu.html">Randevu</a>
     </div>
   </noscript>
 </nav>
-
-<header class="hero"><div class="wrap"><div class="kicker">Kırşehir · Gelin & Nişan Saçı</div><h1>Kırşehir Gelin Saçı</h1><p style="max-width:760px;font-size:18px">Ares Kuaför Kırşehir’de gelin saçı ve nişan saçı hazırlıkları için özel gününüzde istediğiniz görünüme uygun saç tasarımını sizinle birlikte planlıyoruz.</p><div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:28px"><a class="btn gold" href="https://wa.me/905531293338" rel="noopener" target="_blank">💬 WhatsApp'tan Randevu</a><a class="btn" href="#gelin-saci-galeri">Çalışmalarımız</a></div><p>📍 Ahi Evran · Şehit Polis Köksal Demirci Cd. · Kırşehir</p></div></header>
-
+ 
+<header class="hero"><div class="wrap"><div class="kicker">Kırşehir · Gelin & Nişan Saçı</div><h1>Kırşehir Gelin Saçı</h1><p style="max-width:760px;font-size:18px">Ares Kuaför Kırşehir’de gelin saçı ve nişan saçı hazırlıkları için özel gününüzde istediğiniz görünüme uygun saç tasarımını sizinle birlikte planlıyoruz.</p><div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:28px"><a class="btn gold" href="/randevu.html">Randevu Formu</a><a class="btn gold" href="https://wa.me/905531293338" rel="noopener" target="_blank"><svg width="18" height="18" fill="currentColor" aria-hidden="true"><use href="#wa-icon"/></svg>WhatsApp'tan Randevu</a><a class="btn" href="#gelin-saci-galeri">Çalışmalarımız</a></div><p>📍 Ahi Evran · Şehit Polis Köksal Demirci Cd. · Kırşehir</p></div></header>
+ 
 <main>
-<section><div class="wrap"><div class="grid3"><article class="card"><h2 style="font-size:28px;margin-top:0">Gelin Saçı Tasarımı</h2><p>Gelinlik, yüz şekli ve istediğiniz tarza göre özel gün saç modelinizi önceden konuşarak planlayabilirsiniz. Topuz, dalga veya farklı saç tasarımlarını tercihlerinize göre değerlendirebiliriz.</p></article><article class="card"><h2 style="font-size:28px;margin-top:0">Nişan Saçı</h2><p>Nişan gününüz için daha doğal, şık veya dikkat çekici bir saç görünümü planlamak için Ares Kuaför ile iletişime geçebilirsiniz.</p></article><article class="card"><h2 style="font-size:28px;margin-top:0">Makyaj ile Birlikte Planlama</h2><p>Özel gün hazırlığında saç ve makyaj görünümünün birbiriyle uyumlu olması önemlidir. Gelin saçı veya nişan saçı ile birlikte profesyonel makyaj hizmetimiz hakkında da bilgi alabilirsiniz.</p></article><article class="card"><h2 style="font-size:28px;margin-top:0">Randevu</h2><p>Özel gününüz için uygun zamanı planlamak adına mümkün olduğunca erken iletişime geçerek randevu talebinizi iletebilirsiniz.</p></article></div>
-
-<p class="more-links">Gelin saçı dışındaki hizmetlerimiz için <a class="txt-link" href="/kadin-kuaforu.html">kadın kuaförü</a> ve <a class="txt-link" href="/hizmetler.html">hizmetler</a> sayfalarımıza göz atabilirsiniz. Özel gününüz öncesinde saç bakımı için <a class="txt-link" href="/keratinbakim.html">keratin bakım</a> sayfamız da ilginizi çekebilir.</p>
-</div></section>
-
+ 
+<!-- Galeri (girişin hemen altında) -->
 <section id="gelin-saci-galeri"><div class="wrap">
 <div class="kicker">Ares Kuaför · Gerçek Çalışmalar</div>
 <h2>Gelin Saçı Galerisi</h2>
 <p>Kırşehir Ares Kuaför salonumuzda tamamladığımız gelin saçı ve özel gün tasarımlarından gerçek örnekler.</p>
 <div class="real-gallery">
-  <div class="gallery-card"><div class="gallery-photo"><img src="gelin-saci-1.jpg" alt="Kırşehir gelin saçı örneği, Ares Kuaför çalışması 1" loading="lazy" /></div></div>
-  <div class="gallery-card"><div class="gallery-photo"><img src="gelin-saci-2.jpg" alt="Kırşehir gelin saçı örneği, Ares Kuaför çalışması 2" loading="lazy" /></div></div>
-  <div class="gallery-card"><div class="gallery-photo"><img src="gelin-saci-3.jpg" alt="Kırşehir gelin saçı örneği, Ares Kuaför çalışması 3" loading="lazy" /></div></div>
-  <div class="gallery-card"><div class="gallery-photo"><img src="gelin-saci-4.jpg" alt="Kırşehir gelin saçı örneği, Ares Kuaför çalışması 4" loading="lazy" /></div></div>
-  <div class="gallery-card"><div class="gallery-photo"><img src="gelin-saci-5.jpg" alt="Kırşehir gelin saçı örneği, Ares Kuaför çalışması 5" loading="lazy" /></div></div>
-  <div class="gallery-card"><div class="gallery-photo"><img src="gelin-saci-6.jpg" alt="Kırşehir gelin saçı örneği, Ares Kuaför çalışması 6" loading="lazy" /></div></div>
-  <div class="gallery-card"><div class="gallery-photo"><img src="gelin-saci-7.jpg" alt="Kırşehir gelin saçı örneği, Ares Kuaför çalışması 7" loading="lazy" /></div></div>
-  <div class="gallery-card"><div class="gallery-photo"><img src="gelin-saci-8.jpg" alt="Kırşehir gelin saçı örneği, Ares Kuaför çalışması 8" loading="lazy" /></div></div>
-  <div class="gallery-card"><div class="gallery-photo"><img src="gelin-saci-9.jpg" alt="Kırşehir gelin saçı örneği, Ares Kuaför çalışması 9" loading="lazy" /></div></div>
-  <div class="gallery-card"><div class="gallery-photo"><img src="gelin-saci-10.jpg" alt="Kırşehir gelin saçı örneği, Ares Kuaför çalışması 10" loading="lazy" /></div></div>
-  <div class="gallery-card"><div class="gallery-photo"><img src="gelin-saci-11.jpg" alt="Kırşehir gelin saçı örneği, Ares Kuaför çalışması 11" loading="lazy" /></div></div>
-  <div class="gallery-card"><div class="gallery-photo"><img src="gelin-saci-12.jpg" alt="Kırşehir gelin saçı örneği, Ares Kuaför çalışması 12" loading="lazy" /></div></div>
+  <div class="gallery-card"><div class="gallery-photo"><img src="/gelin-saci-1.jpg" alt="Kırşehir gelin saçı örneği, Ares Kuaför çalışması 1" width="400" height="500" loading="lazy" /></div></div>
+  <div class="gallery-card"><div class="gallery-photo"><img src="/gelin-saci-2.jpg" alt="Kırşehir gelin saçı örneği, Ares Kuaför çalışması 2" width="400" height="500" loading="lazy" /></div></div>
+  <div class="gallery-card"><div class="gallery-photo"><img src="/gelin-saci-3.jpg" alt="Kırşehir gelin saçı örneği, Ares Kuaför çalışması 3" width="400" height="500" loading="lazy" /></div></div>
+  <div class="gallery-card"><div class="gallery-photo"><img src="/gelin-saci-4.jpg" alt="Kırşehir gelin saçı örneği, Ares Kuaför çalışması 4" width="400" height="500" loading="lazy" /></div></div>
+  <div class="gallery-card"><div class="gallery-photo"><img src="/gelin-saci-5.jpg" alt="Kırşehir gelin saçı örneği, Ares Kuaför çalışması 5" width="400" height="500" loading="lazy" /></div></div>
+  <div class="gallery-card"><div class="gallery-photo"><img src="/gelin-saci-6.jpg" alt="Kırşehir gelin saçı örneği, Ares Kuaför çalışması 6" width="400" height="500" loading="lazy" /></div></div>
+  <div class="gallery-card"><div class="gallery-photo"><img src="/gelin-saci-7.jpg" alt="Kırşehir gelin saçı örneği, Ares Kuaför çalışması 7" width="400" height="500" loading="lazy" /></div></div>
+  <div class="gallery-card"><div class="gallery-photo"><img src="/gelin-saci-8.jpg" alt="Kırşehir gelin saçı örneği, Ares Kuaför çalışması 8" width="400" height="500" loading="lazy" /></div></div>
+  <div class="gallery-card"><div class="gallery-photo"><img src="/gelin-saci-9.jpg" alt="Kırşehir gelin saçı örneği, Ares Kuaför çalışması 9" width="400" height="500" loading="lazy" /></div></div>
+  <div class="gallery-card"><div class="gallery-photo"><img src="/gelin-saci-10.jpg" alt="Kırşehir gelin saçı örneği, Ares Kuaför çalışması 10" width="400" height="500" loading="lazy" /></div></div>
+  <div class="gallery-card"><div class="gallery-photo"><img src="/gelin-saci-11.jpg" alt="Kırşehir gelin saçı örneği, Ares Kuaför çalışması 11" width="400" height="500" loading="lazy" /></div></div>
+  <div class="gallery-card"><div class="gallery-photo"><img src="/gelin-saci-12.jpg" alt="Kırşehir gelin saçı örneği, Ares Kuaför çalışması 12" width="400" height="500" loading="lazy" /></div></div>
 </div>
 </div></section>
-
-<section><div class="wrap faq"><div class="kicker">Sıkça Sorulan Sorular</div><h2>Merak ettikleriniz.</h2>
+ 
+<section><div class="wrap"><div class="grid3"><article class="card"><h2 style="font-size:28px;margin-top:0">Gelin Saçı Tasarımı</h2><p>Gelinlik, yüz şekli ve istediğiniz tarza göre özel gün saç modelinizi önceden konuşarak planlayabilirsiniz. Topuz, dalga veya farklı saç tasarımlarını tercihlerinize göre değerlendirebiliriz.</p></article><article class="card"><h2 style="font-size:28px;margin-top:0">Nişan Saçı</h2><p>Nişan gününüz için daha doğal, şık veya dikkat çekici bir saç görünümü planlamak için Ares Kuaför ile iletişime geçebilirsiniz.</p></article><article class="card"><h2 style="font-size:28px;margin-top:0">Makyaj ile Birlikte Planlama</h2><p>Özel gün hazırlığında saç ve makyaj görünümünün birbiriyle uyumlu olması önemlidir. Gelin saçı veya nişan saçı ile birlikte profesyonel <a class="txt-link" href="/makyaj.html">makyaj</a> hizmetimiz hakkında da bilgi alabilirsiniz.</p></article><article class="card"><h2 style="font-size:28px;margin-top:0">Randevu</h2><p>Özel gününüz için uygun zamanı planlamak adına mümkün olduğunca erken iletişime geçerek randevu talebinizi iletebilirsiniz.</p></article></div>
+ 
+<p class="more-links">Gelin saçı dışındaki hizmetlerimiz için <a class="txt-link" href="/kadin-kuaforu.html">kadın kuaförü</a> ve <a class="txt-link" href="/hizmetler.html">hizmetler</a> sayfalarımıza göz atabilirsiniz. Özel gününüz öncesinde saç bakımı için <a class="txt-link" href="/keratinbakim.html">keratin bakım</a> sayfamız da ilginizi çekebilir.</p>
+</div></section>
+ 
+<section id="sss"><div class="wrap faq"><div class="kicker">Sıkça Sorulan Sorular</div><h2>Merak ettikleriniz.</h2>
 <details><summary>Gelin saçı için önceden görüşme ve planlama yapılıyor mu?</summary><p>Özel günleriniz öncesinde konseptinize, gelinliğinize ve yüz tipinize en uygun modeli belirlemek için ön görüşme ve planlama yapıyoruz. Detaylar için WhatsApp üzerinden bize yazabilirsiniz.</p></details>
 <details><summary>Nişan saçı da yapıyor musunuz?</summary><p>Evet, nişan saçı ve özel gün saç tasarımı hizmeti sunuyoruz.</p></details>
 <details><summary>Makyaj hizmeti veriyor musunuz?</summary><p>Evet, gelin, nişan, davet ve diğer özel günler için profesyonel makyaj hizmeti veriyoruz.</p></details>
@@ -178,22 +273,22 @@ section{padding:80px 0}
 <details><summary>Gelin saçı için randevuyu ne kadar önceden almalıyım?</summary><p>Özel gün tarihleri dolabileceği için mümkün olduğunca erken iletişime geçmenizi öneririz.</p></details>
 <details><summary>Gelin saçı fiyatlarını nasıl öğrenebilirim?</summary><p>Fiyat; istenen modele ve makyaj gibi ek hizmetlere göre değişebilir. Güncel bilgi için WhatsApp üzerinden bize ulaşabilirsiniz.</p></details>
 </div></section>
-
-<section><div class="wrap"><div class="cta"><div><div class="kicker">Ares Kuaför Kırşehir</div><h2>Randevunuzu ayıralım.</h2><p>WhatsApp veya Instagram üzerinden bize ulaşabilirsiniz.</p></div><a class="btn gold" href="https://wa.me/905531293338" rel="noopener" target="_blank">WhatsApp</a></div></div></section>
+ 
+<section><div class="wrap"><div class="cta"><div><div class="kicker">Ares Kuaför Kırşehir</div><h2>Randevunuzu ayıralım.</h2><p>Randevu formunu doldurun veya WhatsApp / Instagram üzerinden bize ulaşın.</p></div><div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn gold" href="/randevu.html">Randevu Formu</a><a class="btn gold" href="https://wa.me/905531293338" rel="noopener" target="_blank">WhatsApp</a><a class="btn" href="https://www.instagram.com/areskuaforkirsehir" rel="noopener" target="_blank">Instagram</a></div></div></div></section>
 </main>
-
+ 
 <!-- ORTAK FOOTER: menu.js tarafından doldurulur -->
 <footer id="site-footer">
   <noscript>
     <div class="wrap foot">
       <div>© Ares Kuaför · Kırşehir</div>
-      <div><a href="/">Ana Sayfa</a> · <a href="/hizmetler.html">Hizmetler</a> · <a href="/perma.html">Perma</a> · <a href="/keratinbakim.html">Keratin Bakım</a> · <a href="/mikro-kaynak.html">Mikro Kaynak</a> · <a href="/randevu.html">Randevu</a></div>
+      <div><a href="/">Ana Sayfa</a> · <a href="/hizmetler.html">Hizmetler</a> · <a href="/perma.html">Perma</a> · <a href="/keratinbakim.html">Keratin Bakım</a> · <a href="/mikro-kaynak.html">Mikro Kaynak</a> · <a href="/makyaj.html">Makyaj</a> · <a href="/randevu.html">Randevu</a></div>
     </div>
   </noscript>
 </footer>
-
+ 
 <a class="float" href="https://wa.me/905531293338" rel="noopener" target="_blank">💬 WhatsApp</a>
-
+ 
 <!-- MOBİL ALT SABİT HIZLI EYLEM ÇUBUĞU -->
 <div class="quick-action-bar">
   <a href="tel:+905531293338">
@@ -201,7 +296,7 @@ section{padding:80px 0}
     Ara
   </a>
   <a href="https://wa.me/905531293338" rel="noopener" target="_blank" style="color:#25D366">
-    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#wa-icon"/></svg>
     WhatsApp
   </a>
   <a href="https://maps.app.goo.gl/7nh9N5rrybAvzD2x8?g_st=ic" rel="noopener" target="_blank">
@@ -212,7 +307,7 @@ section{padding:80px 0}
     Randevu
   </a>
 </div>
-
+ 
 <script>
 /* Google Analytics: WhatsApp, arama ve yol tarifi tıklamaları */
 document.addEventListener('click',function(e){
@@ -229,3 +324,5 @@ document.addEventListener('click',function(e){
 </script>
 </body>
 </html>
+ 
+Claude yanıtı tamamladı
