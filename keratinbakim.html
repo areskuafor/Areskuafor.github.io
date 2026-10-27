@@ -5,6 +5,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta property="og:type" content="website"/>
 <meta property="og:locale" content="tr_TR"/>
+<meta property="og:site_name" content="Ares Kuaför"/>
 <meta property="og:title" content="Keratin Bakım | Ares Kuaför Kırşehir"/>
 <meta property="og:description" content="Ares Kuaför Kırşehir profesyonel keratin bakım hizmeti ile yıpranmış ve işlem görmüş saçlarınıza yumuşaklık ve parlaklık kazandırın."/>
 <meta property="og:url" content="https://areskuafor.com.tr/keratinbakim.html"/>
@@ -37,6 +38,9 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;background:lin
 a{color:inherit;text-decoration:none}
 .wrap{max-width:1180px;margin:auto;padding:0 22px}
 nav{position:sticky;top:0;z-index:50;background:rgba(5,5,6,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+#site-nav{min-height:75px}
+#site-footer{min-height:80px}
+section[id],div[id]{scroll-margin-top:90px}
 
 .navin{height:74px;display:flex;align-items:center;justify-content:space-between;gap:14px;position:relative}
 .logo{display:flex;align-items:center;z-index:60;flex-shrink:0}
@@ -93,8 +97,6 @@ footer{border-top:1px solid var(--line);padding:30px 0;color:#89847d;font-size:1
 @media(max-width:768px){
   .video-grid{grid-template-columns:1fr;max-width:340px;margin:20px auto}
   .brand-logos img{width:140px;height:100px}
-  
-  /* Mobilde CTA butonunun taşmasını engelleme */
   .cta{display:block;padding:25px 20px;text-align:center}
   .cta .btn{width:100%;margin-top:20px;white-space:normal;text-align:center}
 }
@@ -112,7 +114,7 @@ footer{border-top:1px solid var(--line);padding:30px 0;color:#89847d;font-size:1
 {"@context":"https://schema.org","@type":"Service","name":"Keratin Saç Bakımı","provider":{"@type":"HairSalon","name":"Ares Kuaför","url":"https://areskuafor.com.tr/","telephone":"+90 553 129 33 38","address":{"@type":"PostalAddress","streetAddress":"Ahi Evran Mahallesi, Şehit Polis Köksal Demirci Caddesi","addressLocality":"Kırşehir","addressCountry":"TR"}},"areaServed":{"@type":"City","name":"Kırşehir"},"description":"Yıpranmış ve işlem görmüş saçlar için profesyonel keratin bakım hizmeti."}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Keratin bakım nedir?","acceptedAnswer":{"@type":"Answer","text":"Keratin, saç telinin yapısında doğal olarak bulunan bir proteindir. Keratin bakımda keratin içeren ürünlerle saç yüzeyi desteklenerek saça pürüzsüzlük, yumuşaklık ve parlaklık kazandırılması hedeflenir."}},{"@type":"Question","name":"Keratin bakım kimler için uygundur?","acceptedAnswer":{"@type":"Answer","text":"Boya, açıcı veya yüksek ısı nedeniyle yıpranmış, mat görünen ya da kolay kabaran saçlar için tercih edilebilir. Saçınızın mevcut durumuna göre bakımın size uygun olup olmadığını salonumuzda değerlendiriyoruz."}},{"@type":"Question","name":"Keratin bakımın etkisi ne kadar sürer?","acceptedAnswer":{"@type":"Answer","text":"Etkisinin süresi saç yapınıza, kullanılan ürüne, yıkama sıklığına ve bakım rutininize göre değişir. Bakım kalıcı bir işlem değildir; doğru ürünlerle yapılan düzenli bakım etkisinin daha uzun süre görülmesine yardımcı olur."}},{"@type":"Question","name":"Boyalı veya ombre yapılmış saça keratin bakım yapılır mı?","acceptedAnswer":{"@type":"Answer","text":"Saçınızın mevcut durumuna ve yıpranma seviyesine göre değerlendirme yapıyoruz. Güncel bir fotoğrafı WhatsApp hattımıza göndererek ön bilgi alabilirsiniz."}},{"@type":"Question","name":"Keratin bakım sonrası nelere dikkat etmeliyim?","acceptedAnswer":{"@type":"Answer","text":"Yıkama zamanı ve bakım önerileri uygulamada kullanılan ürüne göre değişebildiği için bunları işlem sonrasında salonumuzda öğrenebilirsiniz."}},{"@type":"Question","name":"Keratin bakım fiyatı ve süresi nedir?","acceptedAnswer":{"@type":"Answer","text":"Fiyat ve işlem süresi saç uzunluğuna, gürlüğüne ve kullanılan ürüne göre değişir. Güncel bilgi için WhatsApp üzerinden bize ulaşabilirsiniz."}},{"@type":"Question","name":"Keratin bakımda hangi markalar kullanılıyor?","acceptedAnswer":{"@type":"Answer","text":"Salonumuzda First Lima, X Pro Harmony, Hush ve Native Base markalı ürünler kullanılmaktadır."}}]}
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Keratin bakım nedir?", "acceptedAnswer": {"@type": "Answer", "text": "Keratin, saç telinin yapısında doğal olarak bulunan bir proteindir. Keratin bakımda keratin içeren ürünlerle saç yüzeyi desteklenerek saça pürüzsüzlük, yumuşaklık ve parlaklık kazandırılması hedeflenir."}}, {"@type": "Question", "name": "Keratin bakım kimler için uygundur?", "acceptedAnswer": {"@type": "Answer", "text": "Boya, açıcı veya yüksek ısı nedeniyle yıpranmış, mat görünen ya da kolay kabaran saçlar için tercih edilebilir. Saçınızın mevcut durumuna göre bakımın size uygun olup olmadığını salonumuzda değerlendiriyoruz."}}, {"@type": "Question", "name": "Keratin bakımın etkisi ne kadar sürer?", "acceptedAnswer": {"@type": "Answer", "text": "Etkisinin süresi saç yapınıza, kullanılan ürüne, yıkama sıklığına ve bakım rutininize göre değişir. Bakım kalıcı bir işlem değildir; doğru ürünlerle yapılan düzenli bakım etkisinin daha uzun süre görülmesine yardımcı olur."}}, {"@type": "Question", "name": "Boyalı veya ombre yapılmış saça keratin bakım yapılır mı?", "acceptedAnswer": {"@type": "Answer", "text": "Saçınızın mevcut durumuna ve yıpranma seviyesine göre değerlendirme yapıyoruz. Güncel bir fotoğrafı WhatsApp hattımıza göndererek ön bilgi alabilirsiniz."}}, {"@type": "Question", "name": "Keratin bakım sonrası nelere dikkat etmeliyim?", "acceptedAnswer": {"@type": "Answer", "text": "Yıkama zamanı ve bakım önerileri uygulamada kullanılan ürüne göre değişebildiği için bunları işlem sonrasında salonumuzda öğrenebilirsiniz."}}, {"@type": "Question", "name": "Keratin bakım fiyatı ve süresi nedir?", "acceptedAnswer": {"@type": "Answer", "text": "Fiyat ve işlem süresi saç uzunluğuna, gürlüğüne ve kullanılan ürüne göre değişir. Güncel bilgi için WhatsApp üzerinden bize ulaşabilirsiniz."}}, {"@type": "Question", "name": "Keratin bakımda hangi markalar kullanılıyor?", "acceptedAnswer": {"@type": "Answer", "text": "Salonumuzda First Lima, X Pro Harmony, Hush ve Native Base markalı ürünler kullanılmaktadır."}}]}
 </script>
 
 <!-- Google tag (gtag.js) -->
@@ -124,6 +126,11 @@ gtag('js',new Date());gtag('config','G-4QZ3QC3LW8');
 </script>
 </head>
 <body>
+
+<!-- WhatsApp ikonu (tek sefer tanımlı) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa-icon" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></symbol>
+</svg>
 
 <!-- ORTAK MENÜ -->
 <nav id="site-nav" aria-label="Ana menü">
@@ -137,6 +144,7 @@ gtag('js',new Date());gtag('config','G-4QZ3QC3LW8');
       <a href="/keratinbakim.html">Keratin Bakım</a>
       <a href="/mikro-kaynak.html">Mikro Kaynak</a>
       <a href="/gelin-saci.html">Gelin Saçı</a>
+      <a href="/makyaj.html">Makyaj</a>
       <a href="/markalar.html">Markalar</a>
       <a href="/randevu.html">Randevu</a>
     </div>
@@ -144,6 +152,7 @@ gtag('js',new Date());gtag('config','G-4QZ3QC3LW8');
 </nav>
 
 <!-- İÇERİK BÖLÜMÜ -->
+<main>
 <section>
   <div class="wrap">
     <div class="kicker" style="color:var(--gold);font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:800">Profesyonel Bakım</div>
@@ -151,9 +160,13 @@ gtag('js',new Date());gtag('config','G-4QZ3QC3LW8');
     <p style="font-size:18px;line-height:1.6">
       Boya, açıcı ve yüksek ısı nedeniyle yıpranmış saçlara yumuşaklık, parlaklık ve elastikiyet kazandırmayı hedefleyen profesyonel keratin bakım uygulamalarımızla tanışın. Ares Kuaför Kırşehir'de saçınızın mevcut durumunu değerlendirerek size uygun bakımı planlıyoruz.
     </p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin:22px 0">
+      <a class="btn gold" href="/randevu.html">Randevu Formu</a>
+      <a class="btn gold" href="https://wa.me/905531293338?text=Merhaba%20Ares%20Kuaf%C3%B6r%2C%20keratin%20bak%C4%B1m%20hakk%C4%B1nda%20bilgi%20ve%20randevu%20almak%20istiyorum." rel="noopener" target="_blank"><svg width="18" height="18" fill="currentColor" aria-hidden="true"><use href="#wa-icon"/></svg>WhatsApp</a>
+    </div>
     <p>📍 Ahi Evran Mahallesi, Şehit Polis Köksal Demirci Caddesi, Kırşehir</p>
 
-    <!-- Videolar -->
+    <!-- Videolar (girişin hemen altında) -->
     <h2 style="margin-top:35px">Keratin Bakım Çalışmalarımız</h2>
     <div class="video-grid">
       <div class="video-wrapper">
@@ -181,15 +194,15 @@ gtag('js',new Date());gtag('config','G-4QZ3QC3LW8');
       <div class="kicker" style="color:var(--gold);font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:800">Kalite Güvencesi</div>
       <h2>Kullandığımız Markalar</h2>
       <div class="brand-logos">
-        <img src="/logo1.webp" alt="First Lima marka logosu" loading="lazy">
-        <img src="/logo2.jpg" alt="X Pro Harmony marka logosu" loading="lazy">
-        <img src="/logo3.png" alt="Hush marka logosu" loading="lazy">
-        <img src="/logo4.png" alt="Native Base marka logosu" loading="lazy">
+        <img src="/logo1.webp" alt="First Lima marka logosu" width="180" height="120" loading="lazy">
+        <img src="/logo2.jpg" alt="X Pro Harmony marka logosu" width="180" height="120" loading="lazy">
+        <img src="/logo3.png" alt="Hush marka logosu" width="180" height="120" loading="lazy">
+        <img src="/logo4.png" alt="Native Base marka logosu" width="180" height="120" loading="lazy">
       </div>
     </div>
 
     <!-- Sıkça Sorulan Sorular -->
-    <div class="faq">
+    <div class="faq" id="sss">
       <div class="kicker" style="color:var(--gold);font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:800">Sıkça Sorulan Sorular</div>
       <h2>Keratin Bakım Hakkında Merak Edilenler</h2>
       <details>
@@ -227,28 +240,32 @@ gtag('js',new Date());gtag('config','G-4QZ3QC3LW8');
       <div>
         <div class="kicker" style="color:var(--gold);font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:800">Saçlarınızı Yenileyin</div>
         <h2>Randevunuzu Hemen Oluşturun</h2>
-        <p>Keratin bakım uygulamalarımız hakkında bilgi almak ve randevu oluşturmak için bize WhatsApp'tan yazın.</p>
+        <p>Keratin bakım uygulamalarımız hakkında bilgi almak için randevu formunu doldurun veya WhatsApp'tan bize yazın.</p>
       </div>
-      <a class="btn gold" href="https://wa.me/905531293338?text=Merhaba%20Ares%20Kuaf%C3%B6r%2C%20keratin%20bak%C4%B1m%20hakk%C4%B1nda%20bilgi%20ve%20randevu%20almak%20istiyorum." rel="noopener" target="_blank">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-        WhatsApp'tan Randevu Al
-      </a>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a class="btn gold" href="/randevu.html">Randevu Formu</a>
+        <a class="btn gold" href="https://wa.me/905531293338?text=Merhaba%20Ares%20Kuaf%C3%B6r%2C%20keratin%20bak%C4%B1m%20hakk%C4%B1nda%20bilgi%20ve%20randevu%20almak%20istiyorum." rel="noopener" target="_blank">
+          <svg width="18" height="18" fill="currentColor" aria-hidden="true"><use href="#wa-icon"/></svg>
+          WhatsApp'tan Randevu Al
+        </a>
+      </div>
     </div>
   </div>
 </section>
+</main>
 
 <!-- ORTAK FOOTER -->
 <footer id="site-footer">
   <noscript>
     <div class="wrap foot">
       <div>© Ares Kuaför · Kırşehir</div>
-      <div><a href="/">Ana Sayfa</a> · <a href="/hizmetler.html">Hizmetler</a> · <a href="/perma.html">Perma</a> · <a href="/keratinbakim.html">Keratin Bakım</a> · <a href="/mikro-kaynak.html">Mikro Kaynak</a> · <a href="/randevu.html">Randevu</a></div>
+      <div><a href="/">Ana Sayfa</a> · <a href="/hizmetler.html">Hizmetler</a> · <a href="/perma.html">Perma</a> · <a href="/keratinbakim.html">Keratin Bakım</a> · <a href="/mikro-kaynak.html">Mikro Kaynak</a> · <a href="/makyaj.html">Makyaj</a> · <a href="/randevu.html">Randevu</a></div>
     </div>
   </noscript>
 </footer>
 
 <a class="float" href="https://wa.me/905531293338" rel="noopener" target="_blank">
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+  <svg width="20" height="20" fill="currentColor" aria-hidden="true"><use href="#wa-icon"/></svg>
   WhatsApp
 </a>
 
